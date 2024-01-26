@@ -10,7 +10,7 @@ Conception de l'histoire Semaine 4-5-6
 	
 	
 REALISATION DU PROJET
-Création du git 22 janvier
+Création du git - 22 janvier
 Création interface graphique
 Conceptualisation de la map
 Création des personnages
