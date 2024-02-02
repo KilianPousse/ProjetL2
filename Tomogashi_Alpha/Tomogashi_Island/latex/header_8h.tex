@@ -1,0 +1,190 @@
+\doxysection{Référence du fichier include/header.h}
+\hypertarget{header_8h}{}\label{header_8h}\index{include/header.h@{include/header.h}}
+
+
+Entete principale du projet.  
+
+
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplayer__t}{player\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em structure représentant les informations du joueur \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmap__t}{map\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em structure représentant la map \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e}\label{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e} 
+\#define {\bfseries NAME\+\_\+\+PROG}~\"{}Tomogashi Island\"{}
+\begin{DoxyCompactList}\small\item\em Nom du programme. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3}\label{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3} 
+\#define {\bfseries VERS\+\_\+\+GAME}~\"{}alpha 1.\+1\"{}
+\begin{DoxyCompactList}\small\item\em Version du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a2d6acae8f9b752a5d85795baf1005907}\label{header_8h_a2d6acae8f9b752a5d85795baf1005907} 
+\#define {\bfseries WINDOW\+\_\+\+NAME}~\"{}Tomogashi Island\"{}
+\begin{DoxyCompactList}\small\item\em Nom de la fenêtre. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a498d9f026138406895e9a34b504ac6a6}\label{header_8h_a498d9f026138406895e9a34b504ac6a6} 
+\#define {\bfseries WINDOW\+\_\+\+WIDTH}~1088
+\item 
+\Hypertarget{header_8h_a5473cf64fa979b48335079c99532e243}\label{header_8h_a5473cf64fa979b48335079c99532e243} 
+\#define {\bfseries WINDOW\+\_\+\+HEIGHT}~768
+\item 
+\Hypertarget{header_8h_a004a0bd4d35be528654076c4dcdd52d8}\label{header_8h_a004a0bd4d35be528654076c4dcdd52d8} 
+\#define {\bfseries SIZE\+\_\+\+TILE}~32
+\begin{DoxyCompactList}\small\item\em Taille en pixel d\textquotesingle{}un tuile. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a7261b6a70ea8aeccc36578e361f52777}\label{header_8h_a7261b6a70ea8aeccc36578e361f52777} 
+\#define {\bfseries NB\+\_\+\+TILE\+\_\+X}~WINDOW\+\_\+\+WIDTH/\mbox{\hyperlink{header_8h_a004a0bd4d35be528654076c4dcdd52d8}{SIZE\+\_\+\+TILE}}
+\begin{DoxyCompactList}\small\item\em Nombre de tuiles en X. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a3aad3e50e3f36b38e7cebef206a7b094}\label{header_8h_a3aad3e50e3f36b38e7cebef206a7b094} 
+\#define {\bfseries NB\+\_\+\+TILE\+\_\+Y}~WINDOW\+\_\+\+HEIGHT/\mbox{\hyperlink{header_8h_a004a0bd4d35be528654076c4dcdd52d8}{SIZE\+\_\+\+TILE}}
+\begin{DoxyCompactList}\small\item\em Nombre de tuiles en Y. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a6d58f9ac447476b4e084d7ca383f5183}\label{header_8h_a6d58f9ac447476b4e084d7ca383f5183} 
+\#define {\bfseries FAILURE}~0
+\begin{DoxyCompactList}\small\item\em Valeur d\textquotesingle{}un test faux. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_aa90cac659d18e8ef6294c7ae337f6b58}\label{header_8h_aa90cac659d18e8ef6294c7ae337f6b58} 
+\#define {\bfseries SUCCESS}~1
+\begin{DoxyCompactList}\small\item\em Valeur d\textquotesingle{}un test vrai. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}\label{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b} 
+\#define {\bfseries SIZE\+\_\+\+MAP\+\_\+X}~3
+\begin{DoxyCompactList}\small\item\em Nombre de partie de la map en X. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a24f7370b723f7094c645ae488cf6bdb4}\label{header_8h_a24f7370b723f7094c645ae488cf6bdb4} 
+\#define {\bfseries SIZE\+\_\+\+MAP\+\_\+Y}~2
+\begin{DoxyCompactList}\small\item\em Nombre de partie de la map en Y. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}} \{ \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b}{nord}}
+, \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253}{est}}
+, \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8}{sud}}
+, \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed}{ouest}}
+ \}
+\begin{DoxyCompactList}\small\item\em enum des directions possibles \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{header_8h_a2049f0499b7ae28c19b19e60e9862ef4}\label{header_8h_a2049f0499b7ae28c19b19e60e9862ef4} 
+void {\bfseries afficher\+\_\+cadre} ()
+\item 
+\Hypertarget{header_8h_a5f0f9817e9ea63b9fd4e2f593b56a3ab}\label{header_8h_a5f0f9817e9ea63b9fd4e2f593b56a3ab} 
+void {\bfseries afficher\+\_\+pose\+\_\+map} ()
+\item 
+int \mbox{\hyperlink{header_8h_adbbaf84635f70af9669df2aaa79de7b3}{out\+Window}} (\mbox{\hyperlink{structplayer__t}{player\+\_\+t}} p)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le joueur est hors de l\textquotesingle{}ecran. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a1a9266e5ccf5dadd51b799855091a22a}{out\+Map}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} m)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le joueur est hors de la map. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9}\label{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9} 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} {\bfseries window}
+\item 
+\Hypertarget{header_8h_af99226e5b3abc99207e3240f75080741}\label{header_8h_af99226e5b3abc99207e3240f75080741} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries icon}
+\item 
+\Hypertarget{header_8h_a966da7a60c4ea3ba301e26ccc5efe452}\label{header_8h_a966da7a60c4ea3ba301e26ccc5efe452} 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} {\bfseries renderer}
+\item 
+\Hypertarget{header_8h_a32ecbd9872be86ec1594cff1d9698d99}\label{header_8h_a32ecbd9872be86ec1594cff1d9698d99} 
+\mbox{\hyperlink{structmap__t}{map\+\_\+t}} {\bfseries map}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Entete principale du projet. 
+
+C\textquotesingle{}est ici qu\textquotesingle{}on retrouvera les initialisations des variables globals, struct, enum, fonctions, ... \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/01/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0} 
+\index{header.h@{header.h}!dir\_t@{dir\_t}}
+\index{dir\_t@{dir\_t}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{dir\_t}{dir\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}}}
+
+
+
+enum des directions possibles 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nord@{nord}!header.h@{header.h}}\index{header.h@{header.h}!nord@{nord}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b} 
+nord&Direction nord. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{est@{est}!header.h@{header.h}}\index{header.h@{header.h}!est@{est}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253} 
+est&Direction est. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sud@{sud}!header.h@{header.h}}\index{header.h@{header.h}!sud@{sud}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8} 
+sud&Direction sud. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ouest@{ouest}!header.h@{header.h}}\index{header.h@{header.h}!ouest@{ouest}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed} 
+ouest&Direction ouest. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{header_8h_a1a9266e5ccf5dadd51b799855091a22a}\label{header_8h_a1a9266e5ccf5dadd51b799855091a22a} 
+\index{header.h@{header.h}!outMap@{outMap}}
+\index{outMap@{outMap}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{outMap()}{outMap()}}
+{\footnotesize\ttfamily int out\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Permet de savoir si le joueur est hors de la map. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em m} & est la map du jeu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 -\/-\/\texorpdfstring{$>$}{>} est toujours dans la map 
+
+1 -\/-\/\texorpdfstring{$>$}{>} sortie par la gauche 
+
+2 -\/-\/\texorpdfstring{$>$}{>} sortie par en haut 
+
+3 -\/-\/\texorpdfstring{$>$}{>} sortie par la droite 
+
+4 -\/-\/\texorpdfstring{$>$}{>} sortie par en bas 
+\end{DoxyReturn}
+\Hypertarget{header_8h_adbbaf84635f70af9669df2aaa79de7b3}\label{header_8h_adbbaf84635f70af9669df2aaa79de7b3} 
+\index{header.h@{header.h}!outWindow@{outWindow}}
+\index{outWindow@{outWindow}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{outWindow()}{outWindow()}}
+{\footnotesize\ttfamily int out\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__t}{player\+\_\+t}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Permet de savoir si le joueur est hors de l\textquotesingle{}ecran. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & est le joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 -\/-\/\texorpdfstring{$>$}{>} est toujours dans l\textquotesingle{}ecran 
+
+1 -\/-\/\texorpdfstring{$>$}{>} sortie par la gauche 
+
+2 -\/-\/\texorpdfstring{$>$}{>} sortie par en haut 
+
+3 -\/-\/\texorpdfstring{$>$}{>} sortie par la droite 
+
+4 -\/-\/\texorpdfstring{$>$}{>} sortie par en bas 
+\end{DoxyReturn}
