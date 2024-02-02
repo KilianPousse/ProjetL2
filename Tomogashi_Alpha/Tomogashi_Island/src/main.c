@@ -101,7 +101,7 @@ int main(int argc, char ** arv){
 
     // Libération de la surface de l'icône, car elle n'est plus nécessaire après la définition de l'icône
     
-    icon = NULL;
+    //icon = NULL;
 
     // Initialisation de la map
     initMap(&map);
@@ -236,7 +236,7 @@ int main(int argc, char ** arv){
                 
                 diplayBackground();
                 
-                //afficher_cadre(window, renderer);
+                afficher_cadre(window, renderer);
                 
                 SDL_RenderFillRect(renderer, &rect);
 
@@ -286,15 +286,6 @@ void afficher_pose_map(){
     } 
 
 }
-
-
-
-
-
-
-
-
-
 
 
 /**

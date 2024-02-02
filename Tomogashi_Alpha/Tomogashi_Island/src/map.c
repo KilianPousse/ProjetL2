@@ -43,7 +43,7 @@ int initMap(map_t * m){
     }*/
 
     char img_name[24];
-    char img_path[255] = "assets/textures/background/";
+    char img_path[255] = "bin/assets/textures/background/";
     int cut = strlen(img_path);
     int n = 0;
     char c;
@@ -158,6 +158,8 @@ int canToGo(player_t * p, dir_t dir){
     int x = p->x;
     int y = p->y;
 
+    int i_map = map.y*SIZE_MAP_X + map.x;
+
     switch(dir){
         case nord:
             y -= p->vit;
@@ -177,17 +179,46 @@ int canToGo(player_t * p, dir_t dir){
             
     }
 
+    switch( outWindow(x, y) ){
+        case 0:
+            break;
 
-    if (map.map[map.y*SIZE_MAP_X + map.x][x/SIZE_TILE][y/SIZE_TILE] < 0)
+        // Sortie vers l'ouest
+        case 1:
+            x = (NB_TILE_X-1) * SIZE_TILE;
+            i_map--;
+            break;
+
+        // Sortie vers le nord
+        case 2:
+            y = (NB_TILE_Y-1) * SIZE_TILE;
+            i_map -= SIZE_MAP_Y;
+            break;
+
+        // Sortie vers l'est
+        case 3:
+            i_map++;
+            x = 0;
+            break;
+
+        // Sortie vers le sud
+        case 4:
+            y = 0;
+            i_map += SIZE_MAP_Y;
+            break;
+    }
+
+
+    if (map.map[i_map][x/SIZE_TILE][y/SIZE_TILE] < 0)
         exit_value = FAILURE;
 
-    if (map.map[map.y*SIZE_MAP_X + map.x][(x+SIZE_TILE-1)/SIZE_TILE][y/SIZE_TILE] < 0)
+    if (map.map[i_map][(x+SIZE_TILE-1)/SIZE_TILE][y/SIZE_TILE] < 0)
         exit_value = FAILURE;
 
-    if (map.map[map.y*SIZE_MAP_X + map.x][x/SIZE_TILE][(y+SIZE_TILE-1)/SIZE_TILE] < 0)
+    if (map.map[i_map][x/SIZE_TILE][(y+SIZE_TILE-1)/SIZE_TILE] < 0)
         exit_value = FAILURE;
 
-    if (map.map[map.y*SIZE_MAP_X + map.x][(x+SIZE_TILE-1)/SIZE_TILE][(y+SIZE_TILE-1)/SIZE_TILE] < 0)
+    if (map.map[i_map][(x+SIZE_TILE-1)/SIZE_TILE][(y+SIZE_TILE-1)/SIZE_TILE] < 0)
         exit_value = FAILURE;
 
     
