@@ -1,5 +1,0 @@
-#define WHITE_COLOR {0xFF, 0xFF, 0xFF, 0xFF}
-#define BLACK_COLOR {0x00, 0x00, 0x00, 0xFF}
-
-
-#define IMG_SPRITE "bin/assets/textures/sprites/haric"
