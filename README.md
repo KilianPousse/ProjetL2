@@ -4,7 +4,7 @@ NOM : Pousse Kilian / Pierre Elona / Vallee Alban
 
 Nature du projet : Projet de fin d'études L2 Informatique 2023-2024
 
-Titre du projet : Tomogatchi Island
+Titre du projet : Tomogashi Island
 
 Descriptif du projet : https://docs.google.com/document/d/1uTe6dBWTcEsSuT43sujPOYn0yI_WeHDvxHirNsnBynU/edit?usp=sharing
 
