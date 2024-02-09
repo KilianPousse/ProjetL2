@@ -14,6 +14,7 @@
 #include <SDL2/SDL_image.h>
 
 #include "header.h"
+#include "struct.h"
 #include "style.h"
 
 
@@ -107,11 +108,9 @@ int main(int argc, char ** arv){
     initMap(&map);
 
     // Ininitalisation du joueur
-    player_t player;
-    player.x = SIZE_TILE*10;
-    player.y = SIZE_TILE*5;
-    player.dir = sud;
-    player.vit = SIZE_TILE/2;
+    InitPlayer();
+
+    printf("x:%d / y:%d\n", player.x, player.y);
 
     diplayBackground();
 
@@ -137,7 +136,7 @@ int main(int argc, char ** arv){
                             case SDLK_UP:
                             case SDLK_z:
                                 // Une touche a été relâchée
-                                if( canToGo(&player, nord) ){
+                                if( canToGo( nord) ){
                                     player.y -= player.vit;
                                     player.dir = nord;
                                 }
@@ -146,7 +145,7 @@ int main(int argc, char ** arv){
                             case SDLK_DOWN:
                             case SDLK_s:
                                 // Une touche a été relâchée
-                                if( canToGo(&player, sud) ){
+                                if( canToGo( sud) ){
                                     player.y += player.vit;
                                     player.dir = sud;
                                 }
@@ -155,7 +154,7 @@ int main(int argc, char ** arv){
                             case SDLK_RIGHT:
                             case SDLK_d:
                                 // Une touche a été relâchée
-                                if( canToGo(&player, est) ){
+                                if( canToGo(est) ){
                                     player.x += player.vit;
                                     player.dir = est;
                                 }
@@ -164,7 +163,7 @@ int main(int argc, char ** arv){
                             case SDLK_LEFT:
                             case SDLK_q:
                                 // Une touche a été relâchée
-                                if( canToGo(&player, ouest) ){
+                                if( canToGo( ouest) ){
                                     player.x -= player.vit;
                                     player.dir = ouest;
                                 }
@@ -180,31 +179,8 @@ int main(int argc, char ** arv){
                         break;
 				} 
                 /* On fait le rendu ! */
-                SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
                 SDL_RenderClear(renderer);// Rectangle plein
 
-                
-                switch(player.dir){
-                    case nord:
-                        SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0xFF, 0xFF);
-                        break;
-                    case est:
-                        SDL_SetRenderDrawColor(renderer, 0xFF, 0x00, 0x00, 0xFF);
-                        break;
-                    case sud:
-                        SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0xFF);
-                        break;
-                    case ouest:
-                        SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0xFF, 0xFF);
-                        break;
-                }
-                
-                SDL_Rect rect = { player.x, player.y, SIZE_TILE, SIZE_TILE };
-
-
-                
-
-                
                 switch(outWindow(player.x, player.y)){
                     case 0:
                         break;
@@ -238,7 +214,8 @@ int main(int argc, char ** arv){
                 
                 afficher_cadre(window, renderer);
                 
-                SDL_RenderFillRect(renderer, &rect);
+                //SDL_RenderFillRect(renderer, &rect);
+                displayPlayer();
 
                 SDL_RenderPresent(renderer);
 
@@ -247,7 +224,7 @@ int main(int argc, char ** arv){
     }
 
     
-
+    FreePlayer();
     freeMap(&map);
     SDL_FreeSurface(icon);
     SDL_DestroyRenderer(renderer);
@@ -289,7 +266,7 @@ void afficher_pose_map(){
 
 
 /**
- * \fn int outWindow(player_t p);
+ * \fn int outWindow(x, y);
  * \brief Permet de savoir si le joueur est hors de l'ecran
  * \param p est le joueur
  * \return 0 --> est toujours dans l'ecran
@@ -306,10 +283,10 @@ int outWindow(int x, int y){
     if(y < 0)
         return 2;
 
-    if(x >= WINDOW_WIDTH)
+    if(x+SIZE_TILE-1 >= WINDOW_WIDTH)
         return 3;
 
-    if(y >= WINDOW_HEIGHT)
+    if(y+SIZE_TILE-1 >= WINDOW_HEIGHT)
         return 4;
 
     return 0;

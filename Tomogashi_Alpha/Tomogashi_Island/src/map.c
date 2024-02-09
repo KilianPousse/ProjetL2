@@ -73,16 +73,16 @@ int initMap(map_t * m){
 
     }
     
-    /*for(n=0; n<SIZE_MAP_X*SIZE_MAP_Y; n++){
+    for(n=0; n<SIZE_MAP_X*SIZE_MAP_Y; n++){
             // Lire les éléments de la matrice depuis le fichier
             printf("\n< '%s' n=%d >\n", img_path, n);
             for (int j = 0; j < NB_TILE_Y; j++) {
                 for (int i = 0; i < NB_TILE_X; i++) {
-                    printf(" | %3d", m->map[n][i][j]);
+                    printf("|%2d", m->map[n][i][j]);
                 }
-                    printf(" |\n");
+                    printf("|\n");
             }
-    }*/
+    }
 
     
 
@@ -151,30 +151,35 @@ void diplayBackground(){
 }
 
 
-int canToGo(player_t * p, dir_t dir){
+int canToGo( dir_t dir){
 
     int exit_value = SUCCESS;
 
-    int x = p->x;
-    int y = p->y;
+    int x = player.x;
+    int y = player.y;
 
     int i_map = map.y*SIZE_MAP_X + map.x;
 
+    // Calcul la nouvelle position du joueur
     switch(dir){
+        // S'il part vers le nord
         case nord:
-            y -= p->vit;
+            y -= player.vit;
             break;
         
+        // S'il part vers le est
         case est:
-            x += p->vit;
+            x += player.vit;
             break;
             
+        // S'il part vers le sud
         case sud:
-            y += p->vit;
+            y += player.vit;
             break;
         
+        // S'il part vers l'ouest
         case ouest:
-            x -= p->vit;
+            x -= player.vit;
             break;
             
     }
@@ -185,13 +190,13 @@ int canToGo(player_t * p, dir_t dir){
 
         // Sortie vers l'ouest
         case 1:
-            x = (NB_TILE_X-1) * SIZE_TILE;
+            x = WINDOW_WIDTH - SIZE_TILE;
             i_map--;
             break;
 
         // Sortie vers le nord
         case 2:
-            y = (NB_TILE_Y-1) * SIZE_TILE;
+            y = WINDOW_HEIGHT - SIZE_TILE ;
             i_map -= SIZE_MAP_Y;
             break;
 
@@ -203,25 +208,52 @@ int canToGo(player_t * p, dir_t dir){
 
         // Sortie vers le sud
         case 4:
-            y = 0;
+            y = 1;
             i_map += SIZE_MAP_Y;
             break;
     }
 
 
-    if (map.map[i_map][x/SIZE_TILE][y/SIZE_TILE] < 0)
-        exit_value = FAILURE;
+    // Test collision en haut/gauche
+    if( 0 > tileValue(i_map, x, y) ){
+        return FAILURE;
+    }
 
-    if (map.map[i_map][(x+SIZE_TILE-1)/SIZE_TILE][y/SIZE_TILE] < 0)
-        exit_value = FAILURE;
+    // Test collision en haut/droit
+    if( 0 > tileValue(i_map, x+SIZE_TILE-1, y) ){
+        return FAILURE;
+    }
 
-    if (map.map[i_map][x/SIZE_TILE][(y+SIZE_TILE-1)/SIZE_TILE] < 0)
-        exit_value = FAILURE;
+    // Test collision en bas/gauche
+    if( 0 > tileValue(i_map, x, y+SIZE_TILE-1) ){
+        return FAILURE;
+    }
 
-    if (map.map[i_map][(x+SIZE_TILE-1)/SIZE_TILE][(y+SIZE_TILE-1)/SIZE_TILE] < 0)
-        exit_value = FAILURE;
+    // Test collision en bas/droit
+    if( 0 > tileValue(i_map, x+SIZE_TILE-1, y+SIZE_TILE-1) ){
+        return FAILURE;
+    }
 
-    
 
     return exit_value;
+}
+/*
+
+  |  |  |
+--+--+--+--
+  |  |  |
+--+--+--+--
+  |  |  | 
+
+
+
+*/
+
+
+
+// Retourne la valeur de le tuile en 'x'.'y' de la map 'i_map'
+int tileValue(int i_map, int x, int y){
+
+    return map.map[ i_map ][ (x)/SIZE_TILE ][ (y)/SIZE_TILE ];
+
 }
