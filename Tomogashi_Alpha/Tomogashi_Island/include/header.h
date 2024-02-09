@@ -7,7 +7,7 @@
  * \date 31/01/2024
 **/
 #define NAME_PROG "Tomogashi Island"    /**< Nom du programme */
-#define VERS_GAME "alpha 1.1"           /**< Version du jeu */
+#define VERS_GAME "alpha 1.2.1"           /**< Version du jeu */
 
 #define WINDOW_NAME "Tomogashi Island"  /**< Nom de la fenêtre */
 #define WINDOW_WIDTH   1088     //1920  /**< Taille de la fenmetre en X */
@@ -25,6 +25,9 @@
 
 
 
+#define NB_ANIMATION 3
+
+
 /**
  * \enum dir_t
  * \brief enum des directions possibles
@@ -38,20 +41,20 @@ typedef enum{
 
 
 
-
 /**
  * \struct player_t
  * \brief structure représentant les informations du joueur
 **/
 typedef struct{
 
-    int x;          /**< Position sur l'axe X du joueur */
-    int y;          /**< Position sur l'axe Y du joueur */
-    dir_t dir;      /**< Direction du joueur */
-    int vit;        /**< Vitesse de deplacement du joueur */
+    int x;                  /**< Position sur l'axe X du joueur */
+    int y;                  /**< Position sur l'axe Y du joueur */
+    dir_t dir;              /**< Direction du joueur */
+    int vit;                /**< Vitesse de deplacement du joueur */
+    SDL_Surface * sprites[4][NB_ANIMATION];  /**< Ensembles des sprites du joueur */
+    int frame;
 
 }player_t;
-
 
 
 
@@ -87,10 +90,18 @@ int outMap(map_t m);
 int initMap(map_t * m);
 void freeMap(map_t * m);
 void diplayBackground();
-int canToGo(player_t * p, dir_t dir);
+int canToGo( dir_t dir);
+int tileValue(int i_map, int x, int y);
 
 void ErrorLog(char * message);
 void WarningLog(char * message);
 
 
 #define MAIN_MAP "bin/data/map/main.txt"
+
+
+
+player_t player;
+int InitPlayer();
+int FreePlayer();
+void displayPlayer();
