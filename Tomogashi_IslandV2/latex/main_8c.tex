@@ -1,0 +1,88 @@
+\doxysection{Référence du fichier src/main.c}
+\hypertarget{main_8c}{}\label{main_8c}\index{src/main.c@{src/main.c}}
+
+
+Sripte principale du jeu.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include \"{}header.\+h\"{}}\newline
+{\ttfamily \#include \"{}style.\+h\"{}}\newline
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{main_8c_a1cbaea046077d435e2c2af95f5f4b3b8}{Error\+Log}} (char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Stop le jeu si il y a une erreur dans le programme. \end{DoxyCompactList}\item 
+\Hypertarget{main_8c_ad8de060a9a3f62c8c7591e38e1cffb6e}\label{main_8c_ad8de060a9a3f62c8c7591e38e1cffb6e} 
+int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arv)
+\item 
+\Hypertarget{main_8c_aab92356d555eff37509394d0a6af7666}\label{main_8c_aab92356d555eff37509394d0a6af7666} 
+void {\bfseries afficher\+\_\+cadre} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}window, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}renderer)
+\item 
+\Hypertarget{main_8c_a5f0f9817e9ea63b9fd4e2f593b56a3ab}\label{main_8c_a5f0f9817e9ea63b9fd4e2f593b56a3ab} 
+void {\bfseries afficher\+\_\+pose\+\_\+map} ()
+\item 
+int \mbox{\hyperlink{main_8c_adbbaf84635f70af9669df2aaa79de7b3}{out\+Window}} (\mbox{\hyperlink{structplayer__t}{player\+\_\+t}} p)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le joueur est hors de l\textquotesingle{}ecran. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Sripte principale du jeu. 
+
+Coeur principal du programme du jeu \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 1.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+30/01/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{main_8c_a1cbaea046077d435e2c2af95f5f4b3b8}\label{main_8c_a1cbaea046077d435e2c2af95f5f4b3b8} 
+\index{main.c@{main.c}!ErrorLog@{ErrorLog}}
+\index{ErrorLog@{ErrorLog}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{ErrorLog()}{ErrorLog()}}
+{\footnotesize\ttfamily void Error\+Log (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Stop le jeu si il y a une erreur dans le programme. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em message} & est le message d\textquotesingle{}erreur à afficher dans le terminal \\
+\hline
+\end{DoxyParams}
+\Hypertarget{main_8c_adbbaf84635f70af9669df2aaa79de7b3}\label{main_8c_adbbaf84635f70af9669df2aaa79de7b3} 
+\index{main.c@{main.c}!outWindow@{outWindow}}
+\index{outWindow@{outWindow}!main.c@{main.c}}
+\doxysubsubsection{\texorpdfstring{outWindow()}{outWindow()}}
+{\footnotesize\ttfamily int out\+Window (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structplayer__t}{player\+\_\+t}}}]{p }\end{DoxyParamCaption})}
+
+
+
+Permet de savoir si le joueur est hors de l\textquotesingle{}ecran. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em p} & est le joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 -\/-\/\texorpdfstring{$>$}{>} est toujours dans l\textquotesingle{}ecran 
+
+1 -\/-\/\texorpdfstring{$>$}{>} sortie par la gauche 
+
+2 -\/-\/\texorpdfstring{$>$}{>} sortie par en haut 
+
+3 -\/-\/\texorpdfstring{$>$}{>} sortie par la droite 
+
+4 -\/-\/\texorpdfstring{$>$}{>} sortie par en bas 
+\end{DoxyReturn}

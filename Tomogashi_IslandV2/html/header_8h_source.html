@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tomogashi Island:  Fichier source de include/header.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">Tomogashi Island
+   </div>
+   <div id="projectbrief">Projet de fin d&#39;études L2 Informatique 2023-2024</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle"><div class="title">header.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="header_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="header_8h.html#ace02b6fb534354e5ba0b2a78218b4a8e">    9</a></span><span class="preprocessor">#define NAME_PROG &quot;Tomogashi Island&quot;</span>    </div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="header_8h.html#ae1172ce9e6d87d89b0d879854bda7ef3">   10</a></span><span class="preprocessor">#define VERS_GAME &quot;alpha 1.1&quot;</span>           </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="header_8h.html#a2d6acae8f9b752a5d85795baf1005907">   12</a></span><span class="preprocessor">#define WINDOW_NAME &quot;Tomogashi Island&quot;</span>  </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#define WINDOW_WIDTH   1088     </span><span class="comment">//1920  /**&lt; Taille de la fenmetre en X */</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#define WINDOW_HEIGHT  768      </span><span class="comment">//1080  /**&lt; Taille de la fenmetre en Y */</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="header_8h.html#a004a0bd4d35be528654076c4dcdd52d8">   16</a></span><span class="preprocessor">#define SIZE_TILE 32                            </span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="header_8h.html#a7261b6a70ea8aeccc36578e361f52777">   17</a></span><span class="preprocessor">#define NB_TILE_X WINDOW_WIDTH/SIZE_TILE        </span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="header_8h.html#a3aad3e50e3f36b38e7cebef206a7b094">   18</a></span><span class="preprocessor">#define NB_TILE_Y WINDOW_HEIGHT/SIZE_TILE       </span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="header_8h.html#a6d58f9ac447476b4e084d7ca383f5183">   20</a></span><span class="preprocessor">#define FAILURE 0       </span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="header_8h.html#aa90cac659d18e8ef6294c7ae337f6b58">   21</a></span><span class="preprocessor">#define SUCCESS 1       </span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno"><a class="line" href="header_8h.html#a7bb22c2af1a1b054c96cc32e896d0a6b">   23</a></span><span class="preprocessor">#define SIZE_MAP_X 3       </span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno"><a class="line" href="header_8h.html#a24f7370b723f7094c645ae488cf6bdb4">   24</a></span><span class="preprocessor">#define SIZE_MAP_Y 2       </span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0">   32</a></span><span class="keyword">typedef</span> <span class="keyword">enum</span>{</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno"><a class="line" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b">   33</a></span>            <a class="code hl_enumvalue" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b">nord</a>,   </div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253">   34</a></span>            <a class="code hl_enumvalue" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253">est</a>,    </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8">   35</a></span>            <a class="code hl_enumvalue" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8">sud</a>,    </div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>            <a class="code hl_enumvalue" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed">ouest</a>   </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed">   37</a></span>}<a class="code hl_enumeration" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0">dir_t</a>;</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno"><a class="line" href="structplayer__t.html">   46</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno"><a class="line" href="structplayer__t.html#ad9a9183e105b3ca0e4ba28cb0137dd24">   48</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structplayer__t.html#ad9a9183e105b3ca0e4ba28cb0137dd24">x</a>;          </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno"><a class="line" href="structplayer__t.html#a23e37c6edab398b7d45261b54decfec8">   49</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structplayer__t.html#a23e37c6edab398b7d45261b54decfec8">y</a>;          </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="structplayer__t.html#a891d4884151019a2190987925120548b">   50</a></span>    <a class="code hl_enumeration" href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0">dir_t</a> <a class="code hl_variable" href="structplayer__t.html#a891d4884151019a2190987925120548b">dir</a>;      </div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>}<a class="code hl_struct" href="structplayer__t.html">player_t</a>;</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span> </div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno"><a class="line" href="structmap__t.html">   62</a></span><span class="keyword">typedef</span> <span class="keyword">struct</span>{</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno"><a class="line" href="structmap__t.html#aac334d44bae2bf16d9b347d3f6ac75cd">   63</a></span>    <span class="keywordtype">int</span> map[<a class="code hl_define" href="header_8h.html#a7bb22c2af1a1b054c96cc32e896d0a6b">SIZE_MAP_X</a> * <a class="code hl_define" href="header_8h.html#a24f7370b723f7094c645ae488cf6bdb4">SIZE_MAP_Y</a>][<a class="code hl_define" href="header_8h.html#a7261b6a70ea8aeccc36578e361f52777">NB_TILE_X</a>][<a class="code hl_define" href="header_8h.html#a3aad3e50e3f36b38e7cebef206a7b094">NB_TILE_Y</a>];          </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="structmap__t.html#aa652b86191d57a63175e30aafae994e1">   64</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structmap__t.html#aa652b86191d57a63175e30aafae994e1">x</a>;          </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="structmap__t.html#a87af8f6b5b941dae8dbf8172adf8c39b">   65</a></span>    <span class="keywordtype">int</span> <a class="code hl_variable" href="structmap__t.html#a87af8f6b5b941dae8dbf8172adf8c39b">y</a>;          </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>}<a class="code hl_struct" href="structmap__t.html">map_t</a>;</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="keywordtype">void</span> afficher_cadre();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span><span class="keywordtype">void</span> afficher_pose_map();</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span> </div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>SDL_Window * window;            <span class="comment">// Fenêtre du jeu</span></div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>SDL_Surface * icon;              <span class="comment">// Icon du jeu</span></div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>SDL_Renderer * renderer;       <span class="comment">// Rendu du jeu</span></div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><a class="code hl_struct" href="structmap__t.html">map_t</a> map;</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span><span class="keywordtype">int</span> <a class="code hl_function" href="header_8h.html#adbbaf84635f70af9669df2aaa79de7b3">outWindow</a>(<a class="code hl_struct" href="structplayer__t.html">player_t</a> p);</div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span><span class="keywordtype">int</span> <a class="code hl_function" href="header_8h.html#a1a9266e5ccf5dadd51b799855091a22a">outMap</a>(<a class="code hl_struct" href="structmap__t.html">map_t</a> m);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="keywordtype">int</span> <a class="code hl_function" href="map_8c.html#a464977f8317c50346420be433fa5320d">initMap</a>(<a class="code hl_struct" href="structmap__t.html">map_t</a> * m)</div>
+<div class="ttc" id="aheader_8h_html_a1a9266e5ccf5dadd51b799855091a22a"><div class="ttname"><a href="header_8h.html#a1a9266e5ccf5dadd51b799855091a22a">outMap</a></div><div class="ttdeci">int outMap(map_t m)</div><div class="ttdoc">Permet de savoir si le joueur est hors de la map.</div><div class="ttdef"><b>Definition</b> map.c:48</div></div>
+<div class="ttc" id="aheader_8h_html_a24f7370b723f7094c645ae488cf6bdb4"><div class="ttname"><a href="header_8h.html#a24f7370b723f7094c645ae488cf6bdb4">SIZE_MAP_Y</a></div><div class="ttdeci">#define SIZE_MAP_Y</div><div class="ttdoc">Nombre de partie de la map en Y.</div><div class="ttdef"><b>Definition</b> header.h:24</div></div>
+<div class="ttc" id="aheader_8h_html_a32db8bfae4e3fc9908e95d227f464ad0"><div class="ttname"><a href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0">dir_t</a></div><div class="ttdeci">dir_t</div><div class="ttdoc">enum des directions possibles</div><div class="ttdef"><b>Definition</b> header.h:32</div></div>
+<div class="ttc" id="aheader_8h_html_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed"><div class="ttname"><a href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed">ouest</a></div><div class="ttdeci">@ ouest</div><div class="ttdoc">Direction ouest.</div><div class="ttdef"><b>Definition</b> header.h:36</div></div>
+<div class="ttc" id="aheader_8h_html_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b"><div class="ttname"><a href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b">nord</a></div><div class="ttdeci">@ nord</div><div class="ttdoc">Direction nord.</div><div class="ttdef"><b>Definition</b> header.h:33</div></div>
+<div class="ttc" id="aheader_8h_html_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253"><div class="ttname"><a href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253">est</a></div><div class="ttdeci">@ est</div><div class="ttdoc">Direction est.</div><div class="ttdef"><b>Definition</b> header.h:34</div></div>
+<div class="ttc" id="aheader_8h_html_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8"><div class="ttname"><a href="header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8">sud</a></div><div class="ttdeci">@ sud</div><div class="ttdoc">Direction sud.</div><div class="ttdef"><b>Definition</b> header.h:35</div></div>
+<div class="ttc" id="aheader_8h_html_a3aad3e50e3f36b38e7cebef206a7b094"><div class="ttname"><a href="header_8h.html#a3aad3e50e3f36b38e7cebef206a7b094">NB_TILE_Y</a></div><div class="ttdeci">#define NB_TILE_Y</div><div class="ttdoc">Nombre de tuiles en Y.</div><div class="ttdef"><b>Definition</b> header.h:18</div></div>
+<div class="ttc" id="aheader_8h_html_a7261b6a70ea8aeccc36578e361f52777"><div class="ttname"><a href="header_8h.html#a7261b6a70ea8aeccc36578e361f52777">NB_TILE_X</a></div><div class="ttdeci">#define NB_TILE_X</div><div class="ttdoc">Nombre de tuiles en X.</div><div class="ttdef"><b>Definition</b> header.h:17</div></div>
+<div class="ttc" id="aheader_8h_html_a7bb22c2af1a1b054c96cc32e896d0a6b"><div class="ttname"><a href="header_8h.html#a7bb22c2af1a1b054c96cc32e896d0a6b">SIZE_MAP_X</a></div><div class="ttdeci">#define SIZE_MAP_X</div><div class="ttdoc">Nombre de partie de la map en X.</div><div class="ttdef"><b>Definition</b> header.h:23</div></div>
+<div class="ttc" id="aheader_8h_html_adbbaf84635f70af9669df2aaa79de7b3"><div class="ttname"><a href="header_8h.html#adbbaf84635f70af9669df2aaa79de7b3">outWindow</a></div><div class="ttdeci">int outWindow(player_t p)</div><div class="ttdoc">Permet de savoir si le joueur est hors de l'ecran.</div><div class="ttdef"><b>Definition</b> main.c:296</div></div>
+<div class="ttc" id="amap_8c_html_a464977f8317c50346420be433fa5320d"><div class="ttname"><a href="map_8c.html#a464977f8317c50346420be433fa5320d">initMap</a></div><div class="ttdeci">int initMap(map_t *m)</div><div class="ttdoc">Permet d'initialiser la map.</div><div class="ttdef"><b>Definition</b> map.c:24</div></div>
+<div class="ttc" id="astructmap__t_html"><div class="ttname"><a href="structmap__t.html">map_t</a></div><div class="ttdoc">structure représentant la map</div><div class="ttdef"><b>Definition</b> header.h:62</div></div>
+<div class="ttc" id="astructmap__t_html_a87af8f6b5b941dae8dbf8172adf8c39b"><div class="ttname"><a href="structmap__t.html#a87af8f6b5b941dae8dbf8172adf8c39b">map_t::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">indice de la partie de map en Y</div><div class="ttdef"><b>Definition</b> header.h:65</div></div>
+<div class="ttc" id="astructmap__t_html_aa652b86191d57a63175e30aafae994e1"><div class="ttname"><a href="structmap__t.html#aa652b86191d57a63175e30aafae994e1">map_t::x</a></div><div class="ttdeci">int x</div><div class="ttdoc">indice de la partie de map en X</div><div class="ttdef"><b>Definition</b> header.h:64</div></div>
+<div class="ttc" id="astructplayer__t_html"><div class="ttname"><a href="structplayer__t.html">player_t</a></div><div class="ttdoc">structure représentant les informations du joueur</div><div class="ttdef"><b>Definition</b> header.h:46</div></div>
+<div class="ttc" id="astructplayer__t_html_a23e37c6edab398b7d45261b54decfec8"><div class="ttname"><a href="structplayer__t.html#a23e37c6edab398b7d45261b54decfec8">player_t::y</a></div><div class="ttdeci">int y</div><div class="ttdoc">Position sur l'axe Y du joueur.</div><div class="ttdef"><b>Definition</b> header.h:49</div></div>
+<div class="ttc" id="astructplayer__t_html_a891d4884151019a2190987925120548b"><div class="ttname"><a href="structplayer__t.html#a891d4884151019a2190987925120548b">player_t::dir</a></div><div class="ttdeci">dir_t dir</div><div class="ttdoc">Direction du joueur.</div><div class="ttdef"><b>Definition</b> header.h:50</div></div>
+<div class="ttc" id="astructplayer__t_html_ad9a9183e105b3ca0e4ba28cb0137dd24"><div class="ttname"><a href="structplayer__t.html#ad9a9183e105b3ca0e4ba28cb0137dd24">player_t::x</a></div><div class="ttdeci">int x</div><div class="ttdoc">Position sur l'axe X du joueur.</div><div class="ttdef"><b>Definition</b> header.h:48</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
