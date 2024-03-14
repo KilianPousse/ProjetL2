@@ -105,15 +105,15 @@ int main(int argc, char ** arv){
     // Définition de l'icône de la fenêtre
     SDL_SetWindowIcon(window, icon);
 
-    // Libération de la surface de l'icône, car elle n'est plus nécessaire après la définition de l'icône
-    
-    //icon = NULL;
+    tps_game = 0;
 
     // Initialisation de la map
     initMap(&map);
 
     // Ininitalisation du joueur
     InitPlayer();
+
+    LoadSave();
 
     // Ininitalisation des interfaces de jeu
     initGUI();
@@ -124,8 +124,6 @@ int main(int argc, char ** arv){
     unsigned int frame_limit = 0;
 
     SDL_SetRenderDrawBlendMode(renderer, SDL_BLENDMODE_BLEND);
-
-    ts = time(NULL);
 
     while( launched_program ){
 
@@ -204,6 +202,7 @@ int main(int argc, char ** arv){
                                 break;
 
                             case SDLK_e:
+                            case SDLK_SPACE:
                                 // Une touche a été relâchée
                                 action( tile_action );
                                 break;
@@ -285,10 +284,15 @@ int main(int argc, char ** arv){
 
                 SDL_RenderPresent(renderer);
                 limit_fps( frame_limit );
+                
+                
+                tps_game++;
 
                 
 			 
     }
+
+    SaveSave( );
 
     GameExit( EXIT_SUCCESS );
 

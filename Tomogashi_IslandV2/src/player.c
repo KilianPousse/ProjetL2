@@ -9,12 +9,6 @@
 #include "map.h"
 
 
-/**
- * \fn void ErrorLog(char * message);
- * \brief Stop le jeu si il y a une erreur dans le programme
- * \param message est le message d'erreur à afficher dans le terminal
-**/
-
 int InitPlayer(){
 
     player.x = SIZE_TILE*10;

@@ -14,11 +14,7 @@
 #include "style.h"
 #include "map.h"
 
-/**
- * \fn int initMap(map_t * m);
- * \brief Permet d'initialiser la map
- * \param m est la map du jeu à initialiser
-**/
+
 int initMap(map_t * m){
 
     m->x = 1;
@@ -105,16 +101,7 @@ int initMap(map_t * m){
 
 
 
-/**
- * \fn int outMap(map_t m);
- * \brief Permet de savoir si le joueur est hors de la map
- * \param m est la map du jeu
- * \return 0 --> est toujours dans la map
- * \return 1 --> sortie par la gauche
- * \return 2 --> sortie par en haut
- * \return 3 --> sortie par la droite
- * \return 4 --> sortie par en bas
-**/
+
 int outMap(map_t m){
 
     if( m.x < 0 )

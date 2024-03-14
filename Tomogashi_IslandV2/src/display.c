@@ -43,11 +43,12 @@ void afficher_pose_map(){
 }
 
 
+
 void displayTime(){
 
-    time_t tps = time(NULL) - ts ;
     char * hour = malloc( sizeof(char) * 10);
-    sprintf( hour, "%02ld:%02ld",  (tps/60)%24, tps%60 );
+    time_t t = tps_game / 30;
+    sprintf( hour, "%02ld:%02ld",  (t/60)%24, t%60 );
 
     // Crée une surface de texte
     SDL_Color color = WHITE_COLOR;
