@@ -34,8 +34,9 @@
 
 
 
-#define NB_ANIMATION 4
+#define NB_ANIMATION 4       /**< Nombre de frame dans une animation */
 
+/* ------------------ Player ------------------ */
 
 /**
  * \enum dir_t
@@ -49,7 +50,7 @@ typedef enum{
 }dir_t;
 
 
-#define NB_ACTIONS 5
+#define NB_ACTIONS 5  /**< Nombre d'icons d'actions */
 
 /**
  * \struct player_t
@@ -62,14 +63,46 @@ typedef struct{
     dir_t dir;              /**< Direction du joueur */
     int vit;                /**< Vitesse de deplacement du joueur */
     SDL_Surface * sprites[4][NB_ANIMATION];  /**< Ensembles des sprites du joueur */
-    int frame;
-    SDL_Surface * actions[NB_ACTIONS];
+    int frame;      /**< Frame d'animation du personnage */
+    SDL_Surface * actions[NB_ACTIONS];  /**< Ensemble des surfaces d'icons d'actions */
 
 }player_t;
 
+/**
+ * \fn int InitPlayer();
+ * \brief Permet d'initialiser le joueur
+ * \return 0 si echec et 1 si succes
+**/
+int InitPlayer();
+
+/**
+ * \fn int FreePlayer();
+ * \brief Permet de liberer le joueur
+ * \return 0 si echec et 1 si succes
+**/
+int FreePlayer();
+
+/**
+ * \fn dvoid displayPlayer();
+ * \brief Permet d'afficher le joueur
+**/
+void displayPlayer();
+
+/* ------------------ ----- ------------------ */
+
+
+/**
+ * \fn void afficher_cadre(SDL_Window * window, SDL_Renderer * renderer);
+ * \brief Fonction optinelle qui affiche un cadrillage pour délimiter les tuiles de la map
+ * \param window Fentre d'affiche
+ * \param renderer Rendu de la fenêtre
+**/
 void afficher_cadre(SDL_Window * window, SDL_Renderer * renderer);
 
 
+
+
+/* ------------------ Map ------------------ */
 
 /**
  * \struct map_t
@@ -83,59 +116,135 @@ typedef struct{
     unsigned int y;          /**< indice de la partie de map en Y */
 }map_t;
 
-void afficher_cadre();
-void afficher_pose_map();
-
-
-
-SDL_Window * window;            // Fenêtre du jeu
-SDL_Surface * icon;             // Icon du jeu
-SDL_Renderer * renderer;        // Rendu du jeu
-SDL_Surface * icon;
-
-map_t map;
-
-
-
+/**
+ * \fn int outWindow(int x, int y);
+ * \brief Permet de savoir si le joueur se trouve hors de la fênetre
+ * \param x position X du joueur
+ * \param y position Y du joueur
+ * \return 0 --> Si joueur dans la fenêtre
+ * \return 1 --> Si joueur dans la fenêtre
+ * \return 2 --> Si joueur dans la fenêtre
+ * \return 3 --> Si joueur dans la fenêtre
+ * \return 4 --> Si joueur dans la fenêtre
+**/
 int outWindow(int x, int y);
+
+/**
+ * \fn int outMap(map_t m);
+ * \brief Permet de savoir si le joueur est hors de la map
+ * \param m est la map du jeu
+ * \return 0 --> est toujours dans la map
+ * \return 1 --> sortie par la gauche
+ * \return 2 --> sortie par en haut
+ * \return 3 --> sortie par la droite
+ * \return 4 --> sortie par en bas
+**/
 int outMap(map_t m);
 
+/**
+ * \fn int initMap(map_t * m);
+ * \brief Permet d'initialiser la map
+ * \param m est la map du jeu à initialiser
+**/
 int initMap(map_t * m);
+
+/**
+ * \fn freeMap(map_t * m);
+ * \brief Permet de liberer la map
+ * \param m est la map du jeu à libérer
+**/
 void freeMap(map_t * m);
+
+/**
+ * \fn diplayBackground();
+ * \brief Permet d'afficher l'arrière plan du jeu
+**/
 void diplayBackground();
-int canToGo( dir_t dir);
-int tileValue(int i_map, int x, int y);
 
-void ErrorLog(char * message);
-void WarningLog(char * message);
-
-
-#define MAIN_MAP "data/map"
-
-
-
-player_t player;
-int InitPlayer();
-int FreePlayer();
-void displayPlayer();
-
-
-TTF_Font * hour_Font;
-
-time_t ts;
-void displayTime();
-void displayShadow();
-
-int action( int );
-int tileAction();
-void displayAction( int );
-int tile_action;
-
-
-void limit_fps( unsigned int limit );
-
+/**
+ * \fn displayOverlay();
+ * \brief Permet d'afficher le calque au dessus de l'arrière plan du jeu
+**/
 void displayOverlay();
 
+/**
+ * \fn int canToGo( dir_t dir);
+ * \brief Permet de savoir si le joueur peut aller en avancant dans un direction
+ * \param dir est la direction du mouvement du joueur
+ * \return 0 --> Le joueur ne peut pas y aller
+ * \return 1 --> Le joueur peut y aller
+**/
+int canToGo( dir_t dir);
+
+/**
+ * \fn int tileValue(int i_map, int x, int y);
+ * \brief Permet de recuperer la valeur d'une tuile selon une position
+ * \param i_map indice de la parcel de map
+ * \param x position X du joueur
+ * \param y position Y du joueur
+ * \return la valeur d'une tuile de la map à la position donnée
+**/
+int tileValue(int i_map, int x, int y);
+
+#define MAIN_MAP "data/map"     /**< chemin vers les données de la map */
+
+/**
+ * \fn void afficher_pose_map();
+ * \brief Fonction optinelle qui affiche dans le terminal la position du joueur dans les maps
+**/
+void afficher_pose_map();
+
+/* ------------------ --- ------------------ */
+
+
+
+/**
+ * \fn displayTime();
+ * \brief Permet d'afficher le temps in game
+**/
+void displayTime();
+
+/**
+ * \fn displayShadow(();
+ * \brief Permet d'afficher l'effet de la nuit
+**/
+void displayShadow();
+
+/**
+ * \fn int action( int tile );
+ * \brief Permet de realiser l'action de la valeur de la tuile
+ * \param tile valeur de la tuile du joueur
+ * \return la valeur de la tuile du joueur
+**/
+int action( int tile );
+
+/**
+ * \fn int tileAction();
+ * \brief Permet de recuperer l'action dans une tuile
+ * \return -1 --> si l'action est hors de la fenêtre de jeu
+ * \return la valeur de l'action tuile du joueur
+**/
+int tileAction();
+
+/**
+ * \fn void displayAction( int action );
+ * \brief Permet d'afficher l'icon de l'action
+ * \param action valeur de l'action du joueur
+**/
+void displayAction( int action );
+
+
+/**
+ * \fn void limit_fps( unsigned int limit );
+ * \brief Permet de limiter les fps a la limite (24 fps)
+ * \param limite limite des fps
+**/
+void limit_fps( unsigned int limit );
+
+/**
+ * \struct gui_t
+ * \brief structure comportants les interfaces
+**/
 typedef struct{
 
     SDL_Surface * hour;
@@ -143,31 +252,68 @@ typedef struct{
 
 }gui_t;
 
-gui_t GUI;
 
+/**
+ * \fn void initGUI();
+ * \brief Permet d'inoitialiser les interfaces
+**/
 void initGUI();
+
+/**
+ * \fn void freeGUI();
+ * \brief Permet d'e libérer les surafaces
+**/
 void freeGUI();
 
+/**
+ * \fn void GUI_print_hour();
+ * \brief Permet d'afficher l'interface de l'hour
+**/
 void GUI_print_hour();
+
+/**
+ * \fn void GUI_print_hour();
+ * \brief Permet d'afficher l'interface des dialogues
+**/
 void GUI_print_dialog();
 
+/**
+ * \fn void displayGUI();
+ * \brief Permet d'afficher l'interface
+**/
+void displayGUI();  
 
-
-void displayGUI();
-
-
-int situation;
-
-#define SITUATION_MAIN_MENU 0
-#define SITUATION_MOVE 1
-#define SITUATION_DIALOGUE 2
-
-
-#define LIMIT_PER_LINE 75
+#define LIMIT_PER_LINE 75   /**< Limite de caracteres par ligne */
 
 #define DIALOG_TEST "data/dialog/dialogue_test.txt"
+
 int dialog( char * file_name );
 
 void GameExit( int exit_value );
 
 int dialog( char * file_name );
+
+
+#define FILE_SAVE "data/save/save"
+int LoadSave();
+int SaveSave();
+
+
+void ErrorLog(char * message);
+void WarningLog(char * message);
+
+
+
+
+SDL_Window * window;            /**< Fenêtre du jeu */
+SDL_Surface * icon;             /**< Icon du jeu */
+SDL_Renderer * renderer;        /**< Rendu du jeu */
+SDL_Surface * icon;             /**< Icon du jeu */
+map_t map;                      /**< Map du jeu */
+player_t player;                /**< Joueur du jeu */
+time_t tps_game;                /**< Temps dans le jeu */
+gui_t GUI;                      /**< Ensemble des Game User Interfaces*/
+int tile_action;                /**< Valeur de la tuile devant le joueur */
+
+
+TTF_Font * hour_Font;       /**< Police de l'heure */
