@@ -46,6 +46,7 @@ void GameExit( int exit_value ){
 
     TTF_Quit();
     SDL_Quit();
+    
 
     exit( exit_value );
 
@@ -293,7 +294,6 @@ int main(int argc, char ** arv){
     }
 
     SaveSave( );
-    printf("\n");
 
     GameExit( EXIT_SUCCESS );
 
