@@ -293,7 +293,6 @@ int main(int argc, char ** arv){
     }
 
     SaveSave( );
-    printf("/n");
 
     GameExit( EXIT_SUCCESS );
 
