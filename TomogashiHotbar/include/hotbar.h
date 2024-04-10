@@ -18,7 +18,8 @@
 #define ITEMWIDTH WINDOW_WIDTH / NUM_ITEMS
 #define ITEMHEIGHT WINDOW_HEIGHT / 20 // Taille de la hotbar
 
-              
+/*Choix du numero de selection de la hotbar (visuellement)*/ 
+int selectNumero = 1;              
 
 
 SDL_Surface* item[NUM_ITEMS]; 
