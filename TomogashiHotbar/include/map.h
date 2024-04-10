@@ -5,3 +5,6 @@
 #define TILE_EXIT_HOUSE -11
 
 #define TILE_PNJ -20
+
+
+#define TILE_FARMLAND 33

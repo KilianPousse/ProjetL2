@@ -25,6 +25,9 @@
 
 #define IMG_ACTION_EXCLAMATION "assets/textures/actions/exclamation.png"
 #define IMG_ACTION_DIALOGUE "assets/textures/actions/dialogue.png"
+#define IMG_ACTION_PLANT "assets/textures/actions/plant.png"
+#define IMG_ACTION_HARVEST "assets/textures/actions/havest.png"
+#define IMG_ACTION_FULL_INVENTARY "assets/textures/actions/full_inventary.png"
 
 
 #define FONT_HOUR "assets/font/small_pixel-7.ttf"
@@ -41,6 +44,7 @@
 #define ITEM4 "assets/textures/item/FleurR2.png"
 #define ITEM5 "assets/textures/item/ItemOF.png"
 #define ITEM6 "assets/textures/item/PousseO3.png"
+
 
 #define IMGHOTBAR "assets/textures/hotbar/hotbar.png"
 #define HOTBARSELECT "assets/textures/hotbar/hotbarSelect.png"

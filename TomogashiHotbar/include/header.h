@@ -198,12 +198,11 @@ void afficher_pose_map();
 
 /* ------------------ --- ------------------ */
 
-
-
-/**
+#define TIME_MAX_DAY 24 * 60 * FPS
+/*     
  * \fn displayTime();
  * \brief Permet d'afficher le temps in game
-**/
+*/
 void displayTime();
 
 /**
@@ -285,6 +284,10 @@ void GUI_print_dialog();
 **/
 void displayGUI();  
 
+
+
+int GUI_coins();
+
 #define LIMIT_PER_LINE 75   /**< Limite de caracteres par ligne */
 
 #define DIALOG_TEST "data/dialog/dialogue_test.txt"
@@ -309,31 +312,37 @@ SDL_Surface * zoomSurface(SDL_Surface* originalSurface, double zoomFactor);
 /* ------------- Gestion dde l'agriculture ------------- */
 
 #define IMAP_FARM 5
-#define NB_PLANTS_MAX 3
-#define NB_FARMLAND 10
-#define NB_STEM_PLANT 2
+#define NB_PLANTS_MAX NB_FARMLAND
+#define NB_FARMLAND 15
+#define NB_STEM_PLANT 4
 
 typedef struct{
 
-    int x, y;
     int id;
-    long age;
+    int x, y;
+    int age;
+    int max_age;
 
 }plant_t;
 
 typedef struct{
 
     plant_t plants[NB_FARMLAND];
-    int n_plants;
+    char n_plants;
     SDL_Surface * texture[NB_PLANTS_MAX][NB_STEM_PLANT];
     
 }farm_t;
 
-#define ID_PLANT_CARROT 1
+#define ID_PLANT_BLE 1
+#define ID_PLANT_TOMATE 2
 
 void displayFarm( int i_map );
 int initFarmTexture(  );
+int farmland_empty(int * x, int * y);
+int farmland_finalstage(int x, int y);
+int farmland_remove(int x, int y);
 
+#define MAX_COINS 999999
 
 SDL_Window * window;            /**< Fenêtre du jeu */
 SDL_Surface * icon;             /**< Icon du jeu */
@@ -344,9 +353,15 @@ player_t player;                /**< Joueur du jeu */
 time_t tps_game;                /**< Temps dans le jeu */
 gui_t GUI;                      /**< Ensemble des Game User Interfaces*/
 int tile_action;                /**< Valeur de la tuile devant le joueur */
-SDL_Cursor * cursor;
-farm_t farm;
+SDL_Cursor * cursor;            /**< Variable comportant le curseur de la souris*/
+farm_t farm;                    /**< Ensemble des plantations */
+int coins;                      /**< Argent du joueur */
 
 
 TTF_Font * hour_Font;       /**< Police de l'heure */
+/*
+#define NUM_ITEMS 6
 
+#define ITEMWIDTH WINDOW_WIDTH / NUM_ITEMS
+#define ITEMHEIGHT WINDOW_HEIGHT / 10
+*/
