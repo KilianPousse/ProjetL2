@@ -1,0 +1,519 @@
+\doxysection{Référence du fichier include/header.h}
+\hypertarget{header_8h}{}\label{header_8h}\index{include/header.h@{include/header.h}}
+
+
+Entete principale du projet.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+image.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+ttf.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structplayer__t}{player\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em structure représentant les informations du joueur \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structmap__t}{map\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em structure représentant la map \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structgui__t}{gui\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em structure comportants les interfaces \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e}\label{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e} 
+\#define {\bfseries NAME\+\_\+\+PROG}~\"{}Tomogashi Island\"{}
+\begin{DoxyCompactList}\small\item\em Nom du programme. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3}\label{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3} 
+\#define {\bfseries VERS\+\_\+\+GAME}~\"{}alpha 1.\+2.\+1\"{}
+\begin{DoxyCompactList}\small\item\em Version du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b}\label{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b} 
+\#define {\bfseries FPS}~24
+\item 
+\Hypertarget{header_8h_a69c339b2966791489487938c49401cf3}\label{header_8h_a69c339b2966791489487938c49401cf3} 
+\#define {\bfseries FPS\+\_\+\+LIMIT}~1000/FPS
+\item 
+\Hypertarget{header_8h_a2d6acae8f9b752a5d85795baf1005907}\label{header_8h_a2d6acae8f9b752a5d85795baf1005907} 
+\#define {\bfseries WINDOW\+\_\+\+NAME}~\"{}Tomogashi Island\"{}
+\begin{DoxyCompactList}\small\item\em Nom de la fenêtre. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a498d9f026138406895e9a34b504ac6a6}\label{header_8h_a498d9f026138406895e9a34b504ac6a6} 
+\#define {\bfseries WINDOW\+\_\+\+WIDTH}~1560
+\item 
+\Hypertarget{header_8h_a5473cf64fa979b48335079c99532e243}\label{header_8h_a5473cf64fa979b48335079c99532e243} 
+\#define {\bfseries WINDOW\+\_\+\+HEIGHT}~960
+\item 
+\Hypertarget{header_8h_a004a0bd4d35be528654076c4dcdd52d8}\label{header_8h_a004a0bd4d35be528654076c4dcdd52d8} 
+\#define {\bfseries SIZE\+\_\+\+TILE}~60
+\begin{DoxyCompactList}\small\item\em Taille en pixel d\textquotesingle{}un tuile. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a7261b6a70ea8aeccc36578e361f52777}\label{header_8h_a7261b6a70ea8aeccc36578e361f52777} 
+\#define {\bfseries NB\+\_\+\+TILE\+\_\+X}~WINDOW\+\_\+\+WIDTH/\mbox{\hyperlink{header_8h_a004a0bd4d35be528654076c4dcdd52d8}{SIZE\+\_\+\+TILE}}
+\item 
+\Hypertarget{header_8h_a3aad3e50e3f36b38e7cebef206a7b094}\label{header_8h_a3aad3e50e3f36b38e7cebef206a7b094} 
+\#define {\bfseries NB\+\_\+\+TILE\+\_\+Y}~WINDOW\+\_\+\+HEIGHT/\mbox{\hyperlink{header_8h_a004a0bd4d35be528654076c4dcdd52d8}{SIZE\+\_\+\+TILE}}
+\item 
+\Hypertarget{header_8h_a6d58f9ac447476b4e084d7ca383f5183}\label{header_8h_a6d58f9ac447476b4e084d7ca383f5183} 
+\#define {\bfseries FAILURE}~0
+\begin{DoxyCompactList}\small\item\em Valeur d\textquotesingle{}un test faux. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_aa90cac659d18e8ef6294c7ae337f6b58}\label{header_8h_aa90cac659d18e8ef6294c7ae337f6b58} 
+\#define {\bfseries SUCCESS}~1
+\begin{DoxyCompactList}\small\item\em Valeur d\textquotesingle{}un test vrai. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}\label{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b} 
+\#define {\bfseries SIZE\+\_\+\+MAP\+\_\+X}~3
+\begin{DoxyCompactList}\small\item\em Nombre de partie de la map en X. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a24f7370b723f7094c645ae488cf6bdb4}\label{header_8h_a24f7370b723f7094c645ae488cf6bdb4} 
+\#define {\bfseries SIZE\+\_\+\+MAP\+\_\+Y}~4
+\begin{DoxyCompactList}\small\item\em Nombre de partie de la map en Y. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef}\label{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef} 
+\#define {\bfseries NB\+\_\+\+ANIMATION}~4
+\begin{DoxyCompactList}\small\item\em Nombre de frame dans une animation. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a92b776fb4fb058c7769228eb857d2539}\label{header_8h_a92b776fb4fb058c7769228eb857d2539} 
+\#define {\bfseries NB\+\_\+\+ACTIONS}~5
+\begin{DoxyCompactList}\small\item\em Nombre d\textquotesingle{}icons d\textquotesingle{}actions. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a8c738dcdf2c4379839739cd7e77e1090}\label{header_8h_a8c738dcdf2c4379839739cd7e77e1090} 
+\#define {\bfseries MAIN\+\_\+\+MAP}~\"{}data/map\"{}
+\begin{DoxyCompactList}\small\item\em chemin vers les données de la map \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a210524a73e29beec0bbfb0ce037f2e34}\label{header_8h_a210524a73e29beec0bbfb0ce037f2e34} 
+\#define {\bfseries LIMIT\+\_\+\+PER\+\_\+\+LINE}~75
+\begin{DoxyCompactList}\small\item\em Limite de caracteres par ligne. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_aa7fce945ea3bc51f17feb61bcba9cd9b}\label{header_8h_aa7fce945ea3bc51f17feb61bcba9cd9b} 
+\#define {\bfseries DIALOG\+\_\+\+TEST}~\"{}data/dialog/dialogue\+\_\+test.\+txt\"{}
+\item 
+\Hypertarget{header_8h_a26e6586f9dfafd65f254285b1a1cc883}\label{header_8h_a26e6586f9dfafd65f254285b1a1cc883} 
+\#define {\bfseries FILE\+\_\+\+SAVE}~\"{}data/save/save\"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Énumérations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}} \{ \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b}{nord}}
+, \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253}{est}}
+, \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8}{sud}}
+, \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed}{ouest}}
+ \}
+\begin{DoxyCompactList}\small\item\em enum des directions possibles \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{header_8h_a2a785a496d04917a541a6b22c23c1f6c}{Init\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}initialiser le joueur. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a82b17f24f7d151eb1902992b358d2625}{Free\+Player}} ()
+\begin{DoxyCompactList}\small\item\em Permet de liberer le joueur. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_adc4e0a44a6c9fd7634f91ff6ea50080e}\label{header_8h_adc4e0a44a6c9fd7634f91ff6ea50080e} 
+void {\bfseries display\+Player} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le joueur. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_aab92356d555eff37509394d0a6af7666}{afficher\+\_\+cadre}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9}{window}}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}})
+\begin{DoxyCompactList}\small\item\em Fonction optinelle qui affiche un cadrillage pour délimiter les tuiles de la map. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_ac83f3fc4e97c234adce291ca195a0e35}{out\+Window}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le joueur se trouve hors de la fênetre. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a1a9266e5ccf5dadd51b799855091a22a}{out\+Map}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} m)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le joueur est hors de la map. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a464977f8317c50346420be433fa5320d}{init\+Map}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}m)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}initialiser la map. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_a68df481c38303e85cc5d9d6b17e19fa6}{free\+Map}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}m)
+\begin{DoxyCompactList}\small\item\em Permet de liberer la map. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ac1cb8dcc427d1cf0e4663bba67ee0c45}\label{header_8h_ac1cb8dcc427d1cf0e4663bba67ee0c45} 
+void {\bfseries diplay\+Background} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}arrière plan du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a464fd363fe0311477f7661d0b292779a}\label{header_8h_a464fd363fe0311477f7661d0b292779a} 
+void {\bfseries display\+Overlay} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le calque au dessus de l\textquotesingle{}arrière plan du jeu. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a6e0d90c86a84a9d8d32267d950d2ce79}{can\+To\+Go}} (\mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}} dir)
+\begin{DoxyCompactList}\small\item\em Permet de savoir si le joueur peut aller en avancant dans un direction. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a3735bd7f3781679e156403436a12712d}{tile\+Value}} (int i\+\_\+map, int x, int y)
+\begin{DoxyCompactList}\small\item\em Permet de recuperer la valeur d\textquotesingle{}une tuile selon une position. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a5f0f9817e9ea63b9fd4e2f593b56a3ab}\label{header_8h_a5f0f9817e9ea63b9fd4e2f593b56a3ab} 
+void {\bfseries afficher\+\_\+pose\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Fonction optinelle qui affiche dans le terminal la position du joueur dans les maps. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ab2f29739b10ddbedf9da6febe9c75917}\label{header_8h_ab2f29739b10ddbedf9da6febe9c75917} 
+void {\bfseries display\+Time} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le temps in game. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_aebb40c6ff5a0fcb6439642b2be7869ec}\label{header_8h_aebb40c6ff5a0fcb6439642b2be7869ec} 
+void {\bfseries display\+Shadow} ()
+\item 
+int \mbox{\hyperlink{header_8h_a7b4cb3f3f41c37d07dbf7c2991efcdc7}{action}} (int tile)
+\begin{DoxyCompactList}\small\item\em Permet de realiser l\textquotesingle{}action de la valeur de la tuile. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_af32cba74c2d07be494e7183bf3d3ee97}{tile\+Action}} ()
+\begin{DoxyCompactList}\small\item\em Permet de recuperer l\textquotesingle{}action dans une tuile. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_a16780f266f3216ee6e8c3872bb32df41}{display\+Action}} (int action)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{}action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_ac2f8a53b6509da854f35d8cdaa18d3a6}{limit\+\_\+fps}} (unsigned int limit)
+\begin{DoxyCompactList}\small\item\em Permet de limiter les fps a la limite (24 fps) \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a5a1d9af3e77f4b4034abad93f5b610ec}\label{header_8h_a5a1d9af3e77f4b4034abad93f5b610ec} 
+void {\bfseries init\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}inoitialiser les interfaces. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a10183a0e39990b29ee4b1ba031b747a1}\label{header_8h_a10183a0e39990b29ee4b1ba031b747a1} 
+void {\bfseries free\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}e libérer les surafaces. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_a1b0bdc2c7f72e1a58b6a6ae93a8863c0}{GUI\+\_\+print\+\_\+hour}} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}interface de l\textquotesingle{}hour. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a2c422da219be9877458cc611e9490426}\label{header_8h_a2c422da219be9877458cc611e9490426} 
+void {\bfseries GUI\+\_\+print\+\_\+dialog} ()
+\item 
+\Hypertarget{header_8h_a7bc81d743082bd5ccdf63327b28fc4d8}\label{header_8h_a7bc81d743082bd5ccdf63327b28fc4d8} 
+void {\bfseries display\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}interface. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_aeb5f5d84c7634fefd0a189ffdc2a01db}\label{header_8h_aeb5f5d84c7634fefd0a189ffdc2a01db} 
+int {\bfseries dialog} (char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\item 
+\Hypertarget{header_8h_a56081315e028b1183be67c1093e70f43}\label{header_8h_a56081315e028b1183be67c1093e70f43} 
+void {\bfseries Game\+Exit} (int exit\+\_\+value)
+\item 
+\Hypertarget{header_8h_a2fdc5b47f8863d5ef8c8f3c4da195d79}\label{header_8h_a2fdc5b47f8863d5ef8c8f3c4da195d79} 
+int {\bfseries Load\+Save} ()
+\item 
+\Hypertarget{header_8h_af08e34b2fbc5836bc854c33639e32f0a}\label{header_8h_af08e34b2fbc5836bc854c33639e32f0a} 
+int {\bfseries Save\+Save} ()
+\item 
+void \mbox{\hyperlink{header_8h_a1cbaea046077d435e2c2af95f5f4b3b8}{Error\+Log}} (char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Stop le jeu si il y a une erreur dans le programme. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_a2b878c29420719f1216318f6ee25b323}{Warning\+Log}} (char \texorpdfstring{$\ast$}{*}message)
+\begin{DoxyCompactList}\small\item\em Envoie un avertissement (warning) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9}\label{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9} 
+SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} {\bfseries window}
+\begin{DoxyCompactList}\small\item\em Fenêtre du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a1bd079d34a0ced70870a996be9eaf5b7}\label{header_8h_a1bd079d34a0ced70870a996be9eaf5b7} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries icon}
+\begin{DoxyCompactList}\small\item\em Icon du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a966da7a60c4ea3ba301e26ccc5efe452}\label{header_8h_a966da7a60c4ea3ba301e26ccc5efe452} 
+SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} {\bfseries renderer}
+\begin{DoxyCompactList}\small\item\em Rendu du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a32ecbd9872be86ec1594cff1d9698d99}\label{header_8h_a32ecbd9872be86ec1594cff1d9698d99} 
+\mbox{\hyperlink{structmap__t}{map\+\_\+t}} {\bfseries map}
+\begin{DoxyCompactList}\small\item\em Map du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ac5a8201c5f6bbce303ec36500d67b6d8}\label{header_8h_ac5a8201c5f6bbce303ec36500d67b6d8} 
+\mbox{\hyperlink{structplayer__t}{player\+\_\+t}} {\bfseries player}
+\begin{DoxyCompactList}\small\item\em Joueur du jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_acddea2e6e4a413a85c9d546d69132dd1}\label{header_8h_acddea2e6e4a413a85c9d546d69132dd1} 
+time\+\_\+t {\bfseries tps\+\_\+game}
+\begin{DoxyCompactList}\small\item\em Temps dans le jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a4037235e3d34f9ebd16df1c2a03f03a7}\label{header_8h_a4037235e3d34f9ebd16df1c2a03f03a7} 
+\mbox{\hyperlink{structgui__t}{gui\+\_\+t}} {\bfseries GUI}
+\begin{DoxyCompactList}\small\item\em Ensemble des Game User Interfaces. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a9c82afb7a8f8310900500133010edb37}\label{header_8h_a9c82afb7a8f8310900500133010edb37} 
+int {\bfseries tile\+\_\+action}
+\begin{DoxyCompactList}\small\item\em Valeur de la tuile devant le joueur. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_adb290a60ca96c217f71023fa5c095c5b}\label{header_8h_adb290a60ca96c217f71023fa5c095c5b} 
+TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*} {\bfseries hour\+\_\+\+Font}
+\begin{DoxyCompactList}\small\item\em Police de l\textquotesingle{}heure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Entete principale du projet. 
+
+C\textquotesingle{}est ici qu\textquotesingle{}on retrouvera les initialisations des variables globals, struct, enum, fonctions, ... \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 1.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+31/01/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation du type de l\textquotesingle{}énumération}
+\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0} 
+\index{header.h@{header.h}!dir\_t@{dir\_t}}
+\index{dir\_t@{dir\_t}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{dir\_t}{dir\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}}}
+
+
+
+enum des directions possibles 
+
+\begin{DoxyEnumFields}{Valeurs énumérées}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{nord@{nord}!header.h@{header.h}}\index{header.h@{header.h}!nord@{nord}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b} 
+nord&Direction nord. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{est@{est}!header.h@{header.h}}\index{header.h@{header.h}!est@{est}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253} 
+est&Direction est. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{sud@{sud}!header.h@{header.h}}\index{header.h@{header.h}!sud@{sud}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8} 
+sud&Direction sud. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ouest@{ouest}!header.h@{header.h}}\index{header.h@{header.h}!ouest@{ouest}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed} 
+ouest&Direction ouest. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{header_8h_a7b4cb3f3f41c37d07dbf7c2991efcdc7}\label{header_8h_a7b4cb3f3f41c37d07dbf7c2991efcdc7} 
+\index{header.h@{header.h}!action@{action}}
+\index{action@{action}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{action()}{action()}}
+{\footnotesize\ttfamily int action (\begin{DoxyParamCaption}\item[{int}]{tile }\end{DoxyParamCaption})}
+
+
+
+Permet de realiser l\textquotesingle{}action de la valeur de la tuile. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em tile} & valeur de la tuile du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la valeur de la tuile du joueur 
+\end{DoxyReturn}
+\Hypertarget{header_8h_aab92356d555eff37509394d0a6af7666}\label{header_8h_aab92356d555eff37509394d0a6af7666} 
+\index{header.h@{header.h}!afficher\_cadre@{afficher\_cadre}}
+\index{afficher\_cadre@{afficher\_cadre}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{afficher\_cadre()}{afficher\_cadre()}}
+{\footnotesize\ttfamily void afficher\+\_\+cadre (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}}]{window,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Fonction optinelle qui affiche un cadrillage pour délimiter les tuiles de la map. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em window} & Fentre d\textquotesingle{}affiche \\
+\hline
+{\em renderer} & Rendu de la fenêtre \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a6e0d90c86a84a9d8d32267d950d2ce79}\label{header_8h_a6e0d90c86a84a9d8d32267d950d2ce79} 
+\index{header.h@{header.h}!canToGo@{canToGo}}
+\index{canToGo@{canToGo}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{canToGo()}{canToGo()}}
+{\footnotesize\ttfamily int can\+To\+Go (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}}}]{dir }\end{DoxyParamCaption})}
+
+
+
+Permet de savoir si le joueur peut aller en avancant dans un direction. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em dir} & est la direction du mouvement du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 -\/-\/\texorpdfstring{$>$}{>} Le joueur ne peut pas y aller 
+
+1 -\/-\/\texorpdfstring{$>$}{>} Le joueur peut y aller 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a16780f266f3216ee6e8c3872bb32df41}\label{header_8h_a16780f266f3216ee6e8c3872bb32df41} 
+\index{header.h@{header.h}!displayAction@{displayAction}}
+\index{displayAction@{displayAction}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{displayAction()}{displayAction()}}
+{\footnotesize\ttfamily void display\+Action (\begin{DoxyParamCaption}\item[{int}]{action }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{}action. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em action} & valeur de l\textquotesingle{}action du joueur \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a1cbaea046077d435e2c2af95f5f4b3b8}\label{header_8h_a1cbaea046077d435e2c2af95f5f4b3b8} 
+\index{header.h@{header.h}!ErrorLog@{ErrorLog}}
+\index{ErrorLog@{ErrorLog}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{ErrorLog()}{ErrorLog()}}
+{\footnotesize\ttfamily void Error\+Log (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Stop le jeu si il y a une erreur dans le programme. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em message} & est le message d\textquotesingle{}erreur à afficher dans le terminal \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a68df481c38303e85cc5d9d6b17e19fa6}\label{header_8h_a68df481c38303e85cc5d9d6b17e19fa6} 
+\index{header.h@{header.h}!freeMap@{freeMap}}
+\index{freeMap@{freeMap}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{freeMap()}{freeMap()}}
+{\footnotesize\ttfamily void free\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{m }\end{DoxyParamCaption})}
+
+
+
+Permet de liberer la map. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em m} & est la map du jeu à libérer \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a82b17f24f7d151eb1902992b358d2625}\label{header_8h_a82b17f24f7d151eb1902992b358d2625} 
+\index{header.h@{header.h}!FreePlayer@{FreePlayer}}
+\index{FreePlayer@{FreePlayer}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{FreePlayer()}{FreePlayer()}}
+{\footnotesize\ttfamily int Free\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de liberer le joueur. 
+
+\begin{DoxyReturn}{Renvoie}
+0 si echec et 1 si succes 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a1b0bdc2c7f72e1a58b6a6ae93a8863c0}\label{header_8h_a1b0bdc2c7f72e1a58b6a6ae93a8863c0} 
+\index{header.h@{header.h}!GUI\_print\_hour@{GUI\_print\_hour}}
+\index{GUI\_print\_hour@{GUI\_print\_hour}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{GUI\_print\_hour()}{GUI\_print\_hour()}}
+{\footnotesize\ttfamily void GUI\+\_\+print\+\_\+hour (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}afficher l\textquotesingle{}interface de l\textquotesingle{}hour. 
+
+Permet d\textquotesingle{}afficher l\textquotesingle{}interface des dialogues. \Hypertarget{header_8h_a464977f8317c50346420be433fa5320d}\label{header_8h_a464977f8317c50346420be433fa5320d} 
+\index{header.h@{header.h}!initMap@{initMap}}
+\index{initMap@{initMap}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{initMap()}{initMap()}}
+{\footnotesize\ttfamily int init\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{m }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}initialiser la map. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em m} & est la map du jeu à initialiser \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a2a785a496d04917a541a6b22c23c1f6c}\label{header_8h_a2a785a496d04917a541a6b22c23c1f6c} 
+\index{header.h@{header.h}!InitPlayer@{InitPlayer}}
+\index{InitPlayer@{InitPlayer}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{InitPlayer()}{InitPlayer()}}
+{\footnotesize\ttfamily int Init\+Player (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}initialiser le joueur. 
+
+\begin{DoxyReturn}{Renvoie}
+0 si echec et 1 si succes 
+\end{DoxyReturn}
+\Hypertarget{header_8h_ac2f8a53b6509da854f35d8cdaa18d3a6}\label{header_8h_ac2f8a53b6509da854f35d8cdaa18d3a6} 
+\index{header.h@{header.h}!limit\_fps@{limit\_fps}}
+\index{limit\_fps@{limit\_fps}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{limit\_fps()}{limit\_fps()}}
+{\footnotesize\ttfamily void limit\+\_\+fps (\begin{DoxyParamCaption}\item[{unsigned int}]{limit }\end{DoxyParamCaption})}
+
+
+
+Permet de limiter les fps a la limite (24 fps) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em limite} & limite des fps \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a1a9266e5ccf5dadd51b799855091a22a}\label{header_8h_a1a9266e5ccf5dadd51b799855091a22a} 
+\index{header.h@{header.h}!outMap@{outMap}}
+\index{outMap@{outMap}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{outMap()}{outMap()}}
+{\footnotesize\ttfamily int out\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}}}]{m }\end{DoxyParamCaption})}
+
+
+
+Permet de savoir si le joueur est hors de la map. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em m} & est la map du jeu \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 -\/-\/\texorpdfstring{$>$}{>} est toujours dans la map 
+
+1 -\/-\/\texorpdfstring{$>$}{>} sortie par la gauche 
+
+2 -\/-\/\texorpdfstring{$>$}{>} sortie par en haut 
+
+3 -\/-\/\texorpdfstring{$>$}{>} sortie par la droite 
+
+4 -\/-\/\texorpdfstring{$>$}{>} sortie par en bas 
+\end{DoxyReturn}
+\Hypertarget{header_8h_ac83f3fc4e97c234adce291ca195a0e35}\label{header_8h_ac83f3fc4e97c234adce291ca195a0e35} 
+\index{header.h@{header.h}!outWindow@{outWindow}}
+\index{outWindow@{outWindow}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{outWindow()}{outWindow()}}
+{\footnotesize\ttfamily int out\+Window (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Permet de savoir si le joueur se trouve hors de la fênetre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & position X du joueur \\
+\hline
+{\em y} & position Y du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+0 -\/-\/\texorpdfstring{$>$}{>} Si joueur dans la fenêtre 
+
+1 -\/-\/\texorpdfstring{$>$}{>} Si joueur dans la fenêtre 
+
+2 -\/-\/\texorpdfstring{$>$}{>} Si joueur dans la fenêtre 
+
+3 -\/-\/\texorpdfstring{$>$}{>} Si joueur dans la fenêtre 
+
+4 -\/-\/\texorpdfstring{$>$}{>} Si joueur dans la fenêtre 
+\end{DoxyReturn}
+\Hypertarget{header_8h_af32cba74c2d07be494e7183bf3d3ee97}\label{header_8h_af32cba74c2d07be494e7183bf3d3ee97} 
+\index{header.h@{header.h}!tileAction@{tileAction}}
+\index{tileAction@{tileAction}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{tileAction()}{tileAction()}}
+{\footnotesize\ttfamily int tile\+Action (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Permet de recuperer l\textquotesingle{}action dans une tuile. 
+
+\begin{DoxyReturn}{Renvoie}
+-\/1 -\/-\/\texorpdfstring{$>$}{>} si l\textquotesingle{}action est hors de la fenêtre de jeu 
+
+la valeur de l\textquotesingle{}action tuile du joueur 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a3735bd7f3781679e156403436a12712d}\label{header_8h_a3735bd7f3781679e156403436a12712d} 
+\index{header.h@{header.h}!tileValue@{tileValue}}
+\index{tileValue@{tileValue}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{tileValue()}{tileValue()}}
+{\footnotesize\ttfamily int tile\+Value (\begin{DoxyParamCaption}\item[{int}]{i\+\_\+map,  }\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Permet de recuperer la valeur d\textquotesingle{}une tuile selon une position. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em i\+\_\+map} & indice de la parcel de map \\
+\hline
+{\em x} & position X du joueur \\
+\hline
+{\em y} & position Y du joueur \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+la valeur d\textquotesingle{}une tuile de la map à la position donnée 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a2b878c29420719f1216318f6ee25b323}\label{header_8h_a2b878c29420719f1216318f6ee25b323} 
+\index{header.h@{header.h}!WarningLog@{WarningLog}}
+\index{WarningLog@{WarningLog}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{WarningLog()}{WarningLog()}}
+{\footnotesize\ttfamily void Warning\+Log (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{message }\end{DoxyParamCaption})}
+
+
+
+Envoie un avertissement (warning) 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em message} & est le message du warning à afficher dans le terminal \\
+\hline
+\end{DoxyParams}
