@@ -7,6 +7,7 @@
 #include "struct.h"
 #include "style.h"
 #include "map.h"
+#include "inventary.h"
 
 
 int InitPlayer(){
@@ -43,9 +44,9 @@ int InitPlayer(){
 
     player.actions[0] = IMG_Load( IMG_ACTION_EXCLAMATION );
     player.actions[1] = IMG_Load( IMG_ACTION_DIALOGUE );
-    player.actions[2] = NULL;
-    player.actions[3] = NULL;
-    player.actions[4] = NULL;
+    player.actions[2] = IMG_Load( IMG_ACTION_PLANT );
+    player.actions[3] = IMG_Load( IMG_ACTION_HARVEST );
+    player.actions[4] = IMG_Load( IMG_ACTION_FULL_INVENTARY );
 
     for(int i=0; i<NB_ANIMATION; i++){
         if( player.actions[i] == NULL )
@@ -103,6 +104,7 @@ void displayPlayer(){
 int action( int tile ){
 
     printf("<action:%3d>\n", tile);
+    int x, y;
 
     switch( tile ){
 
@@ -124,6 +126,64 @@ int action( int tile ){
 
         case TILE_PNJ:
             dialog(DIALOG_TEST);
+            break;
+
+        /* Sur une plantation */
+        case TILE_FARMLAND:
+            /* Si vide et graine dans la main --> planter */
+            if( farmland_empty( &x, &y) ){
+                int id_plant = 0;
+                int max_age = 0;
+                switch(inventary_mainhand().id){
+
+                    /* Graine de blé */
+                    case ID_ITEM_GRAINE_BLE:
+                        id_plant = ID_PLANT_BLE;
+                        max_age = 2;
+                        break;
+
+                    /* Graine de tomate */
+                    case ID_ITEM_GRAINE_TOMATE:
+                        id_plant = ID_PLANT_TOMATE;
+                        max_age = 3;
+                        break;
+                    
+                    /* Aucune graine */
+                    default:
+                        return tile;
+                        break;
+
+                }
+
+                farm.plants[ farm.n_plants ].id = id_plant;
+                farm.plants[ farm.n_plants ].x = x;
+                farm.plants[ farm.n_plants ].y = y;
+                farm.plants[ farm.n_plants ].age = 0;
+                farm.plants[ farm.n_plants ].max_age = max_age;
+                (farm.n_plants)++;
+                inventary_use();
+
+            }
+            else{
+                /* Si plante fin d'avoir poussée */
+                if( farmland_finalstage(x, y) ){
+
+                    item_t item;
+                    item = farmland_planttype(x, y);
+                    
+                    if( inventary_canGive( item ) ){
+                        inventary_give( &item );
+                        inventary_affiche();
+                        farmland_remove(x, y);
+                    }     
+
+
+
+                }
+
+
+
+            }
             break;
         
         default:

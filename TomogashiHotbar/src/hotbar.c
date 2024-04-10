@@ -56,7 +56,7 @@ void displayHotbar(){
     
     // Copier la texture sur tout le rendu (pour remplir l'écran) 
 
-    SDL_Rect destRect = {495, WINDOW_HEIGHT-120, 520, 100};
+    SDL_Rect destRect = {498, WINDOW_HEIGHT-120, 520, 100};
     SDL_Texture * texture = SDL_CreateTextureFromSurface(renderer, hotbar);
     if (texture == NULL) {
         WarningLog("Impossible de charger la texture de la hotbar");
@@ -76,13 +76,14 @@ void displayHotbar(){
  
 }
 
+ 
 
-
-void displayHotbarSelect(){
+void displayHotbarSelect(int i){
 
     // Copier la texture sur tout le rendu (pour remplir l'écran) 
 
-    SDL_Rect destRect = {495,WINDOW_HEIGHT-120, (520/6), 100};
+    float cases = (86 * --i) + 2.5;
+    SDL_Rect destRect = {498+cases,WINDOW_HEIGHT-120, (520/6), 100};
     SDL_Texture * texture = SDL_CreateTextureFromSurface(renderer, hotbarSelect);
     if (texture == NULL) {
         WarningLog("Impossible de charger la texture du select de la hotbar");

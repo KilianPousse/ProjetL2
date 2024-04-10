@@ -75,3 +75,46 @@ void GUI_print_dialog(){
 }
 
 
+int GUI_coins(){
+
+    TTF_Font * font = TTF_OpenFont(FONT_DIALOG, 35);
+    if( font == NULL ){
+        WarningLog("Impossible de charger la police d'écriture de l'argent");
+        return 3;
+    }
+
+    if( coins > MAX_COINS )
+        coins = MAX_COINS;
+
+    char str[7];
+
+    sprintf( str,"%06d", coins );
+    SDL_Color color = WHITE_COLOR;
+    SDL_Surface* textSurface = TTF_RenderText_Solid( font , str, color );
+    if (textSurface == NULL) {
+        WarningLog("Erreur lors de la création de la surface de texte de l'argent");
+        TTF_CloseFont( font );
+        return 1;
+    }
+
+    // Crée une texture à partir de la surface de texte
+    SDL_Texture* textTexture = SDL_CreateTextureFromSurface(renderer, textSurface);
+    if (textTexture == NULL) {
+        WarningLog("Erreur lors de la création de la texture de l'argent");
+        SDL_FreeSurface(textSurface); // Libère la surface maintenant que la texture est créée
+        TTF_CloseFont( font );
+        return 2;
+    }
+    
+    SDL_Rect rect = { 445, 656, 1, 1 };
+    SDL_QueryTexture(textTexture, NULL, NULL, &rect.w, &rect.h);
+    SDL_RenderCopy(renderer, textTexture, NULL, &rect);
+
+    SDL_FreeSurface(textSurface); // Libère la surface maintenant que la texture est créée
+
+    SDL_DestroyTexture(textTexture);
+    TTF_CloseFont( font );
+
+    return 0;
+
+}

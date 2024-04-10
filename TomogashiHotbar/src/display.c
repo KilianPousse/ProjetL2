@@ -13,6 +13,7 @@
 #include "header.h"
 #include "style.h"
 #include "map.h"
+#include "inventary.h"
 
 void afficher_cadre(SDL_Window * window, SDL_Renderer * renderer){
 
@@ -47,7 +48,7 @@ void afficher_pose_map(){
 void displayTime(){
 
     char * hour = malloc( sizeof(char) * 10);
-    time_t t = tps_game / 30;
+    time_t t = tps_game / FPS;
     sprintf( hour, "%02ld:%02ld",  (t/60)%24, t%60 );
 
     // Crée une surface de texte
@@ -99,7 +100,8 @@ void displayAction( int action ){
     
     tile_action = action;
 
-    int i_icon = 0;
+    int i_icon = -1;
+    int x, y;
 
     switch( action ){
 
@@ -113,11 +115,52 @@ void displayAction( int action ){
         case TILE_PNJ:
             i_icon = 1;
             break;
+
+        // Farmalnd
+        case TILE_FARMLAND:
+            if( farmland_empty(&x, &y) ){
+                switch(inventary_mainhand().id){
+                    
+                    case ID_ITEM_GRAINE_BLE:
+                    case ID_ITEM_GRAINE_TOMATE:
+                        i_icon = 2;
+                        break;
+                    
+                    /* Aucune graine */
+                    default:
+                        i_icon = -1;
+                        break;
+
+                }
+            }
+            else{
+
+                if( farmland_finalstage(x, y) ){
+
+                    item_t item;
+                    item = farmland_planttype(x, y);
+                    
+                    if( inventary_canGive( item ) ){
+                        i_icon = 3;
+                    }    
+                    else
+                        i_icon = 4;
+
+
+
+                }
+
+            }
+            
+            break;
             
         default:
             return;
             break;
     }
+
+    if( i_icon < 0 )
+        return;
 
     SDL_Texture * texture = SDL_CreateTextureFromSurface(renderer, player.actions[ i_icon ]);
     if (texture == NULL) {
@@ -138,6 +181,7 @@ void displayAction( int action ){
 void displayGUI(){
 
     GUI_print_hour();
+    GUI_coins();
 
 }
 

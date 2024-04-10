@@ -16,7 +16,10 @@
 #include "struct.h"
 #include "style.h"
 #include "hotbar.h"
+#include "item.h"
 
+/*Choix du numero de selection de la hotbar (visuellement)*/ 
+int selectNumero = 1;
 
 // WIN:  gcc .\src\*.c -o .\bin\prog.exe -I C:\SDL2\include -I .\include -L C:\SDL2\lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf
 
@@ -27,6 +30,7 @@ void GameExit( int exit_value ){
     FreePlayer();
     freeGUI();
     freeHotbar();
+    freeItem();
 
     if(icon != NULL){
         SDL_FreeSurface(icon);
@@ -122,14 +126,16 @@ int main(int argc, char ** arv){
     // Ininitalisation du joueur
     InitPlayer();
 
+    initItem();
     loadHotbar();
+
 
     /* Initialisation du cursor */
     SDL_Surface * surface_cursor = IMG_Load( "assets/cursor.png" );
     surface_cursor = zoomSurface( surface_cursor, 2.0 );
-    SDL_FreeSurface( surface_cursor );
     cursor = SDL_CreateColorCursor( surface_cursor, 0, 0 ); 
     SDL_SetCursor(cursor);
+    SDL_FreeSurface( surface_cursor );
 
     LoadSave();
 
@@ -225,9 +231,31 @@ int main(int argc, char ** arv){
                                 // Une touche a été relâchée
                                 action( tile_action );
                                 break;
-								
-								
-                                
+
+							case SDLK_1:
+                                selectNumero = 1;
+                                break;   
+
+                            case SDLK_2:
+                                selectNumero = 2;
+                                break;   
+
+                            case SDLK_3:
+                                selectNumero = 3;
+                                break;   
+
+                            case SDLK_4:
+                                selectNumero = 4;
+                                break;   
+
+                            case SDLK_5:
+                                selectNumero = 5;
+                                break;   
+
+                            case SDLK_6:
+                                selectNumero = 6;
+                                break;   
+ 
 					        default:		
 					            break;
                         }
@@ -296,7 +324,7 @@ int main(int argc, char ** arv){
 
                 displayGUI();
                 displayHotbar();
-                displayHotbarSelect();
+                displayHotbarSelect(selectNumero);
                 
             
 
@@ -306,8 +334,22 @@ int main(int argc, char ** arv){
 
                 SDL_RenderPresent(renderer);
                 limit_fps( frame_limit );
+
+                /* Passage au jour suivant */
+                if( tps_game > TIME_MAX_DAY ){
+                    tps_game = 0;
+                }
+
+                /* Croissance des plantes */
+                if( ((tps_game) % (6*FPS*60)) == 0 ){
+                    for(int i=0; i<farm.n_plants ; i++){
+                        if(farm.plants[i].age < farm.plants[i].max_age)
+                            (farm.plants[i].age)++;
+                    }
+                }
                 
                 
+
                 tps_game++;
 
                 
@@ -350,23 +392,23 @@ int tileAction(){
     switch( player.dir ){
 
         case nord:
-            x += SIZE_TILE/2;
-            y -= SIZE_TILE/2;
+            x += SIZE_TILE/4;
+            y -= SIZE_TILE/4;
             break;
 
         case est:
-            x += (3*SIZE_TILE)/2;
-            y += SIZE_TILE/2;
+            x += (3*SIZE_TILE)/4;
+            y += SIZE_TILE/4;
             break;
 
         case sud:
-            x += SIZE_TILE/2;
-            y += (3*SIZE_TILE)/2;
+            x += SIZE_TILE/4;
+            y += (3*SIZE_TILE)/4;
             break;
 
         case ouest:
-            x -= SIZE_TILE/2;
-            y += SIZE_TILE/2;
+            x -= SIZE_TILE/4;
+            y += SIZE_TILE/4;
             break;
 
         default:
