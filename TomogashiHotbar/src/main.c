@@ -18,8 +18,7 @@
 #include "hotbar.h"
 #include "item.h"
 
-/*Choix du numero de selection de la hotbar (visuellement)*/ 
-int selectNumero = 1;
+
 
 // WIN:  gcc .\src\*.c -o .\bin\prog.exe -I C:\SDL2\include -I .\include -L C:\SDL2\lib -lmingw32 -lSDL2main -lSDL2 -lSDL2_image -lSDL2_ttf
 
