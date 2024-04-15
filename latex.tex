@@ -1,6 +1,6 @@
 \documentclass{article}
 \usepackage{graphicx}
-\usepackage{xcolor}
+\usepackage[table]{xcolor}
 \usepackage[T1]{fontenc}
 \usepackage[french]{babel}
 \usepackage[utf8]{inputenc}
@@ -149,8 +149,44 @@ Nouvelle ref \ref{f1}
 \subsection{Respect des deadlines}
 \subsection{Division des tâches}
 \section{Conception}
+Tomogashi Island a une économie basé sur le collecte de ressources agricoles. Le joueur doit acheter des graines pour les planter et les récolter afin de vendre le résultat.
+
+    
+    Afin de gérer la croissance des plantations,  on a utilisé une mécanique de cycle. Le jeu est réparti en journée de vingt-quarte heures. Chaque heure dure en réalité une minute. Cela signifie que si vous jouez durant vingt-quatre minutes, vous passez une journée dans le jeu. Afin de diminuer le temps d’attente entre la plantation et la récolte, on a décidé de sous-diviser une journée en quatre cycles de six heures. À la fin d’un cycle, toutes les plantations passent au stade de croissance supérieure. Quand une plante atteint son âge maximal, elle est enfin récoltable.
+    
 \subsection{Conception du projet}
-\subsection{Les sprites}
+
+ Notre espace de travail est structuré comme vu durant le cour de conduite de projet. Les fichiers sont regroupés selon leur extensions et leur utilités. Par exemple, le fichier \textit{*.h} se trouve dans le dossier \textit{include}. Cette arborescence permet une bonne organisation de notre travail. Chaque section, chaque fonctionnalité se trouve dans un fichier adéquat. Si nous prenons l'exemple des fonctions de gain et de suppression d'objets. Elles consistent à modifier le contenu de ce dernier. On a donc décidé de mettre les fonctions \textit{inventary\textunderscore give} et \textit{inventary\textunderscore remove} dans le fichier \textit{src/inventary.c}.
+
+% ---- Arborescence ---- %
+\begin{figure}[h]  
+    \begin{itemize}
+        \item assets
+        \item bin
+        \item include
+        \begin{itemize}
+            \item header.h \textit{(Entête principal pour tous les scriptes)}
+            \item item.h \textit{(Liste des items)}
+            \item style.h \textit{(Lien vers les images dans les dossiers)}
+            \item [...]
+        \end{itemize}
+        \item src
+        \begin{itemize}
+            \item main.c \textit{(Programme principal}
+            \item player.c  \textit{(Gestion, affichage du joueur)}
+            \item display.c \textit{(Affichage des arrières plans, calques, ...)}
+            \item map.c \textit{(Gestions des cartes)}
+            \item farm.c \textit{(Gestion de l'agriculture)}
+            \item [...]
+        \end{itemize}
+        \item test
+    \end{itemize}
+    \centering
+    \caption{Arborescence}
+    \label{fig:arborescence}
+\end{figure}
+
+
 \subsection{Les sprites}
 Tout nos sprites animés ont été réalisé par notre équipe : 
 \begin{itemize}
@@ -196,6 +232,7 @@ Enfin, afin de donner une identité visuelle à notre jeu nous avons crée nous-
 \subsection{Logiciel}
 \subsection{Méthodes}
 \subsection{Les bibliothèques utilisée}
+On a utilise la seconde version de la librairie graphique Simple DirectMedia Layer (SDL) afin d’établir un interface graphique agréable et ergonomique au joueur. SDL apporte une aide considérable à la programmation d’un jeu utilisant le langage c. Il permet d’afficher des images, jouer des musiques, détecter des éventements comme le déclenchement d’un touche. 
 \section{Conception et résultats}
 \subsection{Les difficultés rencontrées}
 \subsection{Notre expèrience}
