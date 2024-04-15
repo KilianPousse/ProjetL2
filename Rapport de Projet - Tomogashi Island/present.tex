@@ -1,0 +1,324 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage[table]{xcolor}
+\usepackage[T1]{fontenc}
+\usepackage[french]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+
+% ------ Variables ------ %
+\newcommand{\Tache}{\cellcolor{blue!25}}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    pdfpagemode=FullScreen,
+}
+
+\begin{document}
+
+\begin{titlepage}
+    % ------ TITRE ------ %
+    \title{
+        % ----- IMAGE D'ENTÊTE ----- %
+        \includegraphics[width=0.25\textwidth]{logolemansU.png}
+        \hspace{150pt}
+        \includegraphics[width=0.25\textwidth]{logo_IC2.png}
+        \\[2cm]
+        \color{blue} \textbf{Le Mans Université} \\
+        \color{black} Licence Informatique \textit{$2^{e}$ année} \\
+        Module 174UP02 Rapport de Projet \\
+        \textbf{Tomogashi Island}
+    }
+    \author{Alban, Elona, Kilian }
+    \date{6 avril 2024}
+    \maketitle
+    
+    \abstract{Dans le cadre de nos études nous avons réalisé un jeu vidéo qui nous a permis de mettre en avant tout ce que nous avions appris depuis le début de notre licence en informatique.}
+\end{titlepage}
+
+% ----- Page de sommaire ----- %
+
+\newpage
+\begin{center}
+\section*{Sommaire}
+\tableofcontents
+\end{center}
+
+% ----- Notre contenu ----- %
+
+\newpage
+\section{Introduction}
+\subsection{Principe du jeu}
+
+Le jeu que nous avons imaginé est inspiré de Stardew Valley, Tomagochi, Animal Crossing et Harvest Moon. 
+\\
+\includegraphics[height = 2cm]{AClogo.png}
+\hspace{50pt}
+\includegraphics[height = 2cm]{HMlogo.jpg}
+\hspace{50pt}
+\includegraphics[height = 2cm]{SVlogo.jpeg} 
+\\
+C'est un jeu d'un aspect mignon avec de petits personnages representant des animaux, le tout dans un univers coloré. Le joueur incarne un petit personnage, Haricot, qui arrive sur une île sans savoir pourquoi ni comment il a atterri ici. Il y fera la rencontre de plusieurs personnages qui l'aideront dans sa quête : Découvrir pourquoi et comment est-il arrivé ici? 
+\\
+
+\subsection{Règles}
+
+Le joueur doit effectuer plusieurs actions afin d'augmenter son niveau et passer les niveaux pour découvrir comment est-il arrivé ici. Il peut cultiver différentes plantations, avec un système de temps qui passe dans le jeu, il peut aussi pêcher dans un coin de pêche spécifique sur la map. Le joueur à aussi les moyens de vendre tout ce qu'il a pu récolter dans un marché sur une autre partie de la map.
+\\
+
+
+
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[height = 2cm]{capture/blébebe.png}
+    \includegraphics[height = 2cm]{capture/blégrand.png} 
+    \caption{Exemple de pousse de blé}
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics{capture/tomateGraine.png}
+    \includegraphics{capture/TomateMoyen.png}
+    \includegraphics{capture/toamteAdulte.png}
+    \includegraphics{capture/tomateFini.png}
+    \caption{Exemple de pousse de tomate}
+    \label{fig:enter-label}
+\end{figure}
+
+
+
+
+
+
+\subsection{Fonctionnalités prévues}
+
+Nous avions prévu tout ensemble de fonctionnalités suivantes : 
+\begin{enumerate}
+         \item Faire pousser et récolter des cultures
+         \item Vendre et acheter des objets
+         \item Créer un filtre pluie et faire varier la météo
+         \item Musique changeante en fonction d'où se situe le joueur dans la map
+         \item Le temps qui passe dans le jeu, si il est trop tard le joueur est téléporté à son lit
+         \item Des PNJ avec qui interagir
+         \item Acheter et équiper des cosmétiques
+         \item Une map dynamique avec des éléments animés
+         \item Une boutique de cosmétique
+         \item Un menu
+         \item La possibilité de sauvegarder la partie
+         \item Une page de paramètre
+         \item Une barre d'énergie
+         \item Des coffres de rangement
+         \item Une barre d'item
+         \item La pousse des cultures qui avance en fonction du temps
+         \item Différentes quêtes
+         \item Un tutoriel pour chaque interactions possibles
+         \item Des crédits dans les menus
+         \item La barre d'énergie descend plus vite si le joueur fait des actions
+         \item Système jour et nuit en fonction du temps qui passe
+         \item Pêcher
+\end{enumerate}
+Nous n'avons pas pu implémenter les fonctionnalités 7,9,13,20 et 22. nous n'avons pas eu le temps pour les faire, les fonctionnalités 7 et 9 auraient été trop compliquées à implémenter avec le temps imparti, nous aurions du refaire les sprites des personnages et toutes ses animations pour faire bouger les cosmétiques avec ses mouvements, la gestion de la boutique aurait été également trop compliqué à réaliser dans le temps imparti. Les fonctionnalités 13 et 22 étaient trop compliquée à réaliser nous ne savions pas comment nous y prendre. Et enfin la fonctionnalité 22 nous aurait demandé trop de temps.
+
+\newpage
+
+
+\section{Organisation} %1p
+%Diagramme de Gantt
+%La partie « organisation » sert à décrire la manière dont les différentes tâches ont été définies
+%et réparties entre les membres du projet. Vous pouvez également indiquer les outils que vous
+%avez utilisés (dépôt git, slack, trello…). A la fin de cette partie, on doit savoir qui a fait quoi, comment vous avez organisé le travail collectif et quel planning vous avez suivi.%
+
+L'organisation d'un projet a une importance primordiale puisqu'elle définit dès le départ le bon déroulement du projet. Elle se base sur les compétences et l'expérience de chacun pour pouvoir avancer dans de bonnes conditions. C'est en s'aidant des cours de \textit{Conduite de projets} que l'on a pu planifier le projet en respectant les différentes phases d'un cycle de vie d'un projet à l'aide d'outils comme un \textit{Diagramme de Gantt}.
+
+\subsection{Diagramme de Gantt}
+
+
+\subsection{Répartition des tâches}
+
+\begin{figure}[h]
+\begin{tabular}{|l|c|c|c|}
+Tâches & Alban & Elona & Kilian \\
+\hline
+Diagramme de Gantt &\Tache  &   \Tache  &     \\
+Implémentation de Doxygène &    &   &    \Tache  \\
+Sprites des Personnages &    &  \Tache&     \\
+Cartes / Collisions & \Tache   &    &     \\%AF
+Mouvements du personnage &    &  &  \Tache    \\
+Interface du Menu &    &    \Tache  & \Tache\\%AF
+Histoire &\Tache    &     &\\
+Système horaire &    &    &   \Tache    \\
+Activité : Agriculture &    &     &    \Tache    \\
+Activité : Pêche &\Tache &  &  \Tache    \\%AF
+Activité: Marché &    &\Tache &  \Tache    \\%AF
+Musiques &\Tache    & \Tache  &\Tache  \\%AF
+Barre des tâches &\Tache  &     &     \\
+Gestion des items/inventaires &    &  &\Tache    \\
+Monnaie virtuelle &    &  &\Tache    \\
+Gestion des dialogues &    &  &\Tache    \\
+Options &    &\Tache  &   \\%AF
+Filtre pluie &\Tache    &\Tache  &\Tache  \\
+Filtre jour/nuit &\Tache    &\Tache  &\Tache  \\
+Tests & \Tache   & \Tache &\Tache    \\
+Oral de soutenance & \Tache   & \Tache &\Tache    \\ %AF
+Rédaction du \LaTeX &\Tache    &\Tache  &\Tache    \\%AF
+
+
+\end{tabular}
+\caption{Ceci est un tableau présentant la répartition des tâches.}\label{f1}
+\end{figure}
+
+Nouvelle ref \ref{f1}
+
+
+
+\subsection{Respect des deadlines}
+\subsection{Division des tâches}
+\section{Conception}
+Tomogashi Island a une économie basé sur le collecte de ressources agricoles. Le joueur doit acheter des graines pour les planter et les récolter afin de vendre le résultat.
+
+    
+    Afin de gérer la croissance des plantations,  on a utilisé une mécanique de cycle. Le jeu est réparti en journée de vingt-quarte heures. Chaque heure dure en réalité une minute. Cela signifie que si vous jouez durant vingt-quatre minutes, vous passez une journée dans le jeu. Afin de diminuer le temps d’attente entre la plantation et la récolte, on a décidé de sous-diviser une journée en quatre cycles de six heures. À la fin d’un cycle, toutes les plantations passent au stade de croissance supérieure. Quand une plante atteint son âge maximal, elle est enfin récoltable.
+    
+\subsection{Conception du projet}
+
+ Notre espace de travail est structuré comme vu durant le cour de conduite de projet. Les fichiers sont regroupés selon leur extensions et leur utilités. Par exemple, le fichier \textit{*.h} se trouve dans le dossier \textit{include}. Cette arborescence permet une bonne organisation de notre travail. Chaque section, chaque fonctionnalité se trouve dans un fichier adéquat. Si nous prenons l'exemple des fonctions de gain et de suppression d'objets. Elles consistent à modifier le contenu de ce dernier. On a donc décidé de mettre les fonctions \textit{inventary\textunderscore give} et \textit{inventary\textunderscore remove} dans le fichier \textit{src/inventary.c}.
+
+% ---- Arborescence ---- %
+\begin{figure}[h]  
+    \begin{itemize}
+        \item assets
+        \item bin
+        \item include
+        \begin{itemize}
+            \item header.h \textit{(Entête principal pour tous les scriptes)}
+            \item item.h \textit{(Liste des items)}
+            \item style.h \textit{(Lien vers les images dans les dossiers)}
+            \item [...]
+        \end{itemize}
+        \item src
+        \begin{itemize}
+            \item main.c \textit{(Programme principal}
+            \item player.c  \textit{(Gestion, affichage du joueur)}
+            \item display.c \textit{(Affichage des arrières plans, calques, ...)}
+            \item map.c \textit{(Gestions des cartes)}
+            \item farm.c \textit{(Gestion de l'agriculture)}
+            \item [...]
+        \end{itemize}
+        \item test
+    \end{itemize}
+    \centering
+    \caption{Arborescence}
+    \label{fig:arborescence}
+\end{figure}
+
+
+\subsection{Les sprites}
+Tout nos sprites animés ont été réalisé par notre équipe : 
+\begin{itemize}
+    \item Les PNJ
+    \item Les mouvements de l'eau
+    \item Les objets décoratifs (le bateau, les arbres en mouvement,... )
+    \item Le filtre pluie
+    \item L'image du menu
+    \item Le logo de notre jeu
+    \item Le logo de la fenêtre
+\end{itemize}
+\subsubsection{Les personnages}
+\begin{figure}[h]
+    \centering
+    \includegraphics[height = 2cm]{py/idle_0.png}
+    \includegraphics[height = 2cm]{py/idle_1.png}
+    \includegraphics[height = 2cm]{py/idle_2.png}
+    \includegraphics[height = 2cm]{py/idle_3.png}
+    \caption{Exemple de sprite d'un pnj volant}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[height = 2cm]{haricot/forward_0.png}
+    \includegraphics[height = 2cm]{haricot/forward_1.png}
+    \includegraphics[height = 2cm]{haricot/forward_2.png}
+    \includegraphics[height = 2cm]{haricot/forward_3.png}
+    \caption{Exemple de sprite de notre personnage principal}
+\end{figure}
+Les autres animations de notre personnage principal et PNJ sont retrouvable a la figure \ref{lapin_devant} de l'annexe.
+\\
+Pour réaliser ce genre de sprites il faut mettre bout à bout plusieurs images et les faire coïncider ensemble.\\
+Tout nos sprites de personnages ont été crée sur la même base, c'est à dire quatre images par animation, le personnage principal est le seul à avoir des animations pour toutes les directions, les autres sont animés pour rester sur place et bouger de manière à les rendre plus vivant.
+\\
+\subsubsection{Les overlays}
+Nous avons crée un système d'overlay afin de rendre la map plus dynamique, cette couche de la map affichera l'eau animées et les items de décorations animés comme le bateau.
+
+\subsubsection{Les logo et image de fond}
+Enfin, afin de donner une identité visuelle à notre jeu nous avons crée nous-même le logo du jeu , l'icône de la fenêtre et les images de fond du menu. Nous avons également animé ces image à certain endroit dans notre jeu, par exemple le logo de notre jeu est animé dans les menu afin de rendre le jeu plus dynamique ainsi que certains éléments su l'image de fond.
+%Ajouter des images
+
+\section{Développement}
+    \subsection{Logiciel}
+    \subsection{Méthodes}
+        \subsubsection{La carte}
+        La carte de Tomogashi Island utile un fonctionnement particulier que l’on peut retrouver dans différents jeux rétros. Le premier opus d’\textit{Animal Crossing}, \textit{Zelda 1} sont des jeux qui utilisent ce principe dans la présentation de leur carte. En effet, celle de Tomogashi Island  est séparée en neuf parties distinctes qui ont une fonctionnalité toute différente. Nous pouvons y retrouver une zone d’agriculture, de pêche, de commerce, … Ce choix s'explique par une volonté de rappeler l'époque de cet jeu pour apporter une touche de nostalgie.
+
+        % FIGURE REPRESENTANT LA DIVISION DE LA CARTE %
+
+        Nous avons donc organisé les différentes parties des cartes dans un tableau se situant dans une structure \textit{map\textunderscore t}. Où pour chaque partie de carte, on a une texture d'arrière plan, de calque.
+        
+        \subsubsection{Les collisions}
+        Chaque parcelle de la carte est découpée en un damier de tuiles. Chaque tuile possède une valeur qui représente une interaction avec le joueur. Si la valeur est négative, alors il ne pourra pas y aller. Néanmoins, la valeur peut indiquer qu'une action est possible par le joueur. Par exemple, les tuiles numérotées 33 signifie qu'à cet emplacement il est possible de planter ou récolter des ressources. Cette case est appelée « terre cultivable ».
+
+        Concernant les collisions, la structure \textit{map\textunderscore t} contient la partie de la carte à afficher. Alors que \textit{player\textunderscore t} contient des informations sur le joueur comme sa position sur la carte. Cela permet de calculer les points se situant sur les angles du spirite du personnage principal. Si le joueur souhait avancer alors qu'une des valeurs au coins est négatives alors il y a collision et le joueur ne pourra pas avancer dans cette direction.
+
+        \begin{figure}[h]  
+            \includegraphics[height = 4cm]{exermple_collision.png}
+            \centering
+            \caption{Exemple de collision}
+            \label{fig:collions}
+        \end{figure}
+        
+        \subsubsection{L'agriculture}
+        
+        \subsubsection{La pêche}
+        
+        \subsubsection{L'inventaire}
+        
+        \subsubsection{Achat et vente d'objets}
+    
+    \subsection{Outils utilisés}
+    On a utilise la seconde version de la librairie graphique Simple DirectMedia Layer (SDL) afin d’établir un interface graphique agréable et ergonomique au joueur. SDL apporte une aide considérable à la programmation d’un jeu utilisant le langage c. Il permet d’afficher des images, jouer des musiques, détecter des évènements comme le déclenchement d’un touche. 
+\section{Conception et résultats}
+    \subsection{Les difficultés rencontrées}
+    \subsection{Notre expèrience}
+\section{Annexes}
+    \subsection{Les sprites}
+    \begin{figure}[h]
+        \centering
+        \includegraphics[height = 2cm]{risette/idle_0.png}
+        \includegraphics[height = 2cm]{risette/idle_1.png}
+        \includegraphics[height = 2cm]{risette/idle_2.png}
+        \includegraphics[height = 2cm]{risette/idle_3.png}
+        \\
+        \includegraphics[height = 2cm]{haricot/idle_0.png}
+        \includegraphics[height = 2cm]{haricot/idle_1.png}
+        \includegraphics[height = 2cm]{haricot/idle_2.png}
+        \includegraphics[height = 2cm]{haricot/idle_3.png}
+        \\
+        \includegraphics[height = 2cm]{haricot/back_0.png}
+        \includegraphics[height = 2cm]{haricot/back_1.png}
+        \includegraphics[height = 2cm]{haricot/back_2.png}
+        \includegraphics[height = 2cm]{haricot/back_3.png}
+        \\
+        \includegraphics[height = 2cm]{haricot/left_0.png}
+        \includegraphics[height = 2cm]{haricot/left_1.png}
+        \includegraphics[height = 2cm]{haricot/left_2.png}
+        \includegraphics[height = 2cm]{haricot/left_3.png}
+        \caption{Exemple de sprite du personnage principal}\label{lapin_devant}
+    \end{figure}
+
+
+
+\end{document}
+
+
+
+\end{document}
