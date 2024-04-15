@@ -99,6 +99,47 @@ Nous n'avons pas pu implémenter les fonctionnalités 7,9,13,20 et 22. nous n'av
 \section{Conception}
 \subsection{Conception du projet}
 \subsection{Les sprites}
+\subsection{Les sprites}
+Tout nos sprites animés ont été réalisé par notre équipe : 
+\begin{itemize}
+    \item Les PNJ
+    \item Les mouvements de l'eau
+    \item Les objets décoratifs (le bateau, les arbres en mouvement,... )
+    \item Le filtre pluie
+    \item L'image du menu
+    \item Le logo de notre jeu
+    \item Le logo de la fenêtre
+\end{itemize}
+\subsubsection{Les personnages}
+\begin{figure}[h]
+    \centering
+    \includegraphics[height = 2cm]{py/idle_0.png}
+    \includegraphics[height = 2cm]{py/idle_1.png}
+    \includegraphics[height = 2cm]{py/idle_2.png}
+    \includegraphics[height = 2cm]{py/idle_3.png}
+    \caption{Exemple de sprite d'un pnj volant}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[height = 2cm]{haricot/forward_0.png}
+    \includegraphics[height = 2cm]{haricot/forward_1.png}
+    \includegraphics[height = 2cm]{haricot/forward_2.png}
+    \includegraphics[height = 2cm]{haricot/forward_3.png}
+    \caption{Exemple de sprite de notre personnage principal}
+\end{figure}
+Les autres animations de notre personnage principal et PNJ sont retrouvable a la figure \ref{lapin_devant} de l'annexe.
+\\
+Pour réaliser ce genre de sprites il faut mettre bout à bout plusieurs images et les faire coïncider ensemble.\\
+Tout nos sprites de personnages ont été crée sur la même base, c'est à dire quatre images par animation, le personnage principal est le seul à avoir des animations pour toutes les directions, les autres sont animés pour rester sur place et bouger de manière à les rendre plus vivant.
+\\
+\subsubsection{Les overlays}
+Nous avons crée un système d'overlay afin de rendre la map plus dynamique, cette couche de la map affichera l'eau animées et les items de décorations animés comme le bateau.
+
+\subsubsection{Les logo et image de fond}
+Enfin, afin de donner une identité visuelle à notre jeu nous avons crée nous-même le logo du jeu , l'icône de la fenêtre et les images de fond du menu. Nous avons également animé ces image à certain endroit dans notre jeu, par exemple le logo de notre jeu est animé dans les menu afin de rendre le jeu plus dynamique ainsi que certains éléments su l'image de fond.
+%Ajouter des images
+
 \section{Développement}
 \subsection{Logiciel}
 \subsection{Méthodes}
