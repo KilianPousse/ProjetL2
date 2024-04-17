@@ -258,18 +258,18 @@ Enfin, afin de donner une identité visuelle à notre jeu nous avons crée nous-
     \subsection{Logiciel}
     \subsection{Méthodes}
         \subsubsection{La carte}
-        La carte de Tomogashi Island utile un fonctionnement particulier que l’on peut retrouver dans différents jeux rétros. Le premier opus d’\textit{Animal Crossing}, \textit{Zelda 1} sont des jeux qui utilisent ce principe dans la présentation de leur carte. En effet, celle de Tomogashi Island  est séparée en neuf parties distinctes qui ont une fonctionnalité toute différente. Nous pouvons y retrouver une zone d’agriculture, de pêche, de commerce, … Ce choix s'explique par une volonté de rappeler l'époque de cet jeu pour apporter une touche de nostalgie.
+        La carte de Tomogashi Island utile un fonctionnement particulier que l’on peut retrouver dans différents jeux rétros. Le premier opus d’\textit{Animal Crossing}, \textit{Zelda 1} sont des jeux qui utilisent ce principe dans la présentation de leur carte. En effet, celle de Tomogashi Island  est séparée en neuf parties distinctes qui ont une fonctionnalité toute différente. Nous pouvons y retrouver une zone d’agriculture, de pêche, de commerce, de plage, d'habitations. Ce choix s'explique par une volonté de rappeler l'époque de ces jeux pour apporter une touche de nostalgie.
 
         % FIGURE REPRESENTANT LA DIVISION DE LA CARTE %
 
-        Nous avons donc organisé les différentes parties des cartes dans un tableau se situant dans une structure \textit{map\textunderscore t}. Où pour chaque partie de carte, on a une texture d'arrière plan, de calque.
+        Nous avons donc organisé les différentes parties des cartes dans un tableau se situant dans une structure \textit{map\textunderscore t}. Où pour chaque partie de carte, on a une texture d'arrière plan et de calque.
         
         \subsubsection{Les collisions}
-        Chaque parcelle de la carte est découpée en un damier de tuiles. Chaque tuile possède une valeur qui représente une interaction avec le joueur. Si la valeur est négative, alors il ne pourra pas y aller. Néanmoins, la valeur peut indiquer qu'une action est possible par le joueur. Par exemple, les tuiles numérotées 33 signifie qu'à cet emplacement il est possible de planter ou récolter des ressources. Cette case est appelée « terre cultivable ».
+        Chaque parcelle de la carte est découpée en un damier de tuiles. Chaque tuile possède une valeur qui représente une interaction avec le joueur. Si la valeur est négative, alors il ne pourra pas y aller. Cependant, la valeur peut indiquer qu'une action est possible par le joueur. Par exemple, les tuiles numérotées 33 signifie qu'à cet emplacement il est possible de planter ou récolter des ressources. Cette case est appelée « terre cultivable ».
 
-        Concernant les collisions, la structure \textit{map\textunderscore t} contient la partie de la carte à afficher. Alors que \textit{player\textunderscore t} contient des informations sur le joueur comme sa position sur la carte. Cela permet de calculer les points se situant sur les angles du spirite du personnage principal. Si le joueur souhait avancer alors qu'une des valeurs au coins est négatives alors il y a collision et le joueur ne pourra pas avancer dans cette direction.
+        La structure \textit{map\textunderscore t} contient les cartes à afficher ainsi que les valeurs des tuiles. Alors que \textit{player\textunderscore t} contient des informations sur le joueur comme sa position sur la carte. Cela permet de calculer la position des angles du spirite du personnage principal. Si le joueur souhait avancer alors qu'une des valeurs d'un des coins est négative, alors il y a collision et le joueur ne pourra pas avancer dans cette direction. (\textit{\hyperref[fig:collions]{Figure \ref{fig:collions}}} )
 
-        \begin{figure}[h]  
+        \begin{figure}[!h]  
             \includegraphics[height = 4cm]{exermple_collision.png}
             \centering
             \caption{Exemple de collision}
@@ -281,8 +281,21 @@ Enfin, afin de donner une identité visuelle à notre jeu nous avons crée nous-
         \subsubsection{La pêche}
         
         \subsubsection{L'inventaire}
+        L'inventaire est une fonctionnalité très importante dans Tomogashi Island. Cela permet de stocker des éléments appelés « \textit{item} ». Cet objet possède sa propre structure. Elle est composée de deux entiers: un pour connaître l'identifiant et l'autre le nombre d'un item.
+        L'inventaire a également une structure constituée de deux tableaux d'\textit{items}, l'inventaire principal et la barre des tâches, ainsi qu'une variable indiquant l'objet sélectionne par le joueur (\textit{\hyperref[fig:hotbar]{Figure \ref{fig:hotbar}}} ).
+
+        La barre des tâches permet l'accès plus rapidement aux items afin que le joueur puisse les utiliser en les sélectionnant. 
+
+        Le joueur peut toujours avoir accès au reste de l'inventaire en appuyant sur la touche « I ». Il pourra échanger les objets de place comme il le souhaite, afin d'utiliser celui de son choix (\textit{\hyperref[fig:inventory]{Figure \ref{fig:inventory}}} ).
+
+        L'inventaire utilise des fonctions lui permettant l'ajout et la suppression d'items avec respectivement \textit{inventory\textunderscore give(item\textunderscore t * item)} et \\ \textit{inventory\textunderscore remove(item\textunderscore t *~item)}. 
+        
+        Le fonctionnement global et la représentation de l'inventaire est une inspiration de jeu vidéo \textit{Minecraft}.
         
         \subsubsection{Achat et vente d'objets}
+        L'économie est l'un des objectifs les plus important que propose le jeu. L'argent permet d'acheter des objets pouvant être utilisés dans l'agriculture par exemple. L'achat et la vente d'objets se font au près des villageois se situant sur la place du marché de la zone commerçante. À l'aide d'une interface, le joueur peut choisir la quantité d'objets qui souhaite vendre ou bien acheter (\textit{\hyperref[fig:trade]{Figure \ref{fig:trade}}} ).
+        
+        Il existe différents type de marchant. Il y a le vendeur de graine, l'acheteur de plants, l'acheteur de poisson. À l'origine, nous avions pour objectif de proposer une boutique de cosmétique qui sevrerait au joueur pour dépenser son argent virtuel dans des accessoires qui seront portés par leur personnage.
     
     \subsection{Outils utilisés}
     On a utilise la seconde version de la librairie graphique Simple DirectMedia Layer (SDL) afin d’établir un interface graphique agréable et ergonomique au joueur. SDL apporte une aide considérable à la programmation d’un jeu utilisant le langage c. Il permet d’afficher des images, jouer des musiques, détecter des évènements comme le déclenchement d’un touche. 
@@ -314,6 +327,21 @@ Enfin, afin de donner une identité visuelle à notre jeu nous avons crée nous-
         \includegraphics[height = 2cm]{haricot/left_3.png}
         \caption{Exemple de sprite du personnage principal}\label{lapin_devant}
     \end{figure}
+
+    \subsection{Interfaces Utilisateur}
+        \begin{figure}[h]  
+            \includegraphics[height = 2cm]{hotbar.png}
+            \centering
+            \caption{Barre des tâches}
+            \label{fig:hotbar}
+        \end{figure}
+
+        \begin{figure}[!h]  
+            \includegraphics[height = 6cm]{inventory.png}
+            \centering
+            \caption{Inventaire}
+            \label{fig:inventory}
+        \end{figure}
 
 
 
