@@ -200,6 +200,8 @@ int SaveSave( ){
     );
 
     for(int i=0; i<farm.n_plants; i++){
+        
+       
         fprintf(f_save, "farm>%d:%d:%d:%d:%d\n",
                 (farm.plants[ i ].id),
                 (farm.plants[ i ].x)/SIZE_TILE,

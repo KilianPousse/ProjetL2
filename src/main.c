@@ -240,6 +240,13 @@ int main(int argc, char ** arv){
 
                         switch(event.key.keysym.sym){
 
+                            case SDLK_l:
+
+                                for(int i=0; i<farm.n_plants; i++){
+                                    printf("%d> x:%d y:%d age:%d max:%d id:%d\n", i, farm.plants[ i ].x, farm.plants[ i ].y, farm.plants[ i ].age, farm.plants[ i ].max_age, farm.plants[ i ].id);
+                                }
+                                break;
+
                             case SDLK_p:
                                 tps_game+=24*10;
                                 printf("p\n");
@@ -372,12 +379,6 @@ int main(int argc, char ** arv){
         }
 
                 //printf("player frame: %d\n", player.frame);
-
-                if( tps_game == 24 * 8 * 60 )
-                    playMusic( "assets/sound/chill_day.ogg", music, &channel_music, -1 );
-                else if( tps_game == 24 * 21 * 60 )
-                    playMusic( "assets/sound/chill_night.ogg", music, &channel_music, -1 );
-
                 /* On fait le rendu ! */
                 SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
                 SDL_RenderClear(renderer);// Rectangle plein

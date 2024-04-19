@@ -256,6 +256,7 @@ int action( int tile ){
             pnj_acheteur(&catalog);
             break;
 
+
         /* Sur une plantation */
         case TILE_FARMLAND:
             /* Si vide et graine dans la main --> planter */
@@ -266,6 +267,7 @@ int action( int tile ){
 
                     /* Graine de blé */
                     case ID_ITEM_GRAINE_BLE:
+
                         id_plant = ID_PLANT_BLE;
                         max_age = 2;
                         break;
@@ -290,6 +292,10 @@ int action( int tile ){
                 farm.plants[ farm.n_plants ].max_age = max_age;
                 (farm.n_plants)++;
                 inventory_use();
+
+                for(int i=0; i<farm.n_plants; i++){
+                    printf("%d> x:%d y:%d age:%d max:%d id:%d\n", i, farm.plants[ i ].x, farm.plants[ i ].y, farm.plants[ i ].age, farm.plants[ i ].max_age, farm.plants[ i ].id);
+                }
 
             }
             else{

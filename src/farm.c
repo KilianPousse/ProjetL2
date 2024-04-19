@@ -11,6 +11,8 @@
 void displayPlant( plant_t p ){
 
     SDL_Rect rect = { p.x, p.y, SIZE_TILE , SIZE_TILE };
+    //printf("x:%d y:%d id:%d\n", p.x, p.y, p.id);
+    //printf(" ");
 
     // Copier la texture sur tout le rendu (pour remplir l'écran)
     SDL_RenderCopy(renderer, farm.texture[p.id][p.age], NULL, &rect);
