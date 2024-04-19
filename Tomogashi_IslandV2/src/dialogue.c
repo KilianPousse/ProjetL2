@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 #include "header.h"
 #include "style.h"
@@ -120,9 +121,14 @@ int printfInterlocutor( char * inter, TTF_Font * font, SDL_Color color ){
 int recupDialogueSprites( char * inter, SDL_Surface * sprites[] ){
 
     char path[256];
+    char name[ strlen(inter) ];
+    
+    for(int i=0; inter[i]; i++){
+        name[i] = tolower( inter[i] );
+    }
 
     for(int i=0; i<4; i++){
-        sprintf( path, "%s/%s/idle_%d.png", IMG_SPRITES, inter, i );
+        sprintf( path, "%s/%s/idle_%d.png", IMG_SPRITES, name, i );
         sprites[i] = IMG_Load(path);
     }
 
@@ -206,6 +212,7 @@ int dialog( char * file_name ){
                         switch(event.key.keysym.sym){
 
                             case SDLK_e:
+                            case SDLK_SPACE:
                                 // Une touche a été relâchée
                                 if( recupDialogue( file, dial, inter ) != 0 )
                                     launched_program = SDL_FALSE;
