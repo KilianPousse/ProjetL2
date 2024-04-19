@@ -4,7 +4,7 @@
 #include <time.h>
 
 #include "header.h"
-#include "inventary.h"
+#include "inventory.h"
 #include "map.h"
 
 #define NUM_ITEMS 6
@@ -31,12 +31,12 @@ int LoadSave() {
 
     // Initialiser l'inventaire à zéro
     for (int i = 0; i < NUM_ITEMS; i++) {
-        inventary.hotbar[i].id = 0;
-        inventary.hotbar[i].nb = 0;
+        inventory.hotbar[i].id = 0;
+        inventory.hotbar[i].nb = 0;
     }
-    for (int i = 0; i < NB_INVENTARY_ITEM; i++) {
-        inventary.pcpl[i].id = 0;
-        inventary.pcpl[i].nb = 0;
+    for (int i = 0; i < NB_INVENTORY_ITEM; i++) {
+        inventory.pcpl[i].id = 0;
+        inventory.pcpl[i].nb = 0;
     }
 
     // Déclaration du tampon pour stocker les lignes lues du fichier de sauvegarde
@@ -88,36 +88,36 @@ int LoadSave() {
         // Information de la hotbar
         if (strncmp(buffer, "hotbar>", strlen("hotbar>")) == 0) {
             sscanf(buffer, "hotbar>(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d)",
-                &(inventary.hotbar[0].id), &(inventary.hotbar[0].nb),
-                &(inventary.hotbar[1].id), &(inventary.hotbar[1].nb),
-                &(inventary.hotbar[2].id), &(inventary.hotbar[2].nb),
-                &(inventary.hotbar[3].id), &(inventary.hotbar[3].nb),
-                &(inventary.hotbar[4].id), &(inventary.hotbar[4].nb),
-                &(inventary.hotbar[5].id), &(inventary.hotbar[5].nb)
+                &(inventory.hotbar[0].id), &(inventory.hotbar[0].nb),
+                &(inventory.hotbar[1].id), &(inventory.hotbar[1].nb),
+                &(inventory.hotbar[2].id), &(inventory.hotbar[2].nb),
+                &(inventory.hotbar[3].id), &(inventory.hotbar[3].nb),
+                &(inventory.hotbar[4].id), &(inventory.hotbar[4].nb),
+                &(inventory.hotbar[5].id), &(inventory.hotbar[5].nb)
             );
         }
 
         // Information de l'inventaire
-        if (strncmp(buffer, "inventary>", strlen("inventary>")) == 0) {
-            sscanf(buffer, "inventary>(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d)",
-                &(inventary.pcpl[0].id), &(inventary.pcpl[0].nb),
-                &(inventary.pcpl[1].id), &(inventary.pcpl[1].nb),
-                &(inventary.pcpl[2].id), &(inventary.pcpl[2].nb),
-                &(inventary.pcpl[3].id), &(inventary.pcpl[3].nb),
-                &(inventary.pcpl[4].id), &(inventary.pcpl[4].nb),
-                &(inventary.pcpl[5].id), &(inventary.pcpl[5].nb),
-                &(inventary.pcpl[6].id), &(inventary.pcpl[6].nb),
-                &(inventary.pcpl[7].id), &(inventary.pcpl[7].nb),
-                &(inventary.pcpl[8].id), &(inventary.pcpl[8].nb),
-                &(inventary.pcpl[9].id), &(inventary.pcpl[9].nb),
-                &(inventary.pcpl[10].id), &(inventary.pcpl[10].nb),
-                &(inventary.pcpl[11].id), &(inventary.pcpl[11].nb),
-                &(inventary.pcpl[12].id), &(inventary.pcpl[12].nb),
-                &(inventary.pcpl[13].id), &(inventary.pcpl[13].nb),
-                &(inventary.pcpl[14].id), &(inventary.pcpl[14].nb),
-                &(inventary.pcpl[15].id), &(inventary.pcpl[15].nb),
-                &(inventary.pcpl[16].id), &(inventary.pcpl[16].nb),
-                &(inventary.pcpl[17].id), &(inventary.pcpl[17].nb)
+        if (strncmp(buffer, "inventory>", strlen("inventory>")) == 0) {
+            sscanf(buffer, "inventory>(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d):(%hhd:%d)",
+                &(inventory.pcpl[0].id), &(inventory.pcpl[0].nb),
+                &(inventory.pcpl[1].id), &(inventory.pcpl[1].nb),
+                &(inventory.pcpl[2].id), &(inventory.pcpl[2].nb),
+                &(inventory.pcpl[3].id), &(inventory.pcpl[3].nb),
+                &(inventory.pcpl[4].id), &(inventory.pcpl[4].nb),
+                &(inventory.pcpl[5].id), &(inventory.pcpl[5].nb),
+                &(inventory.pcpl[6].id), &(inventory.pcpl[6].nb),
+                &(inventory.pcpl[7].id), &(inventory.pcpl[7].nb),
+                &(inventory.pcpl[8].id), &(inventory.pcpl[8].nb),
+                &(inventory.pcpl[9].id), &(inventory.pcpl[9].nb),
+                &(inventory.pcpl[10].id), &(inventory.pcpl[10].nb),
+                &(inventory.pcpl[11].id), &(inventory.pcpl[11].nb),
+                &(inventory.pcpl[12].id), &(inventory.pcpl[12].nb),
+                &(inventory.pcpl[13].id), &(inventory.pcpl[13].nb),
+                &(inventory.pcpl[14].id), &(inventory.pcpl[14].nb),
+                &(inventory.pcpl[15].id), &(inventory.pcpl[15].nb),
+                &(inventory.pcpl[16].id), &(inventory.pcpl[16].nb),
+                &(inventory.pcpl[17].id), &(inventory.pcpl[17].nb)
             );
         }
 
@@ -141,7 +141,7 @@ int LoadSave() {
             (int)farm.plants[ i ].max_age
         );
 
-    inventary.i_hotbar = 0;
+    inventory.i_hotbar = 0;
 
 
     fclose( f_save );
