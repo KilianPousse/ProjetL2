@@ -1,0 +1,81 @@
+\doxysection{Référence du fichier src/display.c}
+\hypertarget{display_8c}{}\label{display_8c}\index{src/display.c@{src/display.c}}
+
+
+Gestion des affichages.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \"{}header.\+h\"{}}\newline
+{\ttfamily \#include \"{}style.\+h\"{}}\newline
+{\ttfamily \#include \"{}map.\+h\"{}}\newline
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{display_8c_aab92356d555eff37509394d0a6af7666}{afficher\+\_\+cadre}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9}{window}}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}})
+\begin{DoxyCompactList}\small\item\em Fonction optinelle qui affiche un cadrillage pour délimiter les tuiles de la map. \end{DoxyCompactList}\item 
+\Hypertarget{display_8c_a5f0f9817e9ea63b9fd4e2f593b56a3ab}\label{display_8c_a5f0f9817e9ea63b9fd4e2f593b56a3ab} 
+void {\bfseries afficher\+\_\+pose\+\_\+map} ()
+\begin{DoxyCompactList}\small\item\em Fonction optinelle qui affiche dans le terminal la position du joueur dans les maps. \end{DoxyCompactList}\item 
+\Hypertarget{display_8c_a4f1bcabc6a32ffba4de3656ac50e859a}\label{display_8c_a4f1bcabc6a32ffba4de3656ac50e859a} 
+void {\bfseries display\+Time} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le temps in game. \end{DoxyCompactList}\item 
+\Hypertarget{display_8c_aebb40c6ff5a0fcb6439642b2be7869ec}\label{display_8c_aebb40c6ff5a0fcb6439642b2be7869ec} 
+void {\bfseries display\+Shadow} ()
+\item 
+void \mbox{\hyperlink{display_8c_a16780f266f3216ee6e8c3872bb32df41}{display\+Action}} (int action)
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{}action. \end{DoxyCompactList}\item 
+\Hypertarget{display_8c_a7bc81d743082bd5ccdf63327b28fc4d8}\label{display_8c_a7bc81d743082bd5ccdf63327b28fc4d8} 
+void {\bfseries display\+GUI} ()
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gestion des affichages. 
+
+Scripte qui realise la gestion des affichages \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 1.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+31/01/2024 
+\end{DoxyDate}
+
+
+\doxysubsection{Documentation des fonctions}
+\Hypertarget{display_8c_aab92356d555eff37509394d0a6af7666}\label{display_8c_aab92356d555eff37509394d0a6af7666} 
+\index{display.c@{display.c}!afficher\_cadre@{afficher\_cadre}}
+\index{afficher\_cadre@{afficher\_cadre}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{afficher\_cadre()}{afficher\_cadre()}}
+{\footnotesize\ttfamily void afficher\+\_\+cadre (\begin{DoxyParamCaption}\item[{SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}}]{window,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Fonction optinelle qui affiche un cadrillage pour délimiter les tuiles de la map. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em window} & Fentre d\textquotesingle{}affiche \\
+\hline
+{\em renderer} & Rendu de la fenêtre \\
+\hline
+\end{DoxyParams}
+\Hypertarget{display_8c_a16780f266f3216ee6e8c3872bb32df41}\label{display_8c_a16780f266f3216ee6e8c3872bb32df41} 
+\index{display.c@{display.c}!displayAction@{displayAction}}
+\index{displayAction@{displayAction}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{displayAction()}{displayAction()}}
+{\footnotesize\ttfamily void display\+Action (\begin{DoxyParamCaption}\item[{int}]{action }\end{DoxyParamCaption})}
+
+
+
+Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{}action. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em action} & valeur de l\textquotesingle{}action du joueur \\
+\hline
+\end{DoxyParams}
