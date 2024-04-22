@@ -181,6 +181,10 @@ void displayAction( int action ){
             i_icon = 0;
         case TILE_ACHETEUR_POISSON:
             i_icon = 0;
+        case TILE_EXIT_BROCOLI:
+            i_icon = 0;
+        case TILE_ENTER_BROCOLI:
+            i_icon = 0;
         case TILE_A:
             i_icon = 0;
             break;
@@ -199,6 +203,7 @@ void displayAction( int action ){
         case TILE_LIVRE_HOUSE:
         case TILE_LIVRE_JSP:
         case TILE_LIVRE_MARKET:
+        case -33:
         case TILE_LIVRE_SPAWN:
             i_icon = 1;
             break;
@@ -396,6 +401,10 @@ int displayPNJ( ){
 
                 case TILE_SERGE:
                     SDL_RenderCopy(renderer, pnj_sprites[ID_PNJ_SERGE].texture[ frame ], NULL, &rect);
+                    break; 
+
+                case -33:
+                    SDL_RenderCopy(renderer, pnj_sprites[ID_PNJ_BROCOLI].texture[ frame ], NULL, &rect);
                     break; 
 
 

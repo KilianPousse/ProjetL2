@@ -521,3 +521,20 @@ int inventory_display(){
 
     return 0;
 }
+
+
+
+int inventory_haveItem( int id ){
+
+    for(int i=0; i<NB_HOTBAR_ITEM; i++){
+        if( inventory.hotbar[i].id == id && inventory.hotbar[i].nb > 0 )
+            return 1;
+    }
+
+    for(int i=0; i<NB_INVENTORY_ITEM; i++){
+        if( inventory.pcpl[i].id == id && inventory.pcpl[i].nb > 0 )
+            return 1;
+    }
+
+    return 0;
+}

@@ -95,18 +95,19 @@ void GameExit( int exit_value ){
 
 }
 
-int playMusic( char* path, Mix_Chunk* chunk, int* channel, int loop ){
-
-    if( chunk != NULL )
-        Mix_FreeChunk(chunk);
-
-    chunk = Mix_LoadWAV(path);
-    if( chunk == NULL ){
+int playMusic(char* path, Mix_Chunk** chunk, int* channel, int loop) {
+    *chunk = Mix_LoadWAV(path);
+    if (*chunk == NULL) {
         fprintf(stderr, "Impossible de charger la musique (%s)\n", path);
         return 1;
     }
 
-    *channel = Mix_PlayChannel(*channel, chunk, loop);
+    // Ouvrir le canal audio
+    *channel = Mix_PlayChannel(-1, *chunk, loop);
+    if (*channel == -1) {
+        fprintf(stderr, "Impossible de jouer la musique (%s)\n", Mix_GetError());
+        return 1;
+    }
 
     return 0;
 }

@@ -31,14 +31,14 @@ void music2fond(){
 
     switch( map.y*SIZE_MAP_X + map.x ){ 
         case 9:
-            playMusic( "assets/sound/home.ogg", music, &channel_music, -1 );
+            playMusic( "assets/sound/home.ogg", &music, &channel_music, -1 );
             break;
         case 10:
         printf("ici\n");
-            playMusic( "assets/sound/cave.ogg", music, &channel_music, -1 );
+            playMusic( "assets/sound/cave.ogg", &music, &channel_music, -1 );
             break;
         default:
-            playMusic( "assets/sound/chill.ogg", music, &channel_music, -1 );
+            playMusic( "assets/sound/chill.ogg", &music, &channel_music, -1 );
             break;
     }
 
