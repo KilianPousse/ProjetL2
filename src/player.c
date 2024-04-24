@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 
 
 #include "header.h"
@@ -101,6 +102,7 @@ int action( int tile ){
     printf("<action:%3d>\n", tile);
     int x, y;
     catalog_t catalog;
+    int alea;
 
     switch( tile ){
         case TILE_ENTER_HOUSE:
@@ -131,12 +133,35 @@ int action( int tile ){
             break; 
 
         case TILE_EXIT_CAVE :
-            player.x = 5*SIZE_TILE;
+            player.x = 8*SIZE_TILE;
             player.y = 9*SIZE_TILE;
             player.dir = sud;
             map.x = 0;
-            map.y = 2;
+            map.y = 1;
             music2fond();
+            break; 
+
+        case TILE_EXIT_BROCOLI :
+            player.x = 8*SIZE_TILE;
+            player.y = 7*SIZE_TILE;
+            player.dir = sud;
+            map.x = 0;
+            map.y = 1;
+            music2fond();
+            break; 
+
+        case TILE_ENTER_BROCOLI :
+            if( inventory_haveItem( ID_ITEM_POISSON_DORE ) ){
+                player.x = 14*SIZE_TILE;
+                player.y = 11*SIZE_TILE;
+                player.dir = nord;
+                map.x = 2;
+                map.y = 3;
+                music2fond();
+            }
+            else{
+                dialog("data/dialog/home_brocoli");
+            }
             break; 
         
 
@@ -158,6 +183,10 @@ int action( int tile ){
 
         case TILE_SERGE:
             dialog("data/dialog/serge");
+            break;
+
+        case -33:
+            dialog("data/dialog/brocoli_cool");
             break;
 
         case TILE_LIVRE_SPAWN:
@@ -197,6 +226,7 @@ int action( int tile ){
             break;
         
         case TILE_VENDEUR_GRAINE:
+            dialog("data/dialog/zebi");
             catalog.trade[0].item = ID_ITEM_GRAINE_BLE; 
             catalog.trade[0].prix = 2; 
 
@@ -217,6 +247,7 @@ int action( int tile ){
             break;
         
         case TILE_ACHETEUR_PLANTE:
+            dialog("data/dialog/ken");
             catalog.trade[0].item = ID_ITEM_BLE; 
             catalog.trade[0].prix = 3; 
 
@@ -237,6 +268,17 @@ int action( int tile ){
             break;
 
         case TILE_ACHETEUR_POISSON:
+            srand(time(NULL));
+            alea = rand()%3;
+            if( inventory_haveItem( ID_ITEM_POISSON_DORE ) ){
+                dialog("data/dialog/brocoli_ee");
+            }
+            else if( alea != 1 ){
+                dialog("data/dialog/brocoli");
+            }
+            else{
+                dialog("data/dialog/brocoli_gold");
+            }
             catalog.trade[0].item = ID_ITEM_POISSON; 
             catalog.trade[0].prix = 25; 
 

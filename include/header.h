@@ -686,7 +686,7 @@ int initBateau();
 int displayBateau();
 int freeBateau();
 
-int playMusic( char* path, Mix_Chunk* chunk, int* channel, int loop );
+int playMusic(char* path, Mix_Chunk** chunk, int* channel, int loop);
 void music2fond();
 
 Mix_Chunk* music;

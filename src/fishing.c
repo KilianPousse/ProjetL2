@@ -146,11 +146,15 @@ int main_fishing(  ){
                                     frame = -16;
 
                                 if( delay < 0 ){
-                                    printf("Bravo mon pote!(id:%d//nb:%d)\n", fish.id, fish.nb);
+                                    //printf("Bravo mon pote!(id:%d//nb:%d)\n", fish.id, fish.nb);
                                     delay = 1;
 
-                                    if( fish.nb == 1 )
+                                    
+
+                                    if( fish.nb == 1 ){
                                         inventory_give(&fish);
+                                        playMusic( "assets/sound/sfx/celebration.ogg", &sfx, &channel_sfx, 0 );
+                                    }
                                     
                                 }
 
@@ -171,6 +175,10 @@ int main_fishing(  ){
 				}
                 
         }
+            if( delay == 0 )
+                playMusic( "assets/sound/sfx/plop.ogg", &sfx, &channel_sfx, 0 );
+
+            
             if( frame == 100 ){
                 fishing_free(hook,idle,plop);
                 return 0;

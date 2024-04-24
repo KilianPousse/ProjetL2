@@ -30,6 +30,6 @@ int inventory_remove( item_t * item );
 
 void inventory_affiche(  );
 
-
+int inventory_haveItem();
 
 int inventory_display();

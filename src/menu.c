@@ -45,7 +45,7 @@ void menu_destruction(bouton_t * bouton, SDL_Texture * texture, nuages_t nuage, 
 /*En SDL obligé de mettre une fonction à argument variable*/
 int menu_main(int argc, char * argv[]){
     printf("ici\n");
-    playMusic( "assets/sound/menu.ogg", music, &channel_music, -1 );
+    playMusic( "assets/sound/menu.ogg", &music, &channel_music, -1 );
 
     SDL_Texture * fond = chargerTexture(IMG_FOND, renderer);
     if(fond == NULL){
