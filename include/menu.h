@@ -12,10 +12,10 @@
 
 
 /**
- * \enum bouton_s
+ * \enum bouton_t
  * \brief Structure representant tout les informations nécessaire aux boutons et à leurs interactions
 **/
-typedef struct bouton_s{
+typedef struct {
     char * texte; /**< Définiton des nom des boutons*/
     SDL_Rect rectangle;  /**< Définiton du rectangle pour savoir si le joueur clique dedans ou pas*/
     SDL_Texture * image; /**< Image du bouton si pas de clique*/
