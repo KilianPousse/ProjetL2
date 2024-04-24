@@ -14,7 +14,10 @@
 #define NB_HOTBAR_ITEM 6
 #define MAX_ITEM_STACK 99
 
-
+/**
+ * \struct inventory_t
+ * \brief Structure representant l'inventaire
+**/
 typedef struct{
     item_t hotbar[NB_HOTBAR_ITEM];
     item_t pcpl[NB_INVENTORY_ITEM];
