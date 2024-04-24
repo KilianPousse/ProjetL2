@@ -1,3 +1,13 @@
+
+/**
+ * \file item.h
+ * \brief Fonction structure et variable utilisé dans item.c
+ * \details Permet de réutiliser les fonctions implémenter dans item.c dans d'autres parties du programme
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 2.2
+ * \date 16/04/2024
+**/
+
 #define NB_ITEMS 25
 
 
