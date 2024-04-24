@@ -4,7 +4,6 @@
 #include <time.h>
 
 #include "header.h"
-#include "inventary.h"
 #include "map.h"
 
 #define NUM_ITEMS 6

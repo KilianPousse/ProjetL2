@@ -4,7 +4,6 @@
 #include <time.h>
 
 #include "header.h"
-#include "inventary.h"
 #include "map.h"
 
 #define NUM_ITEMS 6
@@ -95,7 +94,7 @@ int outMap(map_t m){
 
 
 
-void outWindow_test( ){
+void outMap_test( ){
 
     printf("\nSIZE_MAP_X: %d // SIZE_MAP_Y: %d\n", SIZE_MAP_X, SIZE_MAP_Y );
 
@@ -139,8 +138,8 @@ int main(int argc, char * argv[]){
 
     CU_initialize_registry();
 
-    CU_pSuite suite = CU_add_suite("outWindow Suite", NULL, NULL);
-    CU_add_test(suite, "outWindow_test", outWindow_test);
+    CU_pSuite suite = CU_add_suite("outMap Suite", NULL, NULL);
+    CU_add_test(suite, "outMap_test", outMap_test);
 
     CU_basic_set_mode(CU_BRM_VERBOSE);
     CU_basic_run_tests();
