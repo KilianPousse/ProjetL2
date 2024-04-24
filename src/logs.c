@@ -96,6 +96,9 @@ void GameExit( int exit_value ){
 }
 
 int playMusic(char* path, Mix_Chunk** chunk, int* channel, int loop) {
+    
+    Mix_Pause( *channel );
+    
     *chunk = Mix_LoadWAV(path);
     if (*chunk == NULL) {
         fprintf(stderr, "Impossible de charger la musique (%s)\n", path);
