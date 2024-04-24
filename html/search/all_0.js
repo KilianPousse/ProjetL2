@@ -1,8 +1,0 @@
-var searchData=
-[
-  ['action_0',['action',['../header_8h.html#a7b4cb3f3f41c37d07dbf7c2991efcdc7',1,'player.c']]],
-  ['actions_1',['actions',['../structplayer__t.html#a5e6b9ecc5c4ab8a9c6fe25764d81d597',1,'player_t']]],
-  ['afficher_5fcadre_2',['afficher_cadre',['../display_8c.html#aab92356d555eff37509394d0a6af7666',1,'afficher_cadre(SDL_Window *window, SDL_Renderer *renderer):&#160;display.c'],['../header_8h.html#aab92356d555eff37509394d0a6af7666',1,'afficher_cadre(SDL_Window *window, SDL_Renderer *renderer):&#160;display.c']]],
-  ['afficher_5fpose_5fmap_3',['afficher_pose_map',['../display_8c.html#a5f0f9817e9ea63b9fd4e2f593b56a3ab',1,'afficher_pose_map():&#160;display.c'],['../header_8h.html#a5f0f9817e9ea63b9fd4e2f593b56a3ab',1,'afficher_pose_map():&#160;display.c']]],
-  ['argent_5fs_4',['argent_s',['../structargent__s.html',1,'']]]
-];
