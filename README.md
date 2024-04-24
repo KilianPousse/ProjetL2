@@ -12,6 +12,6 @@ Date de création du projet : 16/01/2024
 
 Date de fin du projet (Semaine 17) : 25/04/2024
 
-Temps de travail ( à compléter à la fin ) : 100 jours entre le 16 janvier et le 25 avril inclus
+Temps de travail : 100 jours entre le 16 janvier et le 25 avril inclus
 
 Lien Gantt : https://docs.google.com/spreadsheets/d/1bFIHjhjtAdLQlkxZmb9XyYbLV4gOiY9AeE5wBOjMWKU/edit?usp=sharing
