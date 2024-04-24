@@ -6,7 +6,7 @@
  * \version alpha 1.2
  * \date 24/02/2024
 **/2024
-**/
+
 #include <time.h>
 
 #include <SDL2/SDL.h>
