@@ -1,3 +1,14 @@
+/**
+ * \file fishing.c
+ * \brief Partie pêche
+ * \details Permet de gérer la pêche, avec du pseudo aléatoire et un pourcentage de chance de collecte
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 2.2
+ * \date 20/04/2024
+**/
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
