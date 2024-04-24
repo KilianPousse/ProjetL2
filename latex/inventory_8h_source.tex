@@ -9,34 +9,33 @@
 \DoxyCodeLine{00014\ \textcolor{preprocessor}{\#define\ NB\_HOTBAR\_ITEM\ 6}}
 \DoxyCodeLine{00015\ \textcolor{preprocessor}{\#define\ MAX\_ITEM\_STACK\ 99}}
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ }
-\DoxyCodeLine{00018\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{structitem__t}{item\_t}}\ \mbox{\hyperlink{hotbar_8h_a34ec5114af3ab0feca9087cc7243a573}{hotbar}}[NB\_HOTBAR\_ITEM];}
-\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{structitem__t}{item\_t}}\ pcpl[NB\_INVENTORY\_ITEM];}
-\DoxyCodeLine{00021\ }
-\DoxyCodeLine{00022\ \ \ \ \ \textcolor{keywordtype}{int}\ i\_hotbar;}
-\DoxyCodeLine{00023\ \}\mbox{\hyperlink{structinventory__t}{inventory\_t}};}
+\DoxyCodeLine{00021\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{structitem__t}{item\_t}}\ \mbox{\hyperlink{hotbar_8h_a34ec5114af3ab0feca9087cc7243a573}{hotbar}}[NB\_HOTBAR\_ITEM];}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{structitem__t}{item\_t}}\ pcpl[NB\_INVENTORY\_ITEM];}
 \DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \mbox{\hyperlink{structinventory__t}{inventory\_t}}\ inventory;}
-\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{int}\ i\_hotbar;}
+\DoxyCodeLine{00026\ \}\mbox{\hyperlink{structinventory__t}{inventory\_t}};}
 \DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \mbox{\hyperlink{structitem__t}{item\_t}}\ inventory\_mainhand();}
-\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ inventory\_use();}
-\DoxyCodeLine{00030\ \textcolor{keywordtype}{int}\ inventory\_clear();}
-\DoxyCodeLine{00031\ \textcolor{keywordtype}{int}\ inventory\_contains\_hotbar(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
-\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ inventory\_contains\_pcpl(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
-\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ inventory\_contains(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
-\DoxyCodeLine{00034\ }
-\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ inventory\_canGive(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}}\ );}
-\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ inventory\_give(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ *\ \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}}\ );}
+\DoxyCodeLine{00028\ \mbox{\hyperlink{structinventory__t}{inventory\_t}}\ inventory;}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \mbox{\hyperlink{structitem__t}{item\_t}}\ inventory\_mainhand();}
+\DoxyCodeLine{00032\ \textcolor{keywordtype}{int}\ inventory\_use();}
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ inventory\_clear();}
+\DoxyCodeLine{00034\ \textcolor{keywordtype}{int}\ inventory\_contains\_hotbar(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ inventory\_contains\_pcpl(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
+\DoxyCodeLine{00036\ \textcolor{keywordtype}{int}\ inventory\_contains(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
 \DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ inventory\_canRemove(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}}\ );}
-\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ inventory\_remove(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ *\ \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}}\ );}
+\DoxyCodeLine{00038\ \textcolor{keywordtype}{int}\ inventory\_canGive(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}}\ );}
+\DoxyCodeLine{00039\ \textcolor{keywordtype}{int}\ inventory\_give(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ *\ \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}}\ );}
 \DoxyCodeLine{00040\ }
-\DoxyCodeLine{00041\ \textcolor{keywordtype}{void}\ inventory\_affiche(\ \ );}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \textcolor{keywordtype}{int}\ inventory\_haveItem();}
-\DoxyCodeLine{00044\ }
-\DoxyCodeLine{00045\ \textcolor{keywordtype}{int}\ inventory\_display();}
+\DoxyCodeLine{00041\ \textcolor{keywordtype}{int}\ inventory\_canRemove(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}}\ );}
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{int}\ inventory\_remove(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ *\ \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}}\ );}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{keywordtype}{void}\ inventory\_affiche(\ \ );}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keywordtype}{int}\ inventory\_haveItem();}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \textcolor{keywordtype}{int}\ inventory\_display();}
 
 \end{DoxyCode}

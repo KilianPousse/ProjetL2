@@ -10,8 +10,6 @@ var searchData=
   ['max_5fcoins_7',['MAX_COINS',['../header_8h.html#a933ac92b2de737c431979927a22052d7',1,'header.h']]],
   ['menu_2ec_8',['menu.c',['../menu_8c.html',1,'']]],
   ['menu_2eh_9',['menu.h',['../menu_8h.html',1,'']]],
-  ['meuble_5fs_10',['meuble_s',['../structmeuble__s.html',1,'']]],
-  ['meuble_5ft_11',['meuble_t',['../structmeuble__t.html',1,'']]],
-  ['musique_5fs_12',['musique_s',['../structmusique__s.html',1,'']]],
-  ['musique_5ft_13',['musique_t',['../structmusique__t.html',1,'']]]
+  ['meuble_5ft_10',['meuble_t',['../structmeuble__t.html',1,'']]],
+  ['musique_5ft_11',['musique_t',['../structmusique__t.html',1,'']]]
 ];
