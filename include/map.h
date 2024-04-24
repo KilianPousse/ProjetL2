@@ -1,3 +1,12 @@
+/**
+ * \file map.h
+ * \brief Variable de la map
+ * \details Création des variables qui seront réutilisée dans la génération des maps
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 2.2
+ * \date 09/02/2024
+**/
+
 #define TILE_EMPTY 0
 #define TILE_WATER -1
 
