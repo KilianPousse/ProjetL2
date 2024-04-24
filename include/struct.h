@@ -6,12 +6,11 @@
  * \version alpha 1.2
  * \date 28/01/2024
 **/
-
 /**
  * \struct meuble_t
  * \brief Structure representant des meubles
 **/
-typedef struct meuble_s{
+typedef struct{
     /*image du meuble*/
     char * nom;
     char * type;
@@ -24,7 +23,7 @@ typedef struct meuble_s{
  * \struct musique_t
  * \brief Structure representant des musiques
 **/
-typedef struct musique_s{
+typedef struct{
     /*à définir plus tard*/
     /*change en fonction de la zone*/
 }musique_t;
@@ -35,7 +34,7 @@ typedef struct musique_s{
  * \struct argent_t
  * \brief Structure representant l'argent du jeu
 **/
-typedef struct argent_s{
+typedef struct{
     char * nom;
     /*image de l'image*/
     int val;
@@ -47,7 +46,7 @@ typedef struct argent_s{
  * \struct skin_t
  * \brief Structure representant des skin
 **/
-typedef struct skin_s{
+typedef struct{
     /*Image*/
     char * nom;
 }skin_t;
