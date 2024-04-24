@@ -142,11 +142,11 @@ int action( int tile ){
             break; 
 
         case TILE_EXIT_CAVE :
-            player.x = 8*SIZE_TILE;
+            player.x = 6*SIZE_TILE;
             player.y = 9*SIZE_TILE;
             player.dir = sud;
             map.x = 0;
-            map.y = 1;
+            map.y = 2;
             music2fond();
             break; 
 

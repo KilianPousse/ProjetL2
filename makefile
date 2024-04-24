@@ -26,7 +26,7 @@ SRCS := $(wildcard ${SRCDIR}/*.c)
 OBJS := $(patsubst ${SRCDIR}/%.c, ${OBJDIR}/%.o, ${SRCS})
 
 ${PROG}: ${OBJS}
-	${CC} $^ -o $@ ${LIBS} ${INCLUDES}
+	${CC} $^ -g -o $@ ${LIBS} ${INCLUDES}
 
 ${OBJDIR}/%.o: ${SRCDIR}/%.c
 	${CC} -c $< -o $@ ${INCLUDES} 

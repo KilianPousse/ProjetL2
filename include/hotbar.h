@@ -5,7 +5,7 @@
  * \author Pousse Kilian - Pierre Elona - Vallee Alban 
  * \version alpha 1.2
  * \date 24/02/2024
-**/2024
+**/
 
 #include <time.h>
 
