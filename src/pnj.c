@@ -1,3 +1,12 @@
+/**
+ * \file pnj.c
+ * \brief Gère les PNJ
+ * \details Scripte qui gènere les PNJ charge les textures et les fait bouger
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 2.2
+ * \date 10/04/2024
+**/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
