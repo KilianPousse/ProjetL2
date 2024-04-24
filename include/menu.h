@@ -24,7 +24,7 @@ typedef struct {
 
 
 /**
- * \enum nuages_t
+ * \struct nuages_t
  * \brief Structure representant tout les informations nécessaire aux nuages et à leurs interactions
 **/
 typedef struct nuages_s{
@@ -33,7 +33,7 @@ typedef struct nuages_s{
 }nuages_t;
 
 /**
- * \enum logo_t
+ * \struct logo_t
  * \brief Structure representant le logo du jeu et ses animations
 **/
 typedef struct logo_s{
