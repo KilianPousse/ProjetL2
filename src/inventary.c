@@ -1,3 +1,12 @@
+/**
+ * \file invantary.c
+ * \brief Gère l'inventaire
+ * \details Scripte qui gère l'inventaire
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 2.2
+ * \date 10/04/2024
+**/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
