@@ -186,8 +186,8 @@ int main_fishing(  ){
 				}
                 
         }
-            if( delay == 0 )
-                playMusic( "assets/sound/sfx/plop.ogg", &sfx, &channel_sfx, 0 );
+           /* if( delay == 0 )
+                playMusic( "assets/sound/sfx/plop.ogg", &sfx, &channel_sfx, 0 );*/
 
             
             if( frame == 100 ){
