@@ -8,7 +8,7 @@ var searchData=
   ['id_5fpnj_5frisette_5',['ID_PNJ_RISETTE',['../header_8h.html#a04e8be9abeb67d05b728004d0aa8238e',1,'header.h']]],
   ['id_5fpnj_5fserge_6',['ID_PNJ_SERGE',['../header_8h.html#aeee0dfb714da2853689880ea4a82e79d',1,'header.h']]],
   ['id_5fpnj_5fzebi_7',['ID_PNJ_ZEBI',['../header_8h.html#af1df77ac4ff4c33dac4b1fafbf422d3f',1,'header.h']]],
-  ['image_8',['image',['../structbouton__s.html#a8b07d28e2af46359cf7b17cb819d9187',1,'bouton_s']]],
+  ['image_8',['image',['../structbouton__s.html#a8b07d28e2af46359cf7b17cb819d9187',1,'bouton_s::image'],['../structnuages__s.html#a42ab52e2ddc2002d450305c912d850a1',1,'nuages_s::image']]],
   ['imap_5ffarm_9',['IMAP_FARM',['../header_8h.html#ad9bcf936a860a2c59c39550cfbcf2565',1,'header.h']]],
   ['initfarmtexture_10',['initFarmTexture',['../header_8h.html#a43dfd85a96f267f1834dfcd4357d14e9',1,'farm.c']]],
   ['initgui_11',['initGUI',['../gui_8c.html#a5a1d9af3e77f4b4034abad93f5b610ec',1,'initGUI():&#160;gui.c'],['../header_8h.html#a5a1d9af3e77f4b4034abad93f5b610ec',1,'initGUI():&#160;gui.c']]],
