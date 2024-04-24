@@ -7,6 +7,10 @@
  * \date 28/01/2024
 **/
 
+/**
+ * \struct meuble_t
+ * \brief Structure representant des meubles
+**/
 typedef struct meuble_s{
     /*image du meuble*/
     char * nom;
@@ -14,11 +18,23 @@ typedef struct meuble_s{
     /*intéraction*/
 }meuble_t;
 
+
+
+/**
+ * \struct musique_t
+ * \brief Structure representant des musiques
+**/
 typedef struct musique_s{
     /*à définir plus tard*/
     /*change en fonction de la zone*/
 }musique_t;
 
+
+
+/**
+ * \struct argent_t
+ * \brief Structure representant l'argent du jeu
+**/
 typedef struct argent_s{
     char * nom;
     /*image de l'image*/
@@ -27,10 +43,16 @@ typedef struct argent_s{
 
     
 
+/**
+ * \struct skin_t
+ * \brief Structure representant des skin
+**/
 typedef struct skin_s{
     /*Image*/
     char * nom;
 }skin_t;
+
+
 
 
 
