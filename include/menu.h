@@ -12,7 +12,7 @@
 
 
 /**
- * \enum bouton_t
+ * \struct bouton_t
  * \brief Structure representant tout les informations nécessaire aux boutons et à leurs interactions
 **/
 typedef struct {
