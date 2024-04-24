@@ -9,6 +9,15 @@
 
 /*Définiton variable globale*/
 
+/**
+* \file menu.c 
+* \brief Menu du jeu
+* \details Programme qui permet d'afficher le menu du jeu et de diriger le joueur jusqu'au jeu
+* \author Pousse Kilian - Pierre Elona - Vallee Alban 
+* \version alpha 1.4
+* \date  15/04/2024
+**/
+
 #define SCREEN_HEIGHT 480
 #define SCREEN_WIDGHT 640
 #define TAILLE 4
