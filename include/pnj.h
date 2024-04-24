@@ -1,3 +1,13 @@
+/**
+ * \file pnj.h
+ * \brief Données utilisées dans pnj.h
+ * \details Stock le données utiles et utilisées dans pnj.c
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 2.2
+ * \date 30/01/2024
+**/
+
+
 typedef struct{
 
     int item;
