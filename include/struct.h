@@ -1,4 +1,11 @@
-
+/**
+ * \file struct.h
+ * \brief Permet de stocker diffèrentes structures utilisées dans le programme
+ * \details Permet de génrer diffèrentes structures
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 1.2
+ * \date 28/01/2024
+**/
 
 typedef struct meuble_s{
     /*image du meuble*/
