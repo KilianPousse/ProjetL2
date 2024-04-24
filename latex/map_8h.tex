@@ -1,0 +1,108 @@
+\doxysection{Référence du fichier include/map.h}
+\hypertarget{map_8h}{}\label{map_8h}\index{include/map.h@{include/map.h}}
+
+
+Variable de la map.  
+
+
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{map_8h_acd19c979ddead8788e2967bd9a748dc0}\label{map_8h_acd19c979ddead8788e2967bd9a748dc0} 
+\#define {\bfseries TILE\+\_\+\+EMPTY}~0
+\item 
+\Hypertarget{map_8h_a4ba727a4ae3f649a97343481687c079f}\label{map_8h_a4ba727a4ae3f649a97343481687c079f} 
+\#define {\bfseries TILE\+\_\+\+WATER}~-\/1
+\item 
+\Hypertarget{map_8h_aad73767a419a795c2433aa70d8db9aa2}\label{map_8h_aad73767a419a795c2433aa70d8db9aa2} 
+\#define {\bfseries TILE\+\_\+\+VENDEUR\+\_\+\+GRAINE}~-\/50
+\item 
+\Hypertarget{map_8h_a4bd11c565245c65946a3370f46f91706}\label{map_8h_a4bd11c565245c65946a3370f46f91706} 
+\#define {\bfseries TILE\+\_\+\+ACHETEUR\+\_\+\+PLANTE}~-\/51
+\item 
+\Hypertarget{map_8h_a8ecf4509f372a6b093d91a25dafb07ea}\label{map_8h_a8ecf4509f372a6b093d91a25dafb07ea} 
+\#define {\bfseries TILE\+\_\+\+ACHETEUR\+\_\+\+POISSON}~-\/52
+\item 
+\Hypertarget{map_8h_ab13aab37ba4ef731b90158e15cca8f02}\label{map_8h_ab13aab37ba4ef731b90158e15cca8f02} 
+\#define {\bfseries TILE\+\_\+\+ENTER\+\_\+\+HOUSE}~-\/10
+\item 
+\Hypertarget{map_8h_aa2399874174d026710f49e2818b8e2be}\label{map_8h_aa2399874174d026710f49e2818b8e2be} 
+\#define {\bfseries TILE\+\_\+\+EXIT\+\_\+\+HOUSE}~-\/11
+\item 
+\Hypertarget{map_8h_a33a8b8bf18e1eadd755c38a61fb166f4}\label{map_8h_a33a8b8bf18e1eadd755c38a61fb166f4} 
+\#define {\bfseries TILE\+\_\+\+ENTER\+\_\+\+BROCOLI}~-\/12
+\item 
+\Hypertarget{map_8h_a4bb3deda37cff708c0aedfa50cf21e4e}\label{map_8h_a4bb3deda37cff708c0aedfa50cf21e4e} 
+\#define {\bfseries TILE\+\_\+\+EXIT\+\_\+\+BROCOLI}~-\/13
+\item 
+\Hypertarget{map_8h_ae0431f3ce81c0b9245ecedfdbe489ad1}\label{map_8h_ae0431f3ce81c0b9245ecedfdbe489ad1} 
+\#define {\bfseries TILE\+\_\+\+PNJ}~-\/20
+\item 
+\Hypertarget{map_8h_a12b5da0d2e07bc1d9323dc3ae5f9964e}\label{map_8h_a12b5da0d2e07bc1d9323dc3ae5f9964e} 
+\#define {\bfseries TILE\+\_\+\+CRABE}~-\/24
+\item 
+\Hypertarget{map_8h_a77fb8cf9f8902139cb6d743f85fb933f}\label{map_8h_a77fb8cf9f8902139cb6d743f85fb933f} 
+\#define {\bfseries TILE\+\_\+\+PY}~-\/25
+\item 
+\Hypertarget{map_8h_a63063426307277e53026444bea5cad76}\label{map_8h_a63063426307277e53026444bea5cad76} 
+\#define {\bfseries TILE\+\_\+\+RISETTE}~-\/26
+\item 
+\Hypertarget{map_8h_a4b1f94a346b962190ad451677209f6a5}\label{map_8h_a4b1f94a346b962190ad451677209f6a5} 
+\#define {\bfseries TILE\+\_\+\+SERGE}~-\/27
+\item 
+\Hypertarget{map_8h_ad8f6abe3abc849dea726325d58a8024b}\label{map_8h_ad8f6abe3abc849dea726325d58a8024b} 
+\#define {\bfseries TILE\+\_\+\+FARMLAND}~33
+\item 
+\Hypertarget{map_8h_ae1f74a5a516749c8ff216c5b2a396474}\label{map_8h_ae1f74a5a516749c8ff216c5b2a396474} 
+\#define {\bfseries TILE\+\_\+\+ENTER\+\_\+\+CAVE}~40
+\item 
+\Hypertarget{map_8h_a8731c038c4eb6281bccce275dd6b528d}\label{map_8h_a8731c038c4eb6281bccce275dd6b528d} 
+\#define {\bfseries TILE\+\_\+\+EXIT\+\_\+\+CAVE}~-\/41
+\item 
+\Hypertarget{map_8h_a42f3ede59704b2803752ac83d920736d}\label{map_8h_a42f3ede59704b2803752ac83d920736d} 
+\#define {\bfseries TILE\+\_\+A}~88
+\item 
+\Hypertarget{map_8h_a0ee8e8cd8b609439344aa170e6d16e88}\label{map_8h_a0ee8e8cd8b609439344aa170e6d16e88} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+SPAWN}~1
+\item 
+\Hypertarget{map_8h_a6f13925f7d55b3591fc61f1e57582583}\label{map_8h_a6f13925f7d55b3591fc61f1e57582583} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+HOUSE}~2
+\item 
+\Hypertarget{map_8h_a157d22c3d10f20fbf6b6c21691c70107}\label{map_8h_a157d22c3d10f20fbf6b6c21691c70107} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+MARKET}~3
+\item 
+\Hypertarget{map_8h_ad846619fab17a5852ca67f6fe52deb05}\label{map_8h_ad846619fab17a5852ca67f6fe52deb05} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+FARM}~4
+\item 
+\Hypertarget{map_8h_a70847684ba7f4f003d59649ecad26773}\label{map_8h_a70847684ba7f4f003d59649ecad26773} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+FISHING}~5
+\item 
+\Hypertarget{map_8h_ad93bac327ec1d6bf1033654fe1e01632}\label{map_8h_ad93bac327ec1d6bf1033654fe1e01632} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+FOREST}~6
+\item 
+\Hypertarget{map_8h_ab5c5b43d6a1413011af6da051f17545c}\label{map_8h_ab5c5b43d6a1413011af6da051f17545c} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+BEACH}~7
+\item 
+\Hypertarget{map_8h_ad63feb495487fcc40af8b6fd24b82733}\label{map_8h_ad63feb495487fcc40af8b6fd24b82733} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+JSP}~8
+\item 
+\Hypertarget{map_8h_a011c61fb03f15246ea5c774f4ed59f7d}\label{map_8h_a011c61fb03f15246ea5c774f4ed59f7d} 
+\#define {\bfseries TILE\+\_\+\+LIVRE\+\_\+\+CAVE}~9
+\item 
+\Hypertarget{map_8h_acbb5cc9725e45e1065107eeca4334387}\label{map_8h_acbb5cc9725e45e1065107eeca4334387} 
+\#define {\bfseries TILE\+\_\+\+FISHING}~-\/30
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Variable de la map. 
+
+Création des variables qui seront réutilisée dans la génération des maps \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 2.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+09/02/2024 
+\end{DoxyDate}

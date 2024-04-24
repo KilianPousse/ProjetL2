@@ -6,5 +6,6 @@ var searchData=
   ['tile_5faction_3',['tile_action',['../header_8h.html#a9c82afb7a8f8310900500133010edb37',1,'header.h']]],
   ['tileaction_4',['tileAction',['../header_8h.html#af32cba74c2d07be494e7183bf3d3ee97',1,'tileAction():&#160;main.c'],['../main_8c.html#af32cba74c2d07be494e7183bf3d3ee97',1,'tileAction():&#160;main.c']]],
   ['tilevalue_5',['tileValue',['../header_8h.html#a3735bd7f3781679e156403436a12712d',1,'tileValue(int i_map, int x, int y):&#160;map.c'],['../map_8c.html#a3735bd7f3781679e156403436a12712d',1,'tileValue(int i_map, int x, int y):&#160;map.c']]],
-  ['trade_5ft_6',['trade_t',['../structtrade__t.html',1,'']]]
+  ['tomogashi_20island_6',['Tomogashi Island',['../index.html',1,'']]],
+  ['trade_5ft_7',['trade_t',['../structtrade__t.html',1,'']]]
 ];

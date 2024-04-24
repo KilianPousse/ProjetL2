@@ -1,0 +1,66 @@
+\doxysection{Référence du fichier include/hotbar.h}
+\hypertarget{hotbar_8h}{}\label{hotbar_8h}\index{include/hotbar.h@{include/hotbar.h}}
+
+
+Variables utilisées dans scripte de la \doxylink{hotbar_8c}{hotbar.\+c}.  
+
+
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+image.\+h$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hotbar_8h_affced4b175e803df59f802e25d017b9b}\label{hotbar_8h_affced4b175e803df59f802e25d017b9b} 
+\#define {\bfseries NUM\+\_\+\+ITEMS}~6
+\begin{DoxyCompactList}\small\item\em Nombre d\textquotesingle{}éléments dans la hotbar. \end{DoxyCompactList}\item 
+\Hypertarget{hotbar_8h_a60327328fdd39328319b711f87099122}\label{hotbar_8h_a60327328fdd39328319b711f87099122} 
+\#define {\bfseries ITEMWIDTH}~WINDOW\+\_\+\+WIDTH / \mbox{\hyperlink{hotbar_8h_affced4b175e803df59f802e25d017b9b}{NUM\+\_\+\+ITEMS}}
+\begin{DoxyCompactList}\small\item\em Largeur d\textquotesingle{}un élément de la hotbar. \end{DoxyCompactList}\item 
+\Hypertarget{hotbar_8h_a79afdbde3d097979712c2c700f857afb}\label{hotbar_8h_a79afdbde3d097979712c2c700f857afb} 
+\#define {\bfseries ITEMHEIGHT}~WINDOW\+\_\+\+HEIGHT / 20
+\begin{DoxyCompactList}\small\item\em Hauteur d\textquotesingle{}un élément de la hotbar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hotbar_8h_aa6b5c07b229b46e56df40f58d2dd2fb1}\label{hotbar_8h_aa6b5c07b229b46e56df40f58d2dd2fb1} 
+void {\bfseries load\+Hotbar} ()
+\begin{DoxyCompactList}\small\item\em Charge les ressources de la hotbar. \end{DoxyCompactList}\item 
+\Hypertarget{hotbar_8h_ad399790f118420f3caf3d1cc009135a4}\label{hotbar_8h_ad399790f118420f3caf3d1cc009135a4} 
+void {\bfseries display\+Hotbar} ()
+\begin{DoxyCompactList}\small\item\em Affiche la hotbar. \end{DoxyCompactList}\item 
+\Hypertarget{hotbar_8h_ad98fc92078e66d32dba5f3ea677ba211}\label{hotbar_8h_ad98fc92078e66d32dba5f3ea677ba211} 
+void {\bfseries display\+Hotbar\+Select} ()
+\begin{DoxyCompactList}\small\item\em Affiche la sélection dans la hotbar. \end{DoxyCompactList}\item 
+\Hypertarget{hotbar_8h_a2c4bf10dc59e17513a9da6b3df6d9d98}\label{hotbar_8h_a2c4bf10dc59e17513a9da6b3df6d9d98} 
+void {\bfseries free\+Hotbar} ()
+\begin{DoxyCompactList}\small\item\em Libère les ressources de la hotbar. \end{DoxyCompactList}\item 
+\Hypertarget{hotbar_8h_a5e162473a54ef90fb5e2101c499329c1}\label{hotbar_8h_a5e162473a54ef90fb5e2101c499329c1} 
+void {\bfseries display\+Item} ()
+\begin{DoxyCompactList}\small\item\em Affiche les éléments de la hotbar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}\label{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries item} \mbox{[}\mbox{\hyperlink{hotbar_8h_affced4b175e803df59f802e25d017b9b}{NUM\+\_\+\+ITEMS}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tableau des surfaces des éléments de la hotbar. \end{DoxyCompactList}\item 
+\Hypertarget{hotbar_8h_a34ec5114af3ab0feca9087cc7243a573}\label{hotbar_8h_a34ec5114af3ab0feca9087cc7243a573} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries hotbar}
+\begin{DoxyCompactList}\small\item\em Surface de la hotbar. \end{DoxyCompactList}\item 
+\Hypertarget{hotbar_8h_a51288cdc47853562ab0e4b490be6dfe6}\label{hotbar_8h_a51288cdc47853562ab0e4b490be6dfe6} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries hotbar\+Select}
+\begin{DoxyCompactList}\small\item\em Surface de la sélection dans la hotbar. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Variables utilisées dans scripte de la \doxylink{hotbar_8c}{hotbar.\+c}. 
+
+Création des variables qqui seront utilisée dans la \doxylink{hotbar_8c}{hotbar.\+c} \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 1.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+24/02/2024 
+\end{DoxyDate}

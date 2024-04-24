@@ -8,7 +8,8 @@ var searchData=
   ['nb_5fplants_5fmax_5',['NB_PLANTS_MAX',['../header_8h.html#a9b2127865c77fac199416ec8d5b1b2a9',1,'header.h']]],
   ['nb_5fpnj_6',['NB_PNJ',['../header_8h.html#acd19773d24e0450b01a69dbe5d47725e',1,'header.h']]],
   ['nb_5fstem_5fplant_7',['NB_STEM_PLANT',['../header_8h.html#a7263e63d367da9dc3311af7f575cb767',1,'header.h']]],
-  ['newsave_8',['newSave',['../header_8h.html#a39713b8d5a634e55c8fe02662866ae5e',1,'save.c']]],
+  ['newsave_8',['newSave',['../header_8h.html#a39713b8d5a634e55c8fe02662866ae5e',1,'newSave():&#160;save.c'],['../save_8c.html#a39713b8d5a634e55c8fe02662866ae5e',1,'newSave():&#160;save.c']]],
   ['nord_9',['nord',['../header_8h.html#a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b',1,'header.h']]],
-  ['nuages_5fs_10',['nuages_s',['../structnuages__s.html',1,'']]]
+  ['nuages_5fs_10',['nuages_s',['../structnuages__s.html',1,'']]],
+  ['num_5fitems_11',['NUM_ITEMS',['../hotbar_8h.html#affced4b175e803df59f802e25d017b9b',1,'hotbar.h']]]
 ];

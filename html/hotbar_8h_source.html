@@ -77,35 +77,45 @@ $(function() {
   <div class="headertitle"><div class="title">hotbar.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;SDL2/SDL_image.h&gt;</span></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<a href="hotbar_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span>2024</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>**/</div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;time.h&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;SDL2/SDL.h&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;SDL2/SDL_image.h&gt;</span></div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#define NUM_ITEMS 6</span></div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">#define ITEMWIDTH WINDOW_WIDTH / NUM_ITEMS</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">#define ITEMHEIGHT WINDOW_HEIGHT / 20 </span><span class="comment">// Taille de la hotbar</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>SDL_Surface* item[NUM_ITEMS]; </div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>SDL_Surface* hotbar;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>SDL_Surface* hotbarSelect;</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span><span class="keywordtype">void</span> loadHotbar();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="keywordtype">void</span> displayHotbar();</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span><span class="keywordtype">void</span> displayHotbarSelect();</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keywordtype">void</span> freeHotbar();</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span><span class="keywordtype">void</span> displayItem();</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="hotbar_8h.html#affced4b175e803df59f802e25d017b9b">   20</a></span><span class="preprocessor">#define NUM_ITEMS 6</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="hotbar_8h.html#a60327328fdd39328319b711f87099122">   26</a></span><span class="preprocessor">#define ITEMWIDTH WINDOW_WIDTH / NUM_ITEMS</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno"><a class="line" href="hotbar_8h.html#a79afdbde3d097979712c2c700f857afb">   32</a></span><span class="preprocessor">#define ITEMHEIGHT WINDOW_HEIGHT / 20 </span><span class="comment">// Taille de la hotbar</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="hotbar_8h.html#a52b259e405afbd1dfd3aaf9f4f128406">   38</a></span>SDL_Surface* <a class="code hl_variable" href="hotbar_8h.html#a52b259e405afbd1dfd3aaf9f4f128406">item</a>[<a class="code hl_define" href="hotbar_8h.html#affced4b175e803df59f802e25d017b9b">NUM_ITEMS</a>]; </div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno"><a class="line" href="hotbar_8h.html#a34ec5114af3ab0feca9087cc7243a573">   44</a></span>SDL_Surface* <a class="code hl_variable" href="hotbar_8h.html#a34ec5114af3ab0feca9087cc7243a573">hotbar</a>;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno"><a class="line" href="hotbar_8h.html#a51288cdc47853562ab0e4b490be6dfe6">   50</a></span>SDL_Surface* <a class="code hl_variable" href="hotbar_8h.html#a51288cdc47853562ab0e4b490be6dfe6">hotbarSelect</a>;</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="keywordtype">void</span> <a class="code hl_function" href="hotbar_8h.html#aa6b5c07b229b46e56df40f58d2dd2fb1">loadHotbar</a>();</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span><span class="keywordtype">void</span> <a class="code hl_function" href="hotbar_8h.html#ad399790f118420f3caf3d1cc009135a4">displayHotbar</a>();</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno"><a class="line" href="hotbar_8h.html#ad98fc92078e66d32dba5f3ea677ba211">   68</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hotbar_8h.html#ad98fc92078e66d32dba5f3ea677ba211">displayHotbarSelect</a>();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span> </div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span><span class="keywordtype">void</span> <a class="code hl_function" href="hotbar_8h.html#a2c4bf10dc59e17513a9da6b3df6d9d98">freeHotbar</a>();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno"><a class="line" href="hotbar_8h.html#a5e162473a54ef90fb5e2101c499329c1">   80</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="hotbar_8h.html#a5e162473a54ef90fb5e2101c499329c1">displayItem</a>();</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span> </div>
+<div class="ttc" id="ahotbar_8h_html_a2c4bf10dc59e17513a9da6b3df6d9d98"><div class="ttname"><a href="hotbar_8h.html#a2c4bf10dc59e17513a9da6b3df6d9d98">freeHotbar</a></div><div class="ttdeci">void freeHotbar()</div><div class="ttdoc">Libère les ressources de la hotbar.</div><div class="ttdef"><b>Definition</b> hotbar.c:43</div></div>
+<div class="ttc" id="ahotbar_8h_html_a34ec5114af3ab0feca9087cc7243a573"><div class="ttname"><a href="hotbar_8h.html#a34ec5114af3ab0feca9087cc7243a573">hotbar</a></div><div class="ttdeci">SDL_Surface * hotbar</div><div class="ttdoc">Surface de la hotbar.</div><div class="ttdef"><b>Definition</b> hotbar.h:44</div></div>
+<div class="ttc" id="ahotbar_8h_html_a51288cdc47853562ab0e4b490be6dfe6"><div class="ttname"><a href="hotbar_8h.html#a51288cdc47853562ab0e4b490be6dfe6">hotbarSelect</a></div><div class="ttdeci">SDL_Surface * hotbarSelect</div><div class="ttdoc">Surface de la sélection dans la hotbar.</div><div class="ttdef"><b>Definition</b> hotbar.h:50</div></div>
+<div class="ttc" id="ahotbar_8h_html_a52b259e405afbd1dfd3aaf9f4f128406"><div class="ttname"><a href="hotbar_8h.html#a52b259e405afbd1dfd3aaf9f4f128406">item</a></div><div class="ttdeci">SDL_Surface * item[NUM_ITEMS]</div><div class="ttdoc">Tableau des surfaces des éléments de la hotbar.</div><div class="ttdef"><b>Definition</b> hotbar.h:38</div></div>
+<div class="ttc" id="ahotbar_8h_html_a5e162473a54ef90fb5e2101c499329c1"><div class="ttname"><a href="hotbar_8h.html#a5e162473a54ef90fb5e2101c499329c1">displayItem</a></div><div class="ttdeci">void displayItem()</div><div class="ttdoc">Affiche les éléments de la hotbar.</div></div>
+<div class="ttc" id="ahotbar_8h_html_aa6b5c07b229b46e56df40f58d2dd2fb1"><div class="ttname"><a href="hotbar_8h.html#aa6b5c07b229b46e56df40f58d2dd2fb1">loadHotbar</a></div><div class="ttdeci">void loadHotbar()</div><div class="ttdoc">Charge les ressources de la hotbar.</div><div class="ttdef"><b>Definition</b> hotbar.c:26</div></div>
+<div class="ttc" id="ahotbar_8h_html_ad399790f118420f3caf3d1cc009135a4"><div class="ttname"><a href="hotbar_8h.html#ad399790f118420f3caf3d1cc009135a4">displayHotbar</a></div><div class="ttdeci">void displayHotbar()</div><div class="ttdoc">Affiche la hotbar.</div><div class="ttdef"><b>Definition</b> hotbar.c:56</div></div>
+<div class="ttc" id="ahotbar_8h_html_ad98fc92078e66d32dba5f3ea677ba211"><div class="ttname"><a href="hotbar_8h.html#ad98fc92078e66d32dba5f3ea677ba211">displayHotbarSelect</a></div><div class="ttdeci">void displayHotbarSelect()</div><div class="ttdoc">Affiche la sélection dans la hotbar.</div></div>
+<div class="ttc" id="ahotbar_8h_html_affced4b175e803df59f802e25d017b9b"><div class="ttname"><a href="hotbar_8h.html#affced4b175e803df59f802e25d017b9b">NUM_ITEMS</a></div><div class="ttdeci">#define NUM_ITEMS</div><div class="ttdoc">Nombre d'éléments dans la hotbar.</div><div class="ttdef"><b>Definition</b> hotbar.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

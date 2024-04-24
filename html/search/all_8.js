@@ -12,11 +12,16 @@ var searchData=
   ['imap_5ffarm_9',['IMAP_FARM',['../header_8h.html#ad9bcf936a860a2c59c39550cfbcf2565',1,'header.h']]],
   ['initfarmtexture_10',['initFarmTexture',['../header_8h.html#a43dfd85a96f267f1834dfcd4357d14e9',1,'farm.c']]],
   ['initgui_11',['initGUI',['../gui_8c.html#a5a1d9af3e77f4b4034abad93f5b610ec',1,'initGUI():&#160;gui.c'],['../header_8h.html#a5a1d9af3e77f4b4034abad93f5b610ec',1,'initGUI():&#160;gui.c']]],
-  ['initmap_12',['initMap',['../header_8h.html#a464977f8317c50346420be433fa5320d',1,'initMap(map_t *m):&#160;map.c'],['../map_8c.html#a464977f8317c50346420be433fa5320d',1,'initMap(map_t *m):&#160;map.c']]],
+  ['initmap_12',['initMap',['../map_8c.html#a464977f8317c50346420be433fa5320d',1,'initMap(map_t *m):&#160;map.c'],['../header_8h.html#a464977f8317c50346420be433fa5320d',1,'initMap(map_t *m):&#160;map.c']]],
   ['initplayer_13',['InitPlayer',['../header_8h.html#a2a785a496d04917a541a6b22c23c1f6c',1,'player.c']]],
   ['initpnj_14',['initPNJ',['../header_8h.html#a921083467da01d3e8764ee6e87304de8',1,'initPNJ():&#160;display.c'],['../display_8c.html#a921083467da01d3e8764ee6e87304de8',1,'initPNJ():&#160;display.c']]],
   ['inventory_15',['inventory',['../structgui__t.html#a99b6547ae7444df6ae28de49fe258072',1,'gui_t']]],
-  ['inventory_5ft_16',['inventory_t',['../structinventory__t.html',1,'']]],
-  ['item_2ec_17',['item.c',['../item_8c.html',1,'']]],
-  ['item_5ft_18',['item_t',['../structitem__t.html',1,'']]]
+  ['inventory_2eh_16',['inventory.h',['../inventory_8h.html',1,'']]],
+  ['inventory_5ft_17',['inventory_t',['../structinventory__t.html',1,'']]],
+  ['item_18',['item',['../hotbar_8h.html#a52b259e405afbd1dfd3aaf9f4f128406',1,'hotbar.h']]],
+  ['item_2ec_19',['item.c',['../item_8c.html',1,'']]],
+  ['item_2eh_20',['item.h',['../item_8h.html',1,'']]],
+  ['item_5ft_21',['item_t',['../structitem__t.html',1,'']]],
+  ['itemheight_22',['ITEMHEIGHT',['../hotbar_8h.html#a79afdbde3d097979712c2c700f857afb',1,'hotbar.h']]],
+  ['itemwidth_23',['ITEMWIDTH',['../hotbar_8h.html#a60327328fdd39328319b711f87099122',1,'hotbar.h']]]
 ];

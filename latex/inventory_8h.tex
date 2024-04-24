@@ -1,0 +1,87 @@
+\doxysection{Référence du fichier include/inventory.h}
+\hypertarget{inventory_8h}{}\label{inventory_8h}\index{include/inventory.h@{include/inventory.h}}
+
+
+Ajoue des fonctions dans inventory.\+c.  
+
+
+{\ttfamily \#include \"{}item.\+h\"{}}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structinventory__t}{inventory\+\_\+t}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{inventory_8h_af9ebf12fe7412df49950ee6b5abf8500}\label{inventory_8h_af9ebf12fe7412df49950ee6b5abf8500} 
+\#define {\bfseries NB\+\_\+\+INVENTORY\+\_\+\+ITEM}~18
+\item 
+\Hypertarget{inventory_8h_a0d1a737285e064b7dfa002efc270ad21}\label{inventory_8h_a0d1a737285e064b7dfa002efc270ad21} 
+\#define {\bfseries NB\+\_\+\+HOTBAR\+\_\+\+ITEM}~6
+\item 
+\Hypertarget{inventory_8h_a89aa21ab17a42eba0c3685876ba06be5}\label{inventory_8h_a89aa21ab17a42eba0c3685876ba06be5} 
+\#define {\bfseries MAX\+\_\+\+ITEM\+\_\+\+STACK}~99
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{inventory_8h_a032a12b08e31b999165a1e0a7d008dd2}\label{inventory_8h_a032a12b08e31b999165a1e0a7d008dd2} 
+\mbox{\hyperlink{structitem__t}{item\+\_\+t}} {\bfseries inventory\+\_\+mainhand} ()
+\item 
+\Hypertarget{inventory_8h_a7e7c78028ea3760655c29c2974ce04c5}\label{inventory_8h_a7e7c78028ea3760655c29c2974ce04c5} 
+int {\bfseries inventory\+\_\+use} ()
+\item 
+\Hypertarget{inventory_8h_a512409b389936fb6fd5dcf430b69687f}\label{inventory_8h_a512409b389936fb6fd5dcf430b69687f} 
+int {\bfseries inventory\+\_\+clear} ()
+\item 
+\Hypertarget{inventory_8h_af161583f56d80e46b161e6c148900efa}\label{inventory_8h_af161583f56d80e46b161e6c148900efa} 
+int {\bfseries inventory\+\_\+contains\+\_\+hotbar} (unsigned int id, int limit)
+\item 
+\Hypertarget{inventory_8h_a02950cbc973082d7a9fee8f19ac4876e}\label{inventory_8h_a02950cbc973082d7a9fee8f19ac4876e} 
+int {\bfseries inventory\+\_\+contains\+\_\+pcpl} (unsigned int id, int limit)
+\item 
+\Hypertarget{inventory_8h_aba7544f2e1598a69c95a2c8877fb997a}\label{inventory_8h_aba7544f2e1598a69c95a2c8877fb997a} 
+int {\bfseries inventory\+\_\+contains} (unsigned int id, int limit)
+\item 
+\Hypertarget{inventory_8h_a43b45378244e6603db26d66ae26f1390}\label{inventory_8h_a43b45378244e6603db26d66ae26f1390} 
+int {\bfseries inventory\+\_\+can\+Give} (\mbox{\hyperlink{structitem__t}{item\+\_\+t}} \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}})
+\item 
+\Hypertarget{inventory_8h_ab2c4addb7d88eea50f751e32e7741b64}\label{inventory_8h_ab2c4addb7d88eea50f751e32e7741b64} 
+int {\bfseries inventory\+\_\+give} (\mbox{\hyperlink{structitem__t}{item\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}})
+\item 
+\Hypertarget{inventory_8h_a806b8886878f08117a2f1e57a3314f3d}\label{inventory_8h_a806b8886878f08117a2f1e57a3314f3d} 
+int {\bfseries inventory\+\_\+can\+Remove} (\mbox{\hyperlink{structitem__t}{item\+\_\+t}} \mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}})
+\item 
+\Hypertarget{inventory_8h_a679cdd051f5abbd34654ed8477f067f6}\label{inventory_8h_a679cdd051f5abbd34654ed8477f067f6} 
+int {\bfseries inventory\+\_\+remove} (\mbox{\hyperlink{structitem__t}{item\+\_\+t}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{hotbar_8h_a52b259e405afbd1dfd3aaf9f4f128406}{item}})
+\item 
+\Hypertarget{inventory_8h_aa9ba495b8a1de28f8df89a0a97ffeffc}\label{inventory_8h_aa9ba495b8a1de28f8df89a0a97ffeffc} 
+void {\bfseries inventory\+\_\+affiche} ()
+\item 
+\Hypertarget{inventory_8h_ab1c8bb16a1702b6b80b1d533a72a1099}\label{inventory_8h_ab1c8bb16a1702b6b80b1d533a72a1099} 
+int {\bfseries inventory\+\_\+have\+Item} ()
+\item 
+\Hypertarget{inventory_8h_ab12238a27741819b3f3994a5813a62e7}\label{inventory_8h_ab12238a27741819b3f3994a5813a62e7} 
+int {\bfseries inventory\+\_\+display} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{inventory_8h_a871c42f8efea87e5674d44b645c17a2c}\label{inventory_8h_a871c42f8efea87e5674d44b645c17a2c} 
+\mbox{\hyperlink{structinventory__t}{inventory\+\_\+t}} {\bfseries inventory}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Ajoue des fonctions dans inventory.\+c. 
+
+Ajoue des fonctions qui se trouvent dans inventory.\+c pour pouvoir les rappeler dans d\textquotesingle{}autres parties du scripte \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 2.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+26/03/2024 
+\end{DoxyDate}

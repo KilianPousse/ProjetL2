@@ -6,5 +6,6 @@ var searchData=
   ['nb_5ffarmland_3',['NB_FARMLAND',['../header_8h.html#a313a0ece5f285dd0573af2d020315eb0',1,'header.h']]],
   ['nb_5fplants_5fmax_4',['NB_PLANTS_MAX',['../header_8h.html#a9b2127865c77fac199416ec8d5b1b2a9',1,'header.h']]],
   ['nb_5fpnj_5',['NB_PNJ',['../header_8h.html#acd19773d24e0450b01a69dbe5d47725e',1,'header.h']]],
-  ['nb_5fstem_5fplant_6',['NB_STEM_PLANT',['../header_8h.html#a7263e63d367da9dc3311af7f575cb767',1,'header.h']]]
+  ['nb_5fstem_5fplant_6',['NB_STEM_PLANT',['../header_8h.html#a7263e63d367da9dc3311af7f575cb767',1,'header.h']]],
+  ['num_5fitems_7',['NUM_ITEMS',['../hotbar_8h.html#affced4b175e803df59f802e25d017b9b',1,'hotbar.h']]]
 ];

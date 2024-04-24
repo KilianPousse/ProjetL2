@@ -1,0 +1,48 @@
+\doxysection{Référence du fichier src/fishing.c}
+\hypertarget{fishing_8c}{}\label{fishing_8c}\index{src/fishing.c@{src/fishing.c}}
+
+
+Partie pêche.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include \"{}header.\+h\"{}}\newline
+{\ttfamily \#include \"{}inventory.\+h\"{}}\newline
+{\ttfamily \#include \"{}fishing.\+h\"{}}\newline
+{\ttfamily \#include \"{}hotbar.\+h\"{}}\newline
+{\ttfamily \#include \"{}menu.\+h\"{}}\newline
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{fishing_8c_ada3b1a51372d94e1005b4139db04d698}\label{fishing_8c_ada3b1a51372d94e1005b4139db04d698} 
+long {\bfseries fishing\+\_\+wait\+Time} ()
+\item 
+\Hypertarget{fishing_8c_abb692ae2ca216440d838c9ed8aa7ef7c}\label{fishing_8c_abb692ae2ca216440d838c9ed8aa7ef7c} 
+\mbox{\hyperlink{structitem__t}{item\+\_\+t}} {\bfseries fishing\+\_\+fishtype} ()
+\item 
+\Hypertarget{fishing_8c_af8cf63cd6af6d7f782b295f51c1b1c75}\label{fishing_8c_af8cf63cd6af6d7f782b295f51c1b1c75} 
+void {\bfseries displayfisher} (int \texorpdfstring{$\ast$}{*}frame, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}idle\mbox{[}2\mbox{]}, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}hook\mbox{[}2\mbox{]}, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}plop, long delay)
+\item 
+\Hypertarget{fishing_8c_a97d5a1ae00d1de423edb8c487369bf56}\label{fishing_8c_a97d5a1ae00d1de423edb8c487369bf56} 
+int {\bfseries fishing\+\_\+free} (SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}idle\mbox{[}2\mbox{]}, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}hook\mbox{[}2\mbox{]}, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}plop)
+\item 
+\Hypertarget{fishing_8c_a831ffe40027a8a87f410b46ce688f665}\label{fishing_8c_a831ffe40027a8a87f410b46ce688f665} 
+int {\bfseries main\+\_\+fishing} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Partie pêche. 
+
+Permet de gérer la pêche, avec du pseudo aléatoire et un pourcentage de chance de collecte \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 2.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+20/04/2024 
+\end{DoxyDate}

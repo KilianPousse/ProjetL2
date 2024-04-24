@@ -1,0 +1,56 @@
+\doxysection{Référence du fichier src/pnj.c}
+\hypertarget{pnj_8c}{}\label{pnj_8c}\index{src/pnj.c@{src/pnj.c}}
+
+
+Gère les PNJ.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \"{}header.\+h\"{}}\newline
+{\ttfamily \#include \"{}map.\+h\"{}}\newline
+{\ttfamily \#include \"{}style.\+h\"{}}\newline
+{\ttfamily \#include \"{}inventory.\+h\"{}}\newline
+{\ttfamily \#include \"{}pnj.\+h\"{}}\newline
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{pnj_8c_ad3f707bfff96debd3b6c85c3e34295ad}\label{pnj_8c_ad3f707bfff96debd3b6c85c3e34295ad} 
+void {\bfseries pnj\+\_\+vendeur} (\mbox{\hyperlink{structcatalog__t}{catalog\+\_\+t}} \texorpdfstring{$\ast$}{*}catalog)
+\item 
+\Hypertarget{pnj_8c_a70cae13af8f5a31ae23b6daf2293895a}\label{pnj_8c_a70cae13af8f5a31ae23b6daf2293895a} 
+void {\bfseries pnj\+\_\+acheteur} (\mbox{\hyperlink{structcatalog__t}{catalog\+\_\+t}} \texorpdfstring{$\ast$}{*}catalog)
+\item 
+\Hypertarget{pnj_8c_a1ba092c8a6db78c2cf456143f390a9de}\label{pnj_8c_a1ba092c8a6db78c2cf456143f390a9de} 
+void {\bfseries display\+\_\+trade\+\_\+vente} (int i\+\_\+select, \mbox{\hyperlink{structcatalog__t}{catalog\+\_\+t}} \texorpdfstring{$\ast$}{*}catalog)
+\item 
+\Hypertarget{pnj_8c_adf2ad72869c09c23bca4ca8d56a3c43d}\label{pnj_8c_adf2ad72869c09c23bca4ca8d56a3c43d} 
+void {\bfseries display\+\_\+trade\+\_\+achat} (int i\+\_\+select, \mbox{\hyperlink{structcatalog__t}{catalog\+\_\+t}} \texorpdfstring{$\ast$}{*}catalog)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{pnj_8c_a84fd35334fe31fc9f8ddc95b8e8a7685}\label{pnj_8c_a84fd35334fe31fc9f8ddc95b8e8a7685} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries trade\+\_\+box}
+\item 
+\Hypertarget{pnj_8c_a78a0f5c9b580d4db4cca4c84a1f6a10d}\label{pnj_8c_a78a0f5c9b580d4db4cca4c84a1f6a10d} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries trade\+\_\+cell}
+\item 
+\Hypertarget{pnj_8c_aecfc00442894124aa20603844ef0e908}\label{pnj_8c_aecfc00442894124aa20603844ef0e908} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries trade\+\_\+cell\+\_\+select}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Gère les PNJ. 
+
+Scripte qui gènere les PNJ charge les textures et les fait bouger \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 2.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+10/04/2024 
+\end{DoxyDate}

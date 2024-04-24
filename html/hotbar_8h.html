@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Tomogashi Island: Référence du fichier include/hotbar.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectlogo"><img alt="Logo" src="icon.png"/></td>
+  <td id="projectalign">
+   <div id="projectname">Tomogashi Island
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Généré par Doxygen 1.9.8 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Recherche');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Chargement...</div>
+<div class="SRStatus" id="Searching">Recherche...</div>
+<div class="SRStatus" id="NoMatches">Aucune correspondance</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#define-members">Macros</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
+  <div class="headertitle"><div class="title">Référence du fichier hotbar.h</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p>Variables utilisées dans scripte de la <a class="el" href="hotbar_8c.html" title="Gestion de la hotbar.">hotbar.c</a>.  
+<a href="#details">Plus de détails...</a></p>
+<div class="textblock"><code>#include &lt;time.h&gt;</code><br />
+<code>#include &lt;SDL2/SDL.h&gt;</code><br />
+<code>#include &lt;SDL2/SDL_image.h&gt;</code><br />
+</div>
+<p><a href="hotbar_8h_source.html">Aller au code source de ce fichier.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:affced4b175e803df59f802e25d017b9b"><td class="memItemLeft" align="right" valign="top"><a id="affced4b175e803df59f802e25d017b9b" name="affced4b175e803df59f802e25d017b9b"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>NUM_ITEMS</b>&#160;&#160;&#160;6</td></tr>
+<tr class="memdesc:affced4b175e803df59f802e25d017b9b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nombre d'éléments dans la hotbar. <br /></td></tr>
+<tr class="separator:affced4b175e803df59f802e25d017b9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60327328fdd39328319b711f87099122"><td class="memItemLeft" align="right" valign="top"><a id="a60327328fdd39328319b711f87099122" name="a60327328fdd39328319b711f87099122"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ITEMWIDTH</b>&#160;&#160;&#160;WINDOW_WIDTH / <a class="el" href="hotbar_8h.html#affced4b175e803df59f802e25d017b9b">NUM_ITEMS</a></td></tr>
+<tr class="memdesc:a60327328fdd39328319b711f87099122"><td class="mdescLeft">&#160;</td><td class="mdescRight">Largeur d'un élément de la hotbar. <br /></td></tr>
+<tr class="separator:a60327328fdd39328319b711f87099122"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79afdbde3d097979712c2c700f857afb"><td class="memItemLeft" align="right" valign="top"><a id="a79afdbde3d097979712c2c700f857afb" name="a79afdbde3d097979712c2c700f857afb"></a>
+#define&#160;</td><td class="memItemRight" valign="bottom"><b>ITEMHEIGHT</b>&#160;&#160;&#160;WINDOW_HEIGHT / 20</td></tr>
+<tr class="memdesc:a79afdbde3d097979712c2c700f857afb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hauteur d'un élément de la hotbar. <br /></td></tr>
+<tr class="separator:a79afdbde3d097979712c2c700f857afb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Fonctions</h2></td></tr>
+<tr class="memitem:aa6b5c07b229b46e56df40f58d2dd2fb1"><td class="memItemLeft" align="right" valign="top"><a id="aa6b5c07b229b46e56df40f58d2dd2fb1" name="aa6b5c07b229b46e56df40f58d2dd2fb1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>loadHotbar</b> ()</td></tr>
+<tr class="memdesc:aa6b5c07b229b46e56df40f58d2dd2fb1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Charge les ressources de la hotbar. <br /></td></tr>
+<tr class="separator:aa6b5c07b229b46e56df40f58d2dd2fb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad399790f118420f3caf3d1cc009135a4"><td class="memItemLeft" align="right" valign="top"><a id="ad399790f118420f3caf3d1cc009135a4" name="ad399790f118420f3caf3d1cc009135a4"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>displayHotbar</b> ()</td></tr>
+<tr class="memdesc:ad399790f118420f3caf3d1cc009135a4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la hotbar. <br /></td></tr>
+<tr class="separator:ad399790f118420f3caf3d1cc009135a4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad98fc92078e66d32dba5f3ea677ba211"><td class="memItemLeft" align="right" valign="top"><a id="ad98fc92078e66d32dba5f3ea677ba211" name="ad98fc92078e66d32dba5f3ea677ba211"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>displayHotbarSelect</b> ()</td></tr>
+<tr class="memdesc:ad98fc92078e66d32dba5f3ea677ba211"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche la sélection dans la hotbar. <br /></td></tr>
+<tr class="separator:ad98fc92078e66d32dba5f3ea677ba211"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c4bf10dc59e17513a9da6b3df6d9d98"><td class="memItemLeft" align="right" valign="top"><a id="a2c4bf10dc59e17513a9da6b3df6d9d98" name="a2c4bf10dc59e17513a9da6b3df6d9d98"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>freeHotbar</b> ()</td></tr>
+<tr class="memdesc:a2c4bf10dc59e17513a9da6b3df6d9d98"><td class="mdescLeft">&#160;</td><td class="mdescRight">Libère les ressources de la hotbar. <br /></td></tr>
+<tr class="separator:a2c4bf10dc59e17513a9da6b3df6d9d98"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e162473a54ef90fb5e2101c499329c1"><td class="memItemLeft" align="right" valign="top"><a id="a5e162473a54ef90fb5e2101c499329c1" name="a5e162473a54ef90fb5e2101c499329c1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>displayItem</b> ()</td></tr>
+<tr class="memdesc:a5e162473a54ef90fb5e2101c499329c1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Affiche les éléments de la hotbar. <br /></td></tr>
+<tr class="separator:a5e162473a54ef90fb5e2101c499329c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a52b259e405afbd1dfd3aaf9f4f128406"><td class="memItemLeft" align="right" valign="top"><a id="a52b259e405afbd1dfd3aaf9f4f128406" name="a52b259e405afbd1dfd3aaf9f4f128406"></a>
+SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><b>item</b> [<a class="el" href="hotbar_8h.html#affced4b175e803df59f802e25d017b9b">NUM_ITEMS</a>]</td></tr>
+<tr class="memdesc:a52b259e405afbd1dfd3aaf9f4f128406"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tableau des surfaces des éléments de la hotbar. <br /></td></tr>
+<tr class="separator:a52b259e405afbd1dfd3aaf9f4f128406"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34ec5114af3ab0feca9087cc7243a573"><td class="memItemLeft" align="right" valign="top"><a id="a34ec5114af3ab0feca9087cc7243a573" name="a34ec5114af3ab0feca9087cc7243a573"></a>
+SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><b>hotbar</b></td></tr>
+<tr class="memdesc:a34ec5114af3ab0feca9087cc7243a573"><td class="mdescLeft">&#160;</td><td class="mdescRight">Surface de la hotbar. <br /></td></tr>
+<tr class="separator:a34ec5114af3ab0feca9087cc7243a573"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51288cdc47853562ab0e4b490be6dfe6"><td class="memItemLeft" align="right" valign="top"><a id="a51288cdc47853562ab0e4b490be6dfe6" name="a51288cdc47853562ab0e4b490be6dfe6"></a>
+SDL_Surface *&#160;</td><td class="memItemRight" valign="bottom"><b>hotbarSelect</b></td></tr>
+<tr class="memdesc:a51288cdc47853562ab0e4b490be6dfe6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Surface de la sélection dans la hotbar. <br /></td></tr>
+<tr class="separator:a51288cdc47853562ab0e4b490be6dfe6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
+<div class="textblock"><p>Variables utilisées dans scripte de la <a class="el" href="hotbar_8c.html" title="Gestion de la hotbar.">hotbar.c</a>. </p>
+<p>Création des variables qqui seront utilisée dans la <a class="el" href="hotbar_8c.html" title="Gestion de la hotbar.">hotbar.c</a> </p><dl class="section author"><dt>Auteur</dt><dd>Pousse Kilian - Pierre Elona - Vallee Alban </dd></dl>
+<dl class="section version"><dt>Version</dt><dd>alpha 1.2 </dd></dl>
+<dl class="section date"><dt>Date</dt><dd>24/02/2024 </dd></dl>
+</div></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Généré par&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.8
+</small></address>
+</body>
+</html>
