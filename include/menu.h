@@ -1,4 +1,15 @@
 
+/**
+ * \file menu.h
+ * \brief Création des structures utilisées dans menu.c
+ * \details Permet de stocker les diffèrentes structures et fonctions 
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 2.2
+ * \date 15/04/2024
+**/
+
+
+
 typedef struct bouton_s{
     char * texte; /**< Définiton des nom des boutons*/
     SDL_Rect rectangle;  /**< Définiton du rectangle pour savoir si le joueur clique dedans ou pas*/
