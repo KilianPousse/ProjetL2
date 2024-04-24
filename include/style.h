@@ -1,3 +1,12 @@
+/**
+ * \file style.h
+ * \brief Fichier qui regroupe tout les chemins d'images
+ * \details Permet de gérer tout les chemins de toutes les images utilisées
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 1.2
+ * \date 19/04/2024
+**/
+
 #define IMG_ICON "assets/icon.png"
 /*
 #define WHITE_COLOR {0xFF, 0xFF, 0xFF, 0xFF}
