@@ -10,6 +10,11 @@
 
 
 
+
+/**
+ * \enum bouton_t
+ * \brief Structure representant tout les informations nécessaire aux boutons et à leurs interactions
+**/
 typedef struct bouton_s{
     char * texte; /**< Définiton des nom des boutons*/
     SDL_Rect rectangle;  /**< Définiton du rectangle pour savoir si le joueur clique dedans ou pas*/
@@ -17,11 +22,20 @@ typedef struct bouton_s{
     SDL_Texture * clique; /**< Image du bouton si le joueur clique dessus*/
 }bouton_t;
 
+
+/**
+ * \enum nuages_t
+ * \brief Structure representant tout les informations nécessaire aux nuages et à leurs interactions
+**/
 typedef struct nuages_s{
-    SDL_Rect rectangle;
-    SDL_Texture * image[2];
+    SDL_Rect rectangle; /**< Définitons de la taille du nuage dans un rectange de taille choisi lors de la création du nuage*/
+    SDL_Texture * image[2];/**< Tableau d'image pour animer le nuages*/
 }nuages_t;
 
+/**
+ * \enum logo_t
+ * \brief Structure representant le logo du jeu et ses animations
+**/
 typedef struct logo_s{
     SDL_Rect rectangle;
     SDL_Texture * image[6];
