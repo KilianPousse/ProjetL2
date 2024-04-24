@@ -6,8 +6,10 @@
  * \version alpha 2.2
  * \date 30/01/2024
 **/
-
-
+/**
+ * \struct trade_t
+ * \brief Structure representant des items et leurs prix
+**/
 typedef struct{
 
     int item;
@@ -15,6 +17,11 @@ typedef struct{
 
 }trade_t;
 
+
+/**
+ * \struct catalog_t
+ * \brief Structure representant tout les items vendables
+**/
 typedef struct{
 
     trade_t trade[5];
