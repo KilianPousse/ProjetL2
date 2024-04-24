@@ -1,3 +1,13 @@
+/**
+ * \file inventory.h
+ * \brief Ajoue des fonctions dans inventory.c
+ * \details Ajoue des fonctions qui se trouvent dans inventory.c pour pouvoir les rappeler dans d'autres parties du scripte
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 2.2
+ * \date 26/03/2024
+**/
+
+
 #include "item.h"
 
 #define NB_INVENTORY_ITEM 18 
