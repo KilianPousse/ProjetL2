@@ -1,3 +1,14 @@
+/**
+ * \file item.c
+ * \brief Item du jeu
+ * \details Permet de créer des surface pour tout les items du jeu
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 1.2
+ * \date 30/03/2024
+**/
+
+
+
 #include <stdio.h>
 #include <stdlib.h>
 

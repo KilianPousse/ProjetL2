@@ -1,3 +1,12 @@
+/**
+* \file option.c
+* \brief Option du jeu 
+* \details Permet d'afficher les options et de mettre le jeu en pause
+* \author Pousse Kilian - Pierre Elona - Vallee Alban 
+* \version alpha 1.4
+* \date 15/04/2024
+**/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
