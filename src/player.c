@@ -1,3 +1,12 @@
+/**
+ * \file main.c
+ * \brief Permet de gérer le joueur
+ * \details On genere le joueur sur la map avec ses coordonnées et on gère ses déplacements
+ * \author Pousse Kilian - Pierre Elona - Vallee Alban 
+ * \version alpha 1.2
+ * \date 31/01/2024
+**/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
