@@ -13,7 +13,7 @@
 
 /**
  * \struct item_t
- * \brief Structure representant l'argent du joueur
+ * \brief Structure representant les items existant dans le jeu
 **/
 
 typedef struct {
