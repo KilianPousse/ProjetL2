@@ -11,11 +11,17 @@ Sripte principale du jeu.
 {\ttfamily \#include \"{}header.\+h\"{}}\newline
 {\ttfamily \#include \"{}struct.\+h\"{}}\newline
 {\ttfamily \#include \"{}style.\+h\"{}}\newline
+{\ttfamily \#include \"{}hotbar.\+h\"{}}\newline
+{\ttfamily \#include \"{}inventory.\+h\"{}}\newline
+{\ttfamily \#include \"{}menu.\+h\"{}}\newline
 \doxysubsubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{main_8c_a56081315e028b1183be67c1093e70f43}\label{main_8c_a56081315e028b1183be67c1093e70f43} 
-void {\bfseries Game\+Exit} (int exit\+\_\+value)
+\Hypertarget{main_8c_adb879ef474a5ca6e5d3a481724191536}\label{main_8c_adb879ef474a5ca6e5d3a481724191536} 
+void {\bfseries music2fond} ()
+\item 
+\Hypertarget{main_8c_ad2a0220993f3c256f2b1f211ab9fd2a5}\label{main_8c_ad2a0220993f3c256f2b1f211ab9fd2a5} 
+int {\bfseries initcursor} ()
 \item 
 \Hypertarget{main_8c_ad8de060a9a3f62c8c7591e38e1cffb6e}\label{main_8c_ad8de060a9a3f62c8c7591e38e1cffb6e} 
 int {\bfseries main} (int argc, char \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}arv)
@@ -29,7 +35,18 @@ int \mbox{\hyperlink{main_8c_af32cba74c2d07be494e7183bf3d3ee97}{tile\+Action}} (
 \doxysubsection{Description détaillée}
 Sripte principale du jeu. 
 
+Permet de gérer le joueur.
+
 Coeur principal du programme du jeu \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 1.\+2 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+31/01/2024
+\end{DoxyDate}
+On genere le joueur sur la map avec ses coordonnées et on gère ses déplacements \begin{DoxyAuthor}{Auteur}
 Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
 \end{DoxyAuthor}
 \begin{DoxyVersion}{Version}

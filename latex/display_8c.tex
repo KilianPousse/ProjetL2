@@ -11,25 +11,55 @@ Gestion des affichages.
 {\ttfamily \#include \"{}header.\+h\"{}}\newline
 {\ttfamily \#include \"{}style.\+h\"{}}\newline
 {\ttfamily \#include \"{}map.\+h\"{}}\newline
+{\ttfamily \#include \"{}inventory.\+h\"{}}\newline
 \doxysubsubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{display_8c_aab92356d555eff37509394d0a6af7666}{afficher\+\_\+cadre}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9}{window}}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}})
+void \mbox{\hyperlink{display_8c_aab92356d555eff37509394d0a6af7666}{afficher\+\_\+cadre}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a6c030f48fca13d5dab2e4e0f6090f267}{window}}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a19016f2094b234a4dd4bbfec440f682e}{renderer}})
 \begin{DoxyCompactList}\small\item\em Fonction optinelle qui affiche un cadrillage pour délimiter les tuiles de la map. \end{DoxyCompactList}\item 
 \Hypertarget{display_8c_a5f0f9817e9ea63b9fd4e2f593b56a3ab}\label{display_8c_a5f0f9817e9ea63b9fd4e2f593b56a3ab} 
 void {\bfseries afficher\+\_\+pose\+\_\+map} ()
 \begin{DoxyCompactList}\small\item\em Fonction optinelle qui affiche dans le terminal la position du joueur dans les maps. \end{DoxyCompactList}\item 
-\Hypertarget{display_8c_a4f1bcabc6a32ffba4de3656ac50e859a}\label{display_8c_a4f1bcabc6a32ffba4de3656ac50e859a} 
+\Hypertarget{display_8c_ab2f29739b10ddbedf9da6febe9c75917}\label{display_8c_ab2f29739b10ddbedf9da6febe9c75917} 
 void {\bfseries display\+Time} ()
-\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le temps in game. \end{DoxyCompactList}\item 
+\item 
 \Hypertarget{display_8c_aebb40c6ff5a0fcb6439642b2be7869ec}\label{display_8c_aebb40c6ff5a0fcb6439642b2be7869ec} 
 void {\bfseries display\+Shadow} ()
 \item 
-void \mbox{\hyperlink{display_8c_a16780f266f3216ee6e8c3872bb32df41}{display\+Action}} (int action)
+void \mbox{\hyperlink{display_8c_a16780f266f3216ee6e8c3872bb32df41}{display\+Action}} (int \mbox{\hyperlink{header_8h_a7b4cb3f3f41c37d07dbf7c2991efcdc7}{action}})
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{}action. \end{DoxyCompactList}\item 
 \Hypertarget{display_8c_a7bc81d743082bd5ccdf63327b28fc4d8}\label{display_8c_a7bc81d743082bd5ccdf63327b28fc4d8} 
 void {\bfseries display\+GUI} ()
-\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}interface. \end{DoxyCompactList}\item 
+\Hypertarget{display_8c_afbd483dbf320a8e67b0c61dd1b8372da}\label{display_8c_afbd483dbf320a8e67b0c61dd1b8372da} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries zoom\+Surface} (SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*}original\+Surface, double zoom\+Factor)
+\item 
+int \mbox{\hyperlink{display_8c_a921083467da01d3e8764ee6e87304de8}{init\+PNJ}} ()
+\begin{DoxyCompactList}\small\item\em Initialise les personnages non-\/joueurs (PNJ) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{display_8c_ab8962a76cb989b1d172fdc362148039c}{free\+PNJ}} ()
+\begin{DoxyCompactList}\small\item\em Libère les ressources allouées aux PNJ. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{display_8c_a0230fbe8a473c60c41455759a9494ea5}{display\+PNJ}} ()
+\begin{DoxyCompactList}\small\item\em Affiche les PNJ sur la carte. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{display_8c_a762bd3c82e9c28a3f14728eb1c793ae2}{charger\+Texture}} (char \texorpdfstring{$\ast$}{*}chemin, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a19016f2094b234a4dd4bbfec440f682e}{renderer}})
+\begin{DoxyCompactList}\small\item\em Charge une texture à partir d\textquotesingle{}un chemin d\textquotesingle{}accès. \end{DoxyCompactList}\item 
+\Hypertarget{display_8c_a070b206963a3a468a4af0d84846f1a9f}\label{display_8c_a070b206963a3a468a4af0d84846f1a9f} 
+int {\bfseries display\+Water} ()
+\item 
+\Hypertarget{display_8c_ab4476a30e9e472b398d6a4cafb1bf53a}\label{display_8c_ab4476a30e9e472b398d6a4cafb1bf53a} 
+int {\bfseries init\+Water} ()
+\item 
+\Hypertarget{display_8c_a1c11f6b9ac53964b945a7da0a569e5a4}\label{display_8c_a1c11f6b9ac53964b945a7da0a569e5a4} 
+int {\bfseries free\+Water} ()
+\item 
+\Hypertarget{display_8c_a0fdd4cf60fbfb364c08f1383bec655b8}\label{display_8c_a0fdd4cf60fbfb364c08f1383bec655b8} 
+int {\bfseries init\+Bateau} ()
+\item 
+\Hypertarget{display_8c_a2db7d6137afe0b128607e85ec7d00e7c}\label{display_8c_a2db7d6137afe0b128607e85ec7d00e7c} 
+int {\bfseries display\+Bateau} ()
+\item 
+\Hypertarget{display_8c_a010f78433f5705f15fc5d37ba0a79f17}\label{display_8c_a010f78433f5705f15fc5d37ba0a79f17} 
+int {\bfseries free\+Bateau} ()
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -64,6 +94,26 @@ Fonction optinelle qui affiche un cadrillage pour délimiter les tuiles de la ma
 {\em renderer} & Rendu de la fenêtre \\
 \hline
 \end{DoxyParams}
+\Hypertarget{display_8c_a762bd3c82e9c28a3f14728eb1c793ae2}\label{display_8c_a762bd3c82e9c28a3f14728eb1c793ae2} 
+\index{display.c@{display.c}!chargerTexture@{chargerTexture}}
+\index{chargerTexture@{chargerTexture}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{chargerTexture()}{chargerTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} charger\+Texture (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{chemin,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Charge une texture à partir d\textquotesingle{}un chemin d\textquotesingle{}accès. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chemin} & Chemin d\textquotesingle{}accès à l\textquotesingle{}image \\
+\hline
+{\em renderer} & Renderer SDL pour la texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur vers la texture chargée, NULL en cas d\textquotesingle{}erreur 
+\end{DoxyReturn}
 \Hypertarget{display_8c_a16780f266f3216ee6e8c3872bb32df41}\label{display_8c_a16780f266f3216ee6e8c3872bb32df41} 
 \index{display.c@{display.c}!displayAction@{displayAction}}
 \index{displayAction@{displayAction}!display.c@{display.c}}
@@ -79,3 +129,42 @@ Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{
 {\em action} & valeur de l\textquotesingle{}action du joueur \\
 \hline
 \end{DoxyParams}
+\Hypertarget{display_8c_a0230fbe8a473c60c41455759a9494ea5}\label{display_8c_a0230fbe8a473c60c41455759a9494ea5} 
+\index{display.c@{display.c}!displayPNJ@{displayPNJ}}
+\index{displayPNJ@{displayPNJ}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{displayPNJ()}{displayPNJ()}}
+{\footnotesize\ttfamily int display\+PNJ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche les PNJ sur la carte. 
+
+\begin{DoxyReturn}{Renvoie}
+1 en cas de succès, sinon 0 
+\end{DoxyReturn}
+\Hypertarget{display_8c_ab8962a76cb989b1d172fdc362148039c}\label{display_8c_ab8962a76cb989b1d172fdc362148039c} 
+\index{display.c@{display.c}!freePNJ@{freePNJ}}
+\index{freePNJ@{freePNJ}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{freePNJ()}{freePNJ()}}
+{\footnotesize\ttfamily int free\+PNJ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libère les ressources allouées aux PNJ. 
+
+\begin{DoxyReturn}{Renvoie}
+1 en cas de succès, sinon 0 
+\end{DoxyReturn}
+\Hypertarget{display_8c_a921083467da01d3e8764ee6e87304de8}\label{display_8c_a921083467da01d3e8764ee6e87304de8} 
+\index{display.c@{display.c}!initPNJ@{initPNJ}}
+\index{initPNJ@{initPNJ}!display.c@{display.c}}
+\doxysubsubsection{\texorpdfstring{initPNJ()}{initPNJ()}}
+{\footnotesize\ttfamily int init\+PNJ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise les personnages non-\/joueurs (PNJ) 
+
+\begin{DoxyReturn}{Renvoie}
+1 en cas de succès, sinon 0 
+\end{DoxyReturn}

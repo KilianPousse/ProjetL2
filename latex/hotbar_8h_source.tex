@@ -1,0 +1,35 @@
+\doxysection{hotbar.\+h}
+\hypertarget{hotbar_8h_source}{}\label{hotbar_8h_source}\index{include/hotbar.h@{include/hotbar.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <time.h>}}
+\DoxyCodeLine{00010\ }
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ <SDL2/SDL.h>}}
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <SDL2/SDL\_image.h>}}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00019\ \textcolor{preprocessor}{\#define\ NUM\_ITEMS\ 6}}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00025\ \textcolor{preprocessor}{\#define\ ITEMWIDTH\ WINDOW\_WIDTH\ /\ NUM\_ITEMS}}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00031\ \textcolor{preprocessor}{\#define\ ITEMHEIGHT\ WINDOW\_HEIGHT\ /\ 20\ }\textcolor{comment}{//\ Taille\ de\ la\ hotbar}}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00037\ SDL\_Surface*\ item[NUM\_ITEMS];\ }
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ SDL\_Surface*\ hotbar;}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ SDL\_Surface*\ hotbarSelect;}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \textcolor{keywordtype}{void}\ loadHotbar();}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \textcolor{keywordtype}{void}\ displayHotbar();}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \textcolor{keywordtype}{void}\ displayHotbarSelect();}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \textcolor{keywordtype}{void}\ freeHotbar();}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \textcolor{keywordtype}{void}\ displayItem();}
+\DoxyCodeLine{00080\ }
+
+\end{DoxyCode}

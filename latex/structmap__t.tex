@@ -12,25 +12,53 @@ structure représentant la map
 \doxysubsubsection*{Attributs publics}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structmap__t_aac334d44bae2bf16d9b347d3f6ac75cd}\label{structmap__t_aac334d44bae2bf16d9b347d3f6ac75cd} 
-int {\bfseries map} \mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}\mbox{[}NB\+\_\+\+TILE\+\_\+X\mbox{]}\mbox{[}NB\+\_\+\+TILE\+\_\+Y\mbox{]}
-\begin{DoxyCompactList}\small\item\em Contenu de la map. \end{DoxyCompactList}\item 
-\Hypertarget{structmap__t_afeb46a037d18e4bd7de7c743db4724c9}\label{structmap__t_afeb46a037d18e4bd7de7c743db4724c9} 
-SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries background} \mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}
-\begin{DoxyCompactList}\small\item\em Contenu de la map. \end{DoxyCompactList}\item 
-\Hypertarget{structmap__t_a804a24ebf9501d3fc255748b4526978e}\label{structmap__t_a804a24ebf9501d3fc255748b4526978e} 
-SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries overlay} \mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}
-\begin{DoxyCompactList}\small\item\em Contenu de la map. \end{DoxyCompactList}\item 
-\Hypertarget{structmap__t_a2475ddf9dc1e5a5a9f545ae2472af70d}\label{structmap__t_a2475ddf9dc1e5a5a9f545ae2472af70d} 
-unsigned int {\bfseries x}
-\begin{DoxyCompactList}\small\item\em indice de la partie de map en X \end{DoxyCompactList}\item 
-\Hypertarget{structmap__t_a92f18a1b3cdff5257ee6196dae7cc8f0}\label{structmap__t_a92f18a1b3cdff5257ee6196dae7cc8f0} 
-unsigned int {\bfseries y}
-\begin{DoxyCompactList}\small\item\em indice de la partie de map en Y \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{structmap__t_aac334d44bae2bf16d9b347d3f6ac75cd}{map}} \mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}\mbox{[}NB\+\_\+\+TILE\+\_\+X\mbox{]}\mbox{[}NB\+\_\+\+TILE\+\_\+Y\mbox{]}
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmap__t_a94c20ae070e19c8ac5141eca2d30978a}{background}} \mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structmap__t_a91731cb3046bbfaf6891e406837906b6}{overlay}} \mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}
+\item 
+int \mbox{\hyperlink{structmap__t_aa652b86191d57a63175e30aafae994e1}{x}}
+\item 
+int \mbox{\hyperlink{structmap__t_a87af8f6b5b941dae8dbf8172adf8c39b}{y}}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
 structure représentant la map 
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{structmap__t_a94c20ae070e19c8ac5141eca2d30978a}\label{structmap__t_a94c20ae070e19c8ac5141eca2d30978a} 
+\index{map\_t@{map\_t}!background@{background}}
+\index{background@{background}!map\_t@{map\_t}}
+\doxysubsubsection{\texorpdfstring{background}{background}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} map\+\_\+t\+::background\mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}}
+
+Contenu de la map \Hypertarget{structmap__t_aac334d44bae2bf16d9b347d3f6ac75cd}\label{structmap__t_aac334d44bae2bf16d9b347d3f6ac75cd} 
+\index{map\_t@{map\_t}!map@{map}}
+\index{map@{map}!map\_t@{map\_t}}
+\doxysubsubsection{\texorpdfstring{map}{map}}
+{\footnotesize\ttfamily int map\+\_\+t\+::map\mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}\mbox{[}NB\+\_\+\+TILE\+\_\+X\mbox{]}\mbox{[}NB\+\_\+\+TILE\+\_\+Y\mbox{]}}
+
+Contenu de la map \Hypertarget{structmap__t_a91731cb3046bbfaf6891e406837906b6}\label{structmap__t_a91731cb3046bbfaf6891e406837906b6} 
+\index{map\_t@{map\_t}!overlay@{overlay}}
+\index{overlay@{overlay}!map\_t@{map\_t}}
+\doxysubsubsection{\texorpdfstring{overlay}{overlay}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} map\+\_\+t\+::overlay\mbox{[}\mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}} \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}\mbox{]}}
+
+Contenu de la map \Hypertarget{structmap__t_aa652b86191d57a63175e30aafae994e1}\label{structmap__t_aa652b86191d57a63175e30aafae994e1} 
+\index{map\_t@{map\_t}!x@{x}}
+\index{x@{x}!map\_t@{map\_t}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int map\+\_\+t\+::x}
+
+indice de la partie de map en X \Hypertarget{structmap__t_a87af8f6b5b941dae8dbf8172adf8c39b}\label{structmap__t_a87af8f6b5b941dae8dbf8172adf8c39b} 
+\index{map\_t@{map\_t}!y@{y}}
+\index{y@{y}!map\_t@{map\_t}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int map\+\_\+t\+::y}
+
+indice de la partie de map en Y 
 
 La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 

@@ -1,0 +1,41 @@
+\doxysection{inventory.\+h}
+\hypertarget{inventory_8h_source}{}\label{inventory_8h_source}\index{include/inventory.h@{include/inventory.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#include\ "{}item.h"{}}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ NB\_INVENTORY\_ITEM\ 18\ }}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#define\ NB\_HOTBAR\_ITEM\ 6}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#define\ MAX\_ITEM\_STACK\ 99}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00008\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00009\ \ \ \ \ \mbox{\hyperlink{structitem__t}{item\_t}}\ hotbar[NB\_HOTBAR\_ITEM];}
+\DoxyCodeLine{00010\ \ \ \ \ \mbox{\hyperlink{structitem__t}{item\_t}}\ pcpl[NB\_INVENTORY\_ITEM];}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{keywordtype}{int}\ i\_hotbar;}
+\DoxyCodeLine{00013\ \}\mbox{\hyperlink{structinventory__t}{inventory\_t}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \mbox{\hyperlink{structinventory__t}{inventory\_t}}\ inventory;}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00018\ \mbox{\hyperlink{structitem__t}{item\_t}}\ inventory\_mainhand();}
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{int}\ inventory\_use();}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ inventory\_clear();}
+\DoxyCodeLine{00021\ \textcolor{keywordtype}{int}\ inventory\_contains\_hotbar(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{int}\ inventory\_contains\_pcpl(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{int}\ inventory\_contains(\ \textcolor{keywordtype}{unsigned}\ \textcolor{keywordtype}{int}\ \textcolor{keywordtype}{id},\ \textcolor{keywordtype}{int}\ limit\ );}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keywordtype}{int}\ inventory\_canGive(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ item\ );}
+\DoxyCodeLine{00026\ \textcolor{keywordtype}{int}\ inventory\_give(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ *\ item\ );}
+\DoxyCodeLine{00027\ }
+\DoxyCodeLine{00028\ \textcolor{keywordtype}{int}\ inventory\_canRemove(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ item\ );}
+\DoxyCodeLine{00029\ \textcolor{keywordtype}{int}\ inventory\_remove(\ \mbox{\hyperlink{structitem__t}{item\_t}}\ *\ item\ );}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \textcolor{keywordtype}{void}\ inventory\_affiche(\ \ );}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \textcolor{keywordtype}{int}\ inventory\_haveItem();}
+\DoxyCodeLine{00034\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{int}\ inventory\_display();}
+
+\end{DoxyCode}

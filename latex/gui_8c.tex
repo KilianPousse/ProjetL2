@@ -11,6 +11,7 @@ Sripte du GUI.
 {\ttfamily \#include \"{}header.\+h\"{}}\newline
 {\ttfamily \#include \"{}struct.\+h\"{}}\newline
 {\ttfamily \#include \"{}style.\+h\"{}}\newline
+{\ttfamily \#include \"{}inventory.\+h\"{}}\newline
 \doxysubsubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
@@ -24,7 +25,19 @@ void \mbox{\hyperlink{gui_8c_a1b0bdc2c7f72e1a58b6a6ae93a8863c0}{GUI\+\_\+print\+
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}interface de l\textquotesingle{}hour. \end{DoxyCompactList}\item 
 \Hypertarget{gui_8c_a2c422da219be9877458cc611e9490426}\label{gui_8c_a2c422da219be9877458cc611e9490426} 
 void {\bfseries GUI\+\_\+print\+\_\+dialog} ()
-\end{DoxyCompactItemize}
+\item 
+\Hypertarget{gui_8c_ac5e115100d1efecf83d2210c5c0d1746}\label{gui_8c_ac5e115100d1efecf83d2210c5c0d1746} 
+int {\bfseries GUI\+\_\+coins} ()
+\begin{DoxyCompactList}\small\item\em Affichage de l\textquotesingle{}argent. \end{DoxyCompactList}\item 
+\Hypertarget{gui_8c_a2849df9dd844d754c7d018480f6f0c24}\label{gui_8c_a2849df9dd844d754c7d018480f6f0c24} 
+int {\bfseries display\+Item\+\_\+inventory} (int i, int j)
+\item 
+\Hypertarget{gui_8c_a478a42ce67b8883fbc58b7ac0a70b0bd}\label{gui_8c_a478a42ce67b8883fbc58b7ac0a70b0bd} 
+int {\bfseries display\+Item\+\_\+hotbar} (int i)
+\item 
+\Hypertarget{gui_8c_aaded3c967c0338746c5f50a320a8ee85}\label{gui_8c_aaded3c967c0338746c5f50a320a8ee85} 
+int {\bfseries GUI\+\_\+inventory} ()
+\begin{DoxyCompactList}\small\item\em Affichage de l\textquotesingle{}inventaire. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}

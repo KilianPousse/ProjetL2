@@ -1,0 +1,55 @@
+\doxysection{Référence du fichier src/menu.c}
+\hypertarget{menu_8c}{}\label{menu_8c}\index{src/menu.c@{src/menu.c}}
+
+
+Menu du jeu.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include \"{}header.\+h\"{}}\newline
+{\ttfamily \#include \"{}style.\+h\"{}}\newline
+{\ttfamily \#include \"{}struct.\+h\"{}}\newline
+{\ttfamily \#include \"{}menu.\+h\"{}}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{menu_8c_a6974d08a74da681b3957b2fead2608b8}\label{menu_8c_a6974d08a74da681b3957b2fead2608b8} 
+\#define {\bfseries SCREEN\+\_\+\+HEIGHT}~480
+\item 
+\Hypertarget{menu_8c_a4fec6c275ff37a5b987c5032cbd98751}\label{menu_8c_a4fec6c275ff37a5b987c5032cbd98751} 
+\#define {\bfseries SCREEN\+\_\+\+WIDGHT}~640
+\item 
+\Hypertarget{menu_8c_a7b29335add3a553ed85d0e3ace85629c}\label{menu_8c_a7b29335add3a553ed85d0e3ace85629c} 
+\#define {\bfseries TAILLE}~4
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Fonctions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{menu_8c_a5947b1aacaa0b7b163a13447fa6a890c}\label{menu_8c_a5947b1aacaa0b7b163a13447fa6a890c} 
+void {\bfseries menu\+\_\+destruction} (\mbox{\hyperlink{structbouton__s}{bouton\+\_\+t}} \texorpdfstring{$\ast$}{*}bouton, SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*}texture, \mbox{\hyperlink{structnuages__s}{nuages\+\_\+t}} nuage, \mbox{\hyperlink{structnuages__s}{nuages\+\_\+t}} nuagea, \mbox{\hyperlink{structnuages__s}{nuages\+\_\+t}} nuageb, \mbox{\hyperlink{structnuages__s}{nuages\+\_\+t}} nuagec, \mbox{\hyperlink{structlogo__s}{logo\+\_\+t}} logo)
+\item 
+\Hypertarget{menu_8c_a7ab91ecc5559d8a0a7d1cf3c969bef29}\label{menu_8c_a7ab91ecc5559d8a0a7d1cf3c969bef29} 
+int {\bfseries menu\+\_\+main} (int argc, char \texorpdfstring{$\ast$}{*}argv\mbox{[}$\,$\mbox{]})
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{menu_8c_a2be22be62b4cd100944da36c29f5acba}\label{menu_8c_a2be22be62b4cd100944da36c29f5acba} 
+SDL\+\_\+\+Event {\bfseries evenement}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Description détaillée}
+Menu du jeu. 
+
+Programme qui permet d\textquotesingle{}afficher le menu du jeu et de diriger le joueur jusqu\textquotesingle{}au jeu \begin{DoxyAuthor}{Auteur}
+Pousse Kilian -\/ Pierre Elona -\/ Vallee Alban 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+alpha 1.\+4 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+15/04/2024 
+\end{DoxyDate}

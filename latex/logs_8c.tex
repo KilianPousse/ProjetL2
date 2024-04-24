@@ -9,13 +9,20 @@ Gestions de logs.
 {\ttfamily \#include $<$stdlib.\+h$>$}\newline
 {\ttfamily \#include $<$string.\+h$>$}\newline
 {\ttfamily \#include \"{}header.\+h\"{}}\newline
+{\ttfamily \#include \"{}hotbar.\+h\"{}}\newline
+{\ttfamily \#include \"{}inventory.\+h\"{}}\newline
 \doxysubsubsection*{Fonctions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{logs_8c_a1cbaea046077d435e2c2af95f5f4b3b8}{Error\+Log}} (char \texorpdfstring{$\ast$}{*}message)
-\begin{DoxyCompactList}\small\item\em Stop le jeu si il y a une erreur dans le programme. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Arret le programme avec un maessage d\textquotesingle{}erreur. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{logs_8c_a2b878c29420719f1216318f6ee25b323}{Warning\+Log}} (char \texorpdfstring{$\ast$}{*}message)
-\begin{DoxyCompactList}\small\item\em Envoie un avertissement (warning) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Affiche un maessage (warning) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{logs_8c_a56081315e028b1183be67c1093e70f43}{Game\+Exit}} (int exit\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Affichage de l\textquotesingle{}argent. \end{DoxyCompactList}\item 
+\Hypertarget{logs_8c_a54d2d6c741e8c97e0b15d296c1d687b3}\label{logs_8c_a54d2d6c741e8c97e0b15d296c1d687b3} 
+int {\bfseries play\+Music} (char \texorpdfstring{$\ast$}{*}path, Mix\+\_\+\+Chunk \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}chunk, int \texorpdfstring{$\ast$}{*}channel, int loop)
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -41,11 +48,30 @@ alpha 1.\+2.\+1
 
 
 
-Stop le jeu si il y a une erreur dans le programme. 
+Arret le programme avec un maessage d\textquotesingle{}erreur. 
+
+Stop le jeu si il y a une erreur dans le programme.
 
 
 \begin{DoxyParams}{Paramètres}
+{\em message} & message a afficher\\
+\hline
 {\em message} & est le message d\textquotesingle{}erreur à afficher dans le terminal \\
+\hline
+\end{DoxyParams}
+\Hypertarget{logs_8c_a56081315e028b1183be67c1093e70f43}\label{logs_8c_a56081315e028b1183be67c1093e70f43} 
+\index{logs.c@{logs.c}!GameExit@{GameExit}}
+\index{GameExit@{GameExit}!logs.c@{logs.c}}
+\doxysubsubsection{\texorpdfstring{GameExit()}{GameExit()}}
+{\footnotesize\ttfamily void Game\+Exit (\begin{DoxyParamCaption}\item[{int}]{exit\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Affichage de l\textquotesingle{}argent. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em exit\+\_\+value} & valeur de sortie du jeu \\
 \hline
 \end{DoxyParams}
 \Hypertarget{logs_8c_a2b878c29420719f1216318f6ee25b323}\label{logs_8c_a2b878c29420719f1216318f6ee25b323} 
@@ -56,10 +82,14 @@ Stop le jeu si il y a une erreur dans le programme.
 
 
 
-Envoie un avertissement (warning) 
+Affiche un maessage (warning) 
+
+Envoie un avertissement (warning)
 
 
 \begin{DoxyParams}{Paramètres}
+{\em message} & message a afficher\\
+\hline
 {\em message} & est le message du warning à afficher dans le terminal \\
 \hline
 \end{DoxyParams}

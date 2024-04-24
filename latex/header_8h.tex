@@ -9,6 +9,7 @@ Entete principale du projet.
 {\ttfamily \#include $<$SDL2/\+SDL.\+h$>$}\newline
 {\ttfamily \#include $<$SDL2/\+SDL\+\_\+image.\+h$>$}\newline
 {\ttfamily \#include $<$SDL2/\+SDL\+\_\+ttf.\+h$>$}\newline
+{\ttfamily \#include $<$SDL2/\+SDL\+\_\+mixer.\+h$>$}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
@@ -17,69 +18,112 @@ struct \mbox{\hyperlink{structplayer__t}{player\+\_\+t}}
 struct \mbox{\hyperlink{structmap__t}{map\+\_\+t}}
 \begin{DoxyCompactList}\small\item\em structure représentant la map \end{DoxyCompactList}\item 
 struct \mbox{\hyperlink{structgui__t}{gui\+\_\+t}}
-\begin{DoxyCompactList}\small\item\em structure comportants les interfaces \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em structure comportants les interfaces \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structplant__t}{plant\+\_\+t}}
+\item 
+struct \mbox{\hyperlink{structfarm__t}{farm\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em structure des plantations \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structsprite__t}{sprite\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Structure représentant les textures des sprites. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Macros}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e}\label{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e} 
-\#define {\bfseries NAME\+\_\+\+PROG}~\"{}Tomogashi Island\"{}
-\begin{DoxyCompactList}\small\item\em Nom du programme. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3}\label{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3} 
-\#define {\bfseries VERS\+\_\+\+GAME}~\"{}alpha 1.\+2.\+1\"{}
-\begin{DoxyCompactList}\small\item\em Version du jeu. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b}\label{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b} 
-\#define {\bfseries FPS}~24
+\#define \mbox{\hyperlink{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e}{NAME\+\_\+\+PROG}}~\"{}Tomogashi Island\"{}
 \item 
-\Hypertarget{header_8h_a69c339b2966791489487938c49401cf3}\label{header_8h_a69c339b2966791489487938c49401cf3} 
-\#define {\bfseries FPS\+\_\+\+LIMIT}~1000/FPS
+\#define \mbox{\hyperlink{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3}{VERS\+\_\+\+GAME}}~\"{}vers. 1.\+0\"{}
 \item 
-\Hypertarget{header_8h_a2d6acae8f9b752a5d85795baf1005907}\label{header_8h_a2d6acae8f9b752a5d85795baf1005907} 
-\#define {\bfseries WINDOW\+\_\+\+NAME}~\"{}Tomogashi Island\"{}
-\begin{DoxyCompactList}\small\item\em Nom de la fenêtre. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b}{FPS}}~24
+\item 
+\#define \mbox{\hyperlink{header_8h_a69c339b2966791489487938c49401cf3}{FPS\+\_\+\+LIMIT}}~1000/\mbox{\hyperlink{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b}{FPS}}
+\item 
+\#define \mbox{\hyperlink{header_8h_a2d6acae8f9b752a5d85795baf1005907}{WINDOW\+\_\+\+NAME}}~\"{}Tomogashi Island\"{}
+\item 
 \Hypertarget{header_8h_a498d9f026138406895e9a34b504ac6a6}\label{header_8h_a498d9f026138406895e9a34b504ac6a6} 
 \#define {\bfseries WINDOW\+\_\+\+WIDTH}~1560
 \item 
 \Hypertarget{header_8h_a5473cf64fa979b48335079c99532e243}\label{header_8h_a5473cf64fa979b48335079c99532e243} 
 \#define {\bfseries WINDOW\+\_\+\+HEIGHT}~960
 \item 
-\Hypertarget{header_8h_a004a0bd4d35be528654076c4dcdd52d8}\label{header_8h_a004a0bd4d35be528654076c4dcdd52d8} 
-\#define {\bfseries SIZE\+\_\+\+TILE}~60
-\begin{DoxyCompactList}\small\item\em Taille en pixel d\textquotesingle{}un tuile. \end{DoxyCompactList}\item 
+\#define \mbox{\hyperlink{header_8h_a004a0bd4d35be528654076c4dcdd52d8}{SIZE\+\_\+\+TILE}}~60
+\item 
 \Hypertarget{header_8h_a7261b6a70ea8aeccc36578e361f52777}\label{header_8h_a7261b6a70ea8aeccc36578e361f52777} 
 \#define {\bfseries NB\+\_\+\+TILE\+\_\+X}~WINDOW\+\_\+\+WIDTH/\mbox{\hyperlink{header_8h_a004a0bd4d35be528654076c4dcdd52d8}{SIZE\+\_\+\+TILE}}
 \item 
 \Hypertarget{header_8h_a3aad3e50e3f36b38e7cebef206a7b094}\label{header_8h_a3aad3e50e3f36b38e7cebef206a7b094} 
 \#define {\bfseries NB\+\_\+\+TILE\+\_\+Y}~WINDOW\+\_\+\+HEIGHT/\mbox{\hyperlink{header_8h_a004a0bd4d35be528654076c4dcdd52d8}{SIZE\+\_\+\+TILE}}
 \item 
-\Hypertarget{header_8h_a6d58f9ac447476b4e084d7ca383f5183}\label{header_8h_a6d58f9ac447476b4e084d7ca383f5183} 
-\#define {\bfseries FAILURE}~0
-\begin{DoxyCompactList}\small\item\em Valeur d\textquotesingle{}un test faux. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_aa90cac659d18e8ef6294c7ae337f6b58}\label{header_8h_aa90cac659d18e8ef6294c7ae337f6b58} 
-\#define {\bfseries SUCCESS}~1
-\begin{DoxyCompactList}\small\item\em Valeur d\textquotesingle{}un test vrai. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}\label{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b} 
-\#define {\bfseries SIZE\+\_\+\+MAP\+\_\+X}~3
-\begin{DoxyCompactList}\small\item\em Nombre de partie de la map en X. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_a24f7370b723f7094c645ae488cf6bdb4}\label{header_8h_a24f7370b723f7094c645ae488cf6bdb4} 
-\#define {\bfseries SIZE\+\_\+\+MAP\+\_\+Y}~4
-\begin{DoxyCompactList}\small\item\em Nombre de partie de la map en Y. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef}\label{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef} 
-\#define {\bfseries NB\+\_\+\+ANIMATION}~4
-\begin{DoxyCompactList}\small\item\em Nombre de frame dans une animation. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_a92b776fb4fb058c7769228eb857d2539}\label{header_8h_a92b776fb4fb058c7769228eb857d2539} 
-\#define {\bfseries NB\+\_\+\+ACTIONS}~5
-\begin{DoxyCompactList}\small\item\em Nombre d\textquotesingle{}icons d\textquotesingle{}actions. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_a8c738dcdf2c4379839739cd7e77e1090}\label{header_8h_a8c738dcdf2c4379839739cd7e77e1090} 
-\#define {\bfseries MAIN\+\_\+\+MAP}~\"{}data/map\"{}
-\begin{DoxyCompactList}\small\item\em chemin vers les données de la map \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_a210524a73e29beec0bbfb0ce037f2e34}\label{header_8h_a210524a73e29beec0bbfb0ce037f2e34} 
-\#define {\bfseries LIMIT\+\_\+\+PER\+\_\+\+LINE}~75
-\begin{DoxyCompactList}\small\item\em Limite de caracteres par ligne. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_aa7fce945ea3bc51f17feb61bcba9cd9b}\label{header_8h_aa7fce945ea3bc51f17feb61bcba9cd9b} 
-\#define {\bfseries DIALOG\+\_\+\+TEST}~\"{}data/dialog/dialogue\+\_\+test.\+txt\"{}
+\#define \mbox{\hyperlink{header_8h_a6d58f9ac447476b4e084d7ca383f5183}{FAILURE}}~0
 \item 
-\Hypertarget{header_8h_a26e6586f9dfafd65f254285b1a1cc883}\label{header_8h_a26e6586f9dfafd65f254285b1a1cc883} 
-\#define {\bfseries FILE\+\_\+\+SAVE}~\"{}data/save/save\"{}
+\#define \mbox{\hyperlink{header_8h_aa90cac659d18e8ef6294c7ae337f6b58}{SUCCESS}}~1
+\item 
+\#define \mbox{\hyperlink{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}{SIZE\+\_\+\+MAP\+\_\+X}}~3
+\item 
+\#define \mbox{\hyperlink{header_8h_a24f7370b723f7094c645ae488cf6bdb4}{SIZE\+\_\+\+MAP\+\_\+Y}}~4
+\item 
+\#define \mbox{\hyperlink{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef}{NB\+\_\+\+ANIMATION}}~4
+\item 
+\#define \mbox{\hyperlink{header_8h_a92b776fb4fb058c7769228eb857d2539}{NB\+\_\+\+ACTIONS}}~5
+\item 
+\Hypertarget{header_8h_a5fac8f2cc29ea5bde30c8fa4a4daa306}\label{header_8h_a5fac8f2cc29ea5bde30c8fa4a4daa306} 
+\#define {\bfseries PLAYER\+\_\+\+SIZE}~50
+\item 
+\#define \mbox{\hyperlink{header_8h_a8c738dcdf2c4379839739cd7e77e1090}{MAIN\+\_\+\+MAP}}~\"{}data/map\"{}
+\item 
+\Hypertarget{header_8h_ad0f670f8be8684e538d4d8f2a2d67df0}\label{header_8h_ad0f670f8be8684e538d4d8f2a2d67df0} 
+\#define {\bfseries TIME\+\_\+\+MAX\+\_\+\+DAY}~24 \texorpdfstring{$\ast$}{*} 60 \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b}{FPS}}
+\item 
+\#define \mbox{\hyperlink{header_8h_a210524a73e29beec0bbfb0ce037f2e34}{LIMIT\+\_\+\+PER\+\_\+\+LINE}}~75
+\item 
+\Hypertarget{header_8h_aa7fce945ea3bc51f17feb61bcba9cd9b}\label{header_8h_aa7fce945ea3bc51f17feb61bcba9cd9b} 
+\#define {\bfseries DIALOG\+\_\+\+TEST}~\"{}data/\mbox{\hyperlink{header_8h_aeb5f5d84c7634fefd0a189ffdc2a01db}{dialog}}/dialogue\+\_\+test.\+txt\"{}
+\item 
+\#define \mbox{\hyperlink{header_8h_a26e6586f9dfafd65f254285b1a1cc883}{FILE\+\_\+\+SAVE}}~\"{}data/save/save\"{}
+\item 
+\#define \mbox{\hyperlink{header_8h_a26939ce39b475552b5e46657c463ad85}{FILE\+\_\+\+DEFAULT\+\_\+\+SAVE}}~\"{}data/save/default\"{}
+\item 
+\#define \mbox{\hyperlink{header_8h_ad9bcf936a860a2c59c39550cfbcf2565}{IMAP\+\_\+\+FARM}}~5
+\item 
+\#define \mbox{\hyperlink{header_8h_a9b2127865c77fac199416ec8d5b1b2a9}{NB\+\_\+\+PLANTS\+\_\+\+MAX}}~\mbox{\hyperlink{header_8h_a313a0ece5f285dd0573af2d020315eb0}{NB\+\_\+\+FARMLAND}}
+\item 
+\#define \mbox{\hyperlink{header_8h_a313a0ece5f285dd0573af2d020315eb0}{NB\+\_\+\+FARMLAND}}~60
+\item 
+\#define \mbox{\hyperlink{header_8h_a7263e63d367da9dc3311af7f575cb767}{NB\+\_\+\+STEM\+\_\+\+PLANT}}~4
+\item 
+\Hypertarget{header_8h_a623185ada9a97d38871ebdcc8dc3c386}\label{header_8h_a623185ada9a97d38871ebdcc8dc3c386} 
+\#define {\bfseries ID\+\_\+\+PLANT\+\_\+\+BLE}~1
+\item 
+\Hypertarget{header_8h_a566bf9e2012bb1a36f40cd3c207203b0}\label{header_8h_a566bf9e2012bb1a36f40cd3c207203b0} 
+\#define {\bfseries ID\+\_\+\+PLANT\+\_\+\+TOMATE}~2
+\item 
+\Hypertarget{header_8h_a933ac92b2de737c431979927a22052d7}\label{header_8h_a933ac92b2de737c431979927a22052d7} 
+\#define {\bfseries MAX\+\_\+\+COINS}~999999
+\begin{DoxyCompactList}\small\item\em Montant maximum d\textquotesingle{}argent que peut posséder le joueur. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_acd19773d24e0450b01a69dbe5d47725e}\label{header_8h_acd19773d24e0450b01a69dbe5d47725e} 
+\#define {\bfseries NB\+\_\+\+PNJ}~10
+\begin{DoxyCompactList}\small\item\em Nombre de PNJ dans le jeu. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a04e8be9abeb67d05b728004d0aa8238e}\label{header_8h_a04e8be9abeb67d05b728004d0aa8238e} 
+\#define {\bfseries ID\+\_\+\+PNJ\+\_\+\+RISETTE}~0
+\begin{DoxyCompactList}\small\item\em Identifiant du PNJ \"{}\+Risette\"{}. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a8a96e9564a677b6ec116f4753d32dff9}\label{header_8h_a8a96e9564a677b6ec116f4753d32dff9} 
+\#define {\bfseries ID\+\_\+\+PNJ\+\_\+\+PY}~1
+\begin{DoxyCompactList}\small\item\em Identifiant du PNJ \"{}\+Py\"{}. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ab25988b65e882b08f0e7920152eeedc6}\label{header_8h_ab25988b65e882b08f0e7920152eeedc6} 
+\#define {\bfseries ID\+\_\+\+PNJ\+\_\+\+CRABE}~2
+\begin{DoxyCompactList}\small\item\em Identifiant du PNJ \"{}\+Crabe\"{}. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_af1df77ac4ff4c33dac4b1fafbf422d3f}\label{header_8h_af1df77ac4ff4c33dac4b1fafbf422d3f} 
+\#define {\bfseries ID\+\_\+\+PNJ\+\_\+\+ZEBI}~3
+\begin{DoxyCompactList}\small\item\em Identifiant du PNJ \"{}\+Zebi\"{}. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a5e4a4ddc0b4abf04e00a51d5159a7664}\label{header_8h_a5e4a4ddc0b4abf04e00a51d5159a7664} 
+\#define {\bfseries ID\+\_\+\+PNJ\+\_\+\+KEN}~4
+\begin{DoxyCompactList}\small\item\em Identifiant du PNJ \"{}\+Ken\"{}. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a9d641a78644cb44c76cd59bc65e37b0b}\label{header_8h_a9d641a78644cb44c76cd59bc65e37b0b} 
+\#define {\bfseries ID\+\_\+\+PNJ\+\_\+\+BROCOLI}~5
+\begin{DoxyCompactList}\small\item\em Identifiant du PNJ \"{}\+Brocoli\"{}. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_aeee0dfb714da2853689880ea4a82e79d}\label{header_8h_aeee0dfb714da2853689880ea4a82e79d} 
+\#define {\bfseries ID\+\_\+\+PNJ\+\_\+\+SERGE}~6
+\begin{DoxyCompactList}\small\item\em Identifiant du PNJ \"{}\+Serge\"{}. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a683e95bfa78ae1dff5e1036e60a2e329}\label{header_8h_a683e95bfa78ae1dff5e1036e60a2e329} 
+\#define {\bfseries NB\+\_\+\+SPRITES\+\_\+\+WATER}~14
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Énumérations}
 \begin{DoxyCompactItemize}
@@ -97,10 +141,10 @@ int \mbox{\hyperlink{header_8h_a2a785a496d04917a541a6b22c23c1f6c}{Init\+Player}}
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}initialiser le joueur. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{header_8h_a82b17f24f7d151eb1902992b358d2625}{Free\+Player}} ()
 \begin{DoxyCompactList}\small\item\em Permet de liberer le joueur. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_adc4e0a44a6c9fd7634f91ff6ea50080e}\label{header_8h_adc4e0a44a6c9fd7634f91ff6ea50080e} 
+\Hypertarget{header_8h_a442b9d75d1d2f16351e55b01fb6f829e}\label{header_8h_a442b9d75d1d2f16351e55b01fb6f829e} 
 void {\bfseries display\+Player} ()
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le joueur. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{header_8h_aab92356d555eff37509394d0a6af7666}{afficher\+\_\+cadre}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9}{window}}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a966da7a60c4ea3ba301e26ccc5efe452}{renderer}})
+void \mbox{\hyperlink{header_8h_aab92356d555eff37509394d0a6af7666}{afficher\+\_\+cadre}} (SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a6c030f48fca13d5dab2e4e0f6090f267}{window}}, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a19016f2094b234a4dd4bbfec440f682e}{renderer}})
 \begin{DoxyCompactList}\small\item\em Fonction optinelle qui affiche un cadrillage pour délimiter les tuiles de la map. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{header_8h_ac83f3fc4e97c234adce291ca195a0e35}{out\+Window}} (int x, int y)
 \begin{DoxyCompactList}\small\item\em Permet de savoir si le joueur se trouve hors de la fênetre. \end{DoxyCompactList}\item 
@@ -108,12 +152,12 @@ int \mbox{\hyperlink{header_8h_a1a9266e5ccf5dadd51b799855091a22a}{out\+Map}} (\m
 \begin{DoxyCompactList}\small\item\em Permet de savoir si le joueur est hors de la map. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{header_8h_a464977f8317c50346420be433fa5320d}{init\+Map}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}m)
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}initialiser la map. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{header_8h_a68df481c38303e85cc5d9d6b17e19fa6}{free\+Map}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}m)
+void \mbox{\hyperlink{header_8h_a08e611b15a6d28b0d07e38ff0ff73241}{free\+Map}} (\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}m)
 \begin{DoxyCompactList}\small\item\em Permet de liberer la map. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_ac1cb8dcc427d1cf0e4663bba67ee0c45}\label{header_8h_ac1cb8dcc427d1cf0e4663bba67ee0c45} 
+\Hypertarget{header_8h_abbd27a09735fd1e3824dcc47f3cf7a85}\label{header_8h_abbd27a09735fd1e3824dcc47f3cf7a85} 
 void {\bfseries diplay\+Background} ()
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}arrière plan du jeu. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_a464fd363fe0311477f7661d0b292779a}\label{header_8h_a464fd363fe0311477f7661d0b292779a} 
+\Hypertarget{header_8h_a9e01a27b1d2bc476c99622481cf5b767}\label{header_8h_a9e01a27b1d2bc476c99622481cf5b767} 
 void {\bfseries display\+Overlay} ()
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le calque au dessus de l\textquotesingle{}arrière plan du jeu. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{header_8h_a6e0d90c86a84a9d8d32267d950d2ce79}{can\+To\+Go}} (\mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}} dir)
@@ -125,7 +169,7 @@ void {\bfseries afficher\+\_\+pose\+\_\+map} ()
 \begin{DoxyCompactList}\small\item\em Fonction optinelle qui affiche dans le terminal la position du joueur dans les maps. \end{DoxyCompactList}\item 
 \Hypertarget{header_8h_ab2f29739b10ddbedf9da6febe9c75917}\label{header_8h_ab2f29739b10ddbedf9da6febe9c75917} 
 void {\bfseries display\+Time} ()
-\begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher le temps in game. \end{DoxyCompactList}\item 
+\item 
 \Hypertarget{header_8h_aebb40c6ff5a0fcb6439642b2be7869ec}\label{header_8h_aebb40c6ff5a0fcb6439642b2be7869ec} 
 void {\bfseries display\+Shadow} ()
 \item 
@@ -133,7 +177,7 @@ int \mbox{\hyperlink{header_8h_a7b4cb3f3f41c37d07dbf7c2991efcdc7}{action}} (int 
 \begin{DoxyCompactList}\small\item\em Permet de realiser l\textquotesingle{}action de la valeur de la tuile. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{header_8h_af32cba74c2d07be494e7183bf3d3ee97}{tile\+Action}} ()
 \begin{DoxyCompactList}\small\item\em Permet de recuperer l\textquotesingle{}action dans une tuile. \end{DoxyCompactList}\item 
-void \mbox{\hyperlink{header_8h_a16780f266f3216ee6e8c3872bb32df41}{display\+Action}} (int action)
+void \mbox{\hyperlink{header_8h_a16780f266f3216ee6e8c3872bb32df41}{display\+Action}} (int \mbox{\hyperlink{header_8h_a7b4cb3f3f41c37d07dbf7c2991efcdc7}{action}})
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{}action. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{header_8h_ac2f8a53b6509da854f35d8cdaa18d3a6}{limit\+\_\+fps}} (unsigned int limit)
 \begin{DoxyCompactList}\small\item\em Permet de limiter les fps a la limite (24 fps) \end{DoxyCompactList}\item 
@@ -151,52 +195,149 @@ void {\bfseries GUI\+\_\+print\+\_\+dialog} ()
 \Hypertarget{header_8h_a7bc81d743082bd5ccdf63327b28fc4d8}\label{header_8h_a7bc81d743082bd5ccdf63327b28fc4d8} 
 void {\bfseries display\+GUI} ()
 \begin{DoxyCompactList}\small\item\em Permet d\textquotesingle{}afficher l\textquotesingle{}interface. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_aeb5f5d84c7634fefd0a189ffdc2a01db}\label{header_8h_aeb5f5d84c7634fefd0a189ffdc2a01db} 
-int {\bfseries dialog} (char \texorpdfstring{$\ast$}{*}file\+\_\+name)
-\item 
-\Hypertarget{header_8h_a56081315e028b1183be67c1093e70f43}\label{header_8h_a56081315e028b1183be67c1093e70f43} 
-void {\bfseries Game\+Exit} (int exit\+\_\+value)
-\item 
+\Hypertarget{header_8h_aaded3c967c0338746c5f50a320a8ee85}\label{header_8h_aaded3c967c0338746c5f50a320a8ee85} 
+int {\bfseries GUI\+\_\+inventory} ()
+\begin{DoxyCompactList}\small\item\em Affichage de l\textquotesingle{}inventaire. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ac5e115100d1efecf83d2210c5c0d1746}\label{header_8h_ac5e115100d1efecf83d2210c5c0d1746} 
+int {\bfseries GUI\+\_\+coins} ()
+\begin{DoxyCompactList}\small\item\em Affichage de l\textquotesingle{}argent. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_aeb5f5d84c7634fefd0a189ffdc2a01db}{dialog}} (char \texorpdfstring{$\ast$}{*}file\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Affichage un dialogua a partir d\textquotesingle{}un fichier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_a56081315e028b1183be67c1093e70f43}{Game\+Exit}} (int exit\+\_\+value)
+\begin{DoxyCompactList}\small\item\em Affichage de l\textquotesingle{}argent. \end{DoxyCompactList}\item 
 \Hypertarget{header_8h_a2fdc5b47f8863d5ef8c8f3c4da195d79}\label{header_8h_a2fdc5b47f8863d5ef8c8f3c4da195d79} 
 int {\bfseries Load\+Save} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Charge une sauvegarde. \end{DoxyCompactList}\item 
 \Hypertarget{header_8h_af08e34b2fbc5836bc854c33639e32f0a}\label{header_8h_af08e34b2fbc5836bc854c33639e32f0a} 
 int {\bfseries Save\+Save} ()
 \item 
+\Hypertarget{header_8h_a39713b8d5a634e55c8fe02662866ae5e}\label{header_8h_a39713b8d5a634e55c8fe02662866ae5e} 
+int {\bfseries new\+Save} ()
+\begin{DoxyCompactList}\small\item\em créer une nouvelle sauvegarde \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{header_8h_a1cbaea046077d435e2c2af95f5f4b3b8}{Error\+Log}} (char \texorpdfstring{$\ast$}{*}message)
-\begin{DoxyCompactList}\small\item\em Stop le jeu si il y a une erreur dans le programme. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Arret le programme avec un maessage d\textquotesingle{}erreur. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{header_8h_a2b878c29420719f1216318f6ee25b323}{Warning\+Log}} (char \texorpdfstring{$\ast$}{*}message)
-\begin{DoxyCompactList}\small\item\em Envoie un avertissement (warning) \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Affiche un maessage (warning) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{header_8h_a1adab60934d1d9cd845cad9171870637}{display\+Farm}} (int i\+\_\+map)
+\begin{DoxyCompactList}\small\item\em Affiche les plantations sur la carte. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a43dfd85a96f267f1834dfcd4357d14e9}{init\+Farm\+Texture}} ()
+\begin{DoxyCompactList}\small\item\em Initialise les textures des plantations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a96c7fa9ea8349dad73804b5eafb1298e}{farmland\+\_\+empty}} (int \texorpdfstring{$\ast$}{*}x, int \texorpdfstring{$\ast$}{*}y)
+\begin{DoxyCompactList}\small\item\em Vérifie si une parcelle de plantation est vide. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_acba75cb10788e9c1e4187ebd8ed88843}{farmland\+\_\+finalstage}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Vérifie si une parcelle de plantation est à son stade final. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_afde2f077822aa6c243706063844f82de}{farmland\+\_\+remove}} (int x, int y)
+\begin{DoxyCompactList}\small\item\em Retire une parcelle de plantation. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a51a0bd73d2053b2a8088cbcd9f4bcc12}\label{header_8h_a51a0bd73d2053b2a8088cbcd9f4bcc12} 
+void {\bfseries free\+Farm} ()
+\begin{DoxyCompactList}\small\item\em Libère les ressources allouées aux plantations. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a921083467da01d3e8764ee6e87304de8}{init\+PNJ}} ()
+\begin{DoxyCompactList}\small\item\em Initialise les personnages non-\/joueurs (PNJ) \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_ab8962a76cb989b1d172fdc362148039c}{free\+PNJ}} ()
+\begin{DoxyCompactList}\small\item\em Libère les ressources allouées aux PNJ. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{header_8h_a0230fbe8a473c60c41455759a9494ea5}{display\+PNJ}} ()
+\begin{DoxyCompactList}\small\item\em Affiche les PNJ sur la carte. \end{DoxyCompactList}\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{header_8h_a762bd3c82e9c28a3f14728eb1c793ae2}{charger\+Texture}} (char \texorpdfstring{$\ast$}{*}chemin, SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}\mbox{\hyperlink{header_8h_a19016f2094b234a4dd4bbfec440f682e}{renderer}})
+\begin{DoxyCompactList}\small\item\em Charge une texture à partir d\textquotesingle{}un chemin d\textquotesingle{}accès. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a070b206963a3a468a4af0d84846f1a9f}\label{header_8h_a070b206963a3a468a4af0d84846f1a9f} 
+int {\bfseries display\+Water} ()
+\item 
+\Hypertarget{header_8h_ab4476a30e9e472b398d6a4cafb1bf53a}\label{header_8h_ab4476a30e9e472b398d6a4cafb1bf53a} 
+int {\bfseries init\+Water} ()
+\item 
+\Hypertarget{header_8h_a1c11f6b9ac53964b945a7da0a569e5a4}\label{header_8h_a1c11f6b9ac53964b945a7da0a569e5a4} 
+int {\bfseries free\+Water} ()
+\item 
+\Hypertarget{header_8h_a0fdd4cf60fbfb364c08f1383bec655b8}\label{header_8h_a0fdd4cf60fbfb364c08f1383bec655b8} 
+int {\bfseries init\+Bateau} ()
+\item 
+\Hypertarget{header_8h_a2db7d6137afe0b128607e85ec7d00e7c}\label{header_8h_a2db7d6137afe0b128607e85ec7d00e7c} 
+int {\bfseries display\+Bateau} ()
+\item 
+\Hypertarget{header_8h_a010f78433f5705f15fc5d37ba0a79f17}\label{header_8h_a010f78433f5705f15fc5d37ba0a79f17} 
+int {\bfseries free\+Bateau} ()
+\item 
+\Hypertarget{header_8h_a54d2d6c741e8c97e0b15d296c1d687b3}\label{header_8h_a54d2d6c741e8c97e0b15d296c1d687b3} 
+int {\bfseries play\+Music} (char \texorpdfstring{$\ast$}{*}path, Mix\+\_\+\+Chunk \texorpdfstring{$\ast$}{*}\texorpdfstring{$\ast$}{*}chunk, int \texorpdfstring{$\ast$}{*}channel, int loop)
+\item 
+\Hypertarget{header_8h_adb879ef474a5ca6e5d3a481724191536}\label{header_8h_adb879ef474a5ca6e5d3a481724191536} 
+void {\bfseries music2fond} ()
+\end{DoxyCompactItemize}
 \doxysubsubsection*{Variables}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9}\label{header_8h_aaa8e409e04dcf575ef63fd5fb3db06f9} 
+\Hypertarget{header_8h_a8dfff5c0e9194c14ad79751d0bb0438e}\label{header_8h_a8dfff5c0e9194c14ad79751d0bb0438e} 
+\mbox{\hyperlink{structsprite__t}{sprite\+\_\+t}} {\bfseries pnj\+\_\+sprites} \mbox{[}\mbox{\hyperlink{header_8h_acd19773d24e0450b01a69dbe5d47725e}{NB\+\_\+\+PNJ}}\mbox{]}
+\begin{DoxyCompactList}\small\item\em Tableau des textures des sprites des PNJ. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a6c030f48fca13d5dab2e4e0f6090f267}\label{header_8h_a6c030f48fca13d5dab2e4e0f6090f267} 
 SDL\+\_\+\+Window \texorpdfstring{$\ast$}{*} {\bfseries window}
 \begin{DoxyCompactList}\small\item\em Fenêtre du jeu. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_a1bd079d34a0ced70870a996be9eaf5b7}\label{header_8h_a1bd079d34a0ced70870a996be9eaf5b7} 
-SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries icon}
-\begin{DoxyCompactList}\small\item\em Icon du jeu. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_a966da7a60c4ea3ba301e26ccc5efe452}\label{header_8h_a966da7a60c4ea3ba301e26ccc5efe452} 
+\Hypertarget{header_8h_a19016f2094b234a4dd4bbfec440f682e}\label{header_8h_a19016f2094b234a4dd4bbfec440f682e} 
 SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*} {\bfseries renderer}
 \begin{DoxyCompactList}\small\item\em Rendu du jeu. \end{DoxyCompactList}\item 
 \Hypertarget{header_8h_a32ecbd9872be86ec1594cff1d9698d99}\label{header_8h_a32ecbd9872be86ec1594cff1d9698d99} 
 \mbox{\hyperlink{structmap__t}{map\+\_\+t}} {\bfseries map}
-\begin{DoxyCompactList}\small\item\em Map du jeu. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Carte du jeu. \end{DoxyCompactList}\item 
 \Hypertarget{header_8h_ac5a8201c5f6bbce303ec36500d67b6d8}\label{header_8h_ac5a8201c5f6bbce303ec36500d67b6d8} 
 \mbox{\hyperlink{structplayer__t}{player\+\_\+t}} {\bfseries player}
 \begin{DoxyCompactList}\small\item\em Joueur du jeu. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_acddea2e6e4a413a85c9d546d69132dd1}\label{header_8h_acddea2e6e4a413a85c9d546d69132dd1} 
-time\+\_\+t {\bfseries tps\+\_\+game}
-\begin{DoxyCompactList}\small\item\em Temps dans le jeu. \end{DoxyCompactList}\item 
 \Hypertarget{header_8h_a4037235e3d34f9ebd16df1c2a03f03a7}\label{header_8h_a4037235e3d34f9ebd16df1c2a03f03a7} 
 \mbox{\hyperlink{structgui__t}{gui\+\_\+t}} {\bfseries GUI}
-\begin{DoxyCompactList}\small\item\em Ensemble des Game User Interfaces. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Ensemble des interfaces graphiques du jeu. \end{DoxyCompactList}\item 
 \Hypertarget{header_8h_a9c82afb7a8f8310900500133010edb37}\label{header_8h_a9c82afb7a8f8310900500133010edb37} 
 int {\bfseries tile\+\_\+action}
 \begin{DoxyCompactList}\small\item\em Valeur de la tuile devant le joueur. \end{DoxyCompactList}\item 
-\Hypertarget{header_8h_adb290a60ca96c217f71023fa5c095c5b}\label{header_8h_adb290a60ca96c217f71023fa5c095c5b} 
+\Hypertarget{header_8h_a91ba5f6b4b3e1efb6ef70b926d3bb154}\label{header_8h_a91ba5f6b4b3e1efb6ef70b926d3bb154} 
+\mbox{\hyperlink{structfarm__t}{farm\+\_\+t}} {\bfseries farm}
+\begin{DoxyCompactList}\small\item\em Ensemble des plantations. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_ad7b19ae27c8e920ec00b72fb993ebd1e}\label{header_8h_ad7b19ae27c8e920ec00b72fb993ebd1e} 
+int {\bfseries coins}
+\begin{DoxyCompactList}\small\item\em Argent du joueur. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a4e65a18d474455ceca7e3e4b0a1e6ae9}\label{header_8h_a4e65a18d474455ceca7e3e4b0a1e6ae9} 
 TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*} {\bfseries hour\+\_\+\+Font}
-\begin{DoxyCompactList}\small\item\em Police de l\textquotesingle{}heure. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Police de l\textquotesingle{}heure. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_a04305fd57a791c8de1cc9c7396141a05}\label{header_8h_a04305fd57a791c8de1cc9c7396141a05} 
+TTF\+\_\+\+Font \texorpdfstring{$\ast$}{*} {\bfseries text\+\_\+\+Font}
+\begin{DoxyCompactList}\small\item\em Police de texte. \end{DoxyCompactList}\item 
+\Hypertarget{header_8h_acddea2e6e4a413a85c9d546d69132dd1}\label{header_8h_acddea2e6e4a413a85c9d546d69132dd1} 
+time\+\_\+t {\bfseries tps\+\_\+game}
+\item 
+\Hypertarget{header_8h_af99226e5b3abc99207e3240f75080741}\label{header_8h_af99226e5b3abc99207e3240f75080741} 
+SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries icon}
+\item 
+\Hypertarget{header_8h_a06e8dd1f849973ccc456f8553601e8b9}\label{header_8h_a06e8dd1f849973ccc456f8553601e8b9} 
+SDL\+\_\+\+Cursor \texorpdfstring{$\ast$}{*} {\bfseries cursor}
+\item 
+\Hypertarget{header_8h_a8a41e7290766bca94b0d0e5af913312c}\label{header_8h_a8a41e7290766bca94b0d0e5af913312c} 
+SDL\+\_\+\+Cursor \texorpdfstring{$\ast$}{*} {\bfseries cursor\+\_\+select}
+\item 
+\Hypertarget{header_8h_a96b9f17b30e4014f7bf543bc452117de}\label{header_8h_a96b9f17b30e4014f7bf543bc452117de} 
+SDL\+\_\+\+Cursor \texorpdfstring{$\ast$}{*} {\bfseries cursor\+\_\+click}
+\item 
+\Hypertarget{header_8h_a286b97b6c1f8e65cc4017c788fe413f2}\label{header_8h_a286b97b6c1f8e65cc4017c788fe413f2} 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries water} \mbox{[}NB\+\_\+\+SPRITES\+\_\+\+WATER\mbox{]}
+\item 
+\Hypertarget{header_8h_a83e331826a81645c8a9884a996e9e253}\label{header_8h_a83e331826a81645c8a9884a996e9e253} 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} {\bfseries bateau} \mbox{[}\mbox{\hyperlink{header_8h_a92b776fb4fb058c7769228eb857d2539}{NB\+\_\+\+ACTIONS}}\mbox{]}
+\item 
+\Hypertarget{header_8h_a1cb251ee3c53b80c0900f8318026c771}\label{header_8h_a1cb251ee3c53b80c0900f8318026c771} 
+Mix\+\_\+\+Chunk \texorpdfstring{$\ast$}{*} {\bfseries music}
+\item 
+\Hypertarget{header_8h_a8218aa8636ae57370c074caa3580f739}\label{header_8h_a8218aa8636ae57370c074caa3580f739} 
+char {\bfseries volume\+\_\+music}
+\item 
+\Hypertarget{header_8h_add3c163d5c804baf41c6ad66250254cc}\label{header_8h_add3c163d5c804baf41c6ad66250254cc} 
+int {\bfseries channel\+\_\+music}
+\item 
+\Hypertarget{header_8h_a870dede243f15bd2dee6cca720d8b196}\label{header_8h_a870dede243f15bd2dee6cca720d8b196} 
+Mix\+\_\+\+Chunk \texorpdfstring{$\ast$}{*} {\bfseries sfx}
+\item 
+\Hypertarget{header_8h_a06469ab55674cfdc582289e15aedda5b}\label{header_8h_a06469ab55674cfdc582289e15aedda5b} 
+int {\bfseries channel\+\_\+sfx}
+\item 
+\Hypertarget{header_8h_af210d05f69b4d1c171cf07afe2f1908d}\label{header_8h_af210d05f69b4d1c171cf07afe2f1908d} 
+char {\bfseries volume\+\_\+sfx}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
@@ -213,6 +354,130 @@ alpha 1.\+2
 \end{DoxyDate}
 
 
+\doxysubsection{Documentation des macros}
+\Hypertarget{header_8h_a6d58f9ac447476b4e084d7ca383f5183}\label{header_8h_a6d58f9ac447476b4e084d7ca383f5183} 
+\index{header.h@{header.h}!FAILURE@{FAILURE}}
+\index{FAILURE@{FAILURE}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{FAILURE}{FAILURE}}
+{\footnotesize\ttfamily \#define FAILURE~0}
+
+Valeur d\textquotesingle{}un test faux \Hypertarget{header_8h_a26939ce39b475552b5e46657c463ad85}\label{header_8h_a26939ce39b475552b5e46657c463ad85} 
+\index{header.h@{header.h}!FILE\_DEFAULT\_SAVE@{FILE\_DEFAULT\_SAVE}}
+\index{FILE\_DEFAULT\_SAVE@{FILE\_DEFAULT\_SAVE}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_DEFAULT\_SAVE}{FILE\_DEFAULT\_SAVE}}
+{\footnotesize\ttfamily \#define FILE\+\_\+\+DEFAULT\+\_\+\+SAVE~\"{}data/save/default\"{}}
+
+Chemin vers la sauvegarde par défaut \Hypertarget{header_8h_a26e6586f9dfafd65f254285b1a1cc883}\label{header_8h_a26e6586f9dfafd65f254285b1a1cc883} 
+\index{header.h@{header.h}!FILE\_SAVE@{FILE\_SAVE}}
+\index{FILE\_SAVE@{FILE\_SAVE}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{FILE\_SAVE}{FILE\_SAVE}}
+{\footnotesize\ttfamily \#define FILE\+\_\+\+SAVE~\"{}data/save/save\"{}}
+
+Chemin vers les sauvegardes \Hypertarget{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b}\label{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b} 
+\index{header.h@{header.h}!FPS@{FPS}}
+\index{FPS@{FPS}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{FPS}{FPS}}
+{\footnotesize\ttfamily \#define FPS~24}
+
+Nombres de frame par seconde \Hypertarget{header_8h_a69c339b2966791489487938c49401cf3}\label{header_8h_a69c339b2966791489487938c49401cf3} 
+\index{header.h@{header.h}!FPS\_LIMIT@{FPS\_LIMIT}}
+\index{FPS\_LIMIT@{FPS\_LIMIT}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{FPS\_LIMIT}{FPS\_LIMIT}}
+{\footnotesize\ttfamily \#define FPS\+\_\+\+LIMIT~1000/\mbox{\hyperlink{header_8h_ac92ca5ab87034a348decad7ee8d4bd1b}{FPS}}}
+
+Temps d\textquotesingle{}attente entre deux frames \Hypertarget{header_8h_ad9bcf936a860a2c59c39550cfbcf2565}\label{header_8h_ad9bcf936a860a2c59c39550cfbcf2565} 
+\index{header.h@{header.h}!IMAP\_FARM@{IMAP\_FARM}}
+\index{IMAP\_FARM@{IMAP\_FARM}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{IMAP\_FARM}{IMAP\_FARM}}
+{\footnotesize\ttfamily \#define IMAP\+\_\+\+FARM~5}
+
+L\textquotesingle{}indice de la map d\textquotesingle{}agriculture \Hypertarget{header_8h_a210524a73e29beec0bbfb0ce037f2e34}\label{header_8h_a210524a73e29beec0bbfb0ce037f2e34} 
+\index{header.h@{header.h}!LIMIT\_PER\_LINE@{LIMIT\_PER\_LINE}}
+\index{LIMIT\_PER\_LINE@{LIMIT\_PER\_LINE}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{LIMIT\_PER\_LINE}{LIMIT\_PER\_LINE}}
+{\footnotesize\ttfamily \#define LIMIT\+\_\+\+PER\+\_\+\+LINE~75}
+
+Limite de caracteres par ligne \Hypertarget{header_8h_a8c738dcdf2c4379839739cd7e77e1090}\label{header_8h_a8c738dcdf2c4379839739cd7e77e1090} 
+\index{header.h@{header.h}!MAIN\_MAP@{MAIN\_MAP}}
+\index{MAIN\_MAP@{MAIN\_MAP}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{MAIN\_MAP}{MAIN\_MAP}}
+{\footnotesize\ttfamily \#define MAIN\+\_\+\+MAP~\"{}data/map\"{}}
+
+chemin vers les données de la map \Hypertarget{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e}\label{header_8h_ace02b6fb534354e5ba0b2a78218b4a8e} 
+\index{header.h@{header.h}!NAME\_PROG@{NAME\_PROG}}
+\index{NAME\_PROG@{NAME\_PROG}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{NAME\_PROG}{NAME\_PROG}}
+{\footnotesize\ttfamily \#define NAME\+\_\+\+PROG~\"{}Tomogashi Island\"{}}
+
+Nom du programme \Hypertarget{header_8h_a92b776fb4fb058c7769228eb857d2539}\label{header_8h_a92b776fb4fb058c7769228eb857d2539} 
+\index{header.h@{header.h}!NB\_ACTIONS@{NB\_ACTIONS}}
+\index{NB\_ACTIONS@{NB\_ACTIONS}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{NB\_ACTIONS}{NB\_ACTIONS}}
+{\footnotesize\ttfamily \#define NB\+\_\+\+ACTIONS~5}
+
+Nombre d\textquotesingle{}icons d\textquotesingle{}actions \Hypertarget{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef}\label{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef} 
+\index{header.h@{header.h}!NB\_ANIMATION@{NB\_ANIMATION}}
+\index{NB\_ANIMATION@{NB\_ANIMATION}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{NB\_ANIMATION}{NB\_ANIMATION}}
+{\footnotesize\ttfamily \#define NB\+\_\+\+ANIMATION~4}
+
+Nombre de frame dans une animation \Hypertarget{header_8h_a313a0ece5f285dd0573af2d020315eb0}\label{header_8h_a313a0ece5f285dd0573af2d020315eb0} 
+\index{header.h@{header.h}!NB\_FARMLAND@{NB\_FARMLAND}}
+\index{NB\_FARMLAND@{NB\_FARMLAND}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{NB\_FARMLAND}{NB\_FARMLAND}}
+{\footnotesize\ttfamily \#define NB\+\_\+\+FARMLAND~60}
+
+nombre de plantation maximale \Hypertarget{header_8h_a9b2127865c77fac199416ec8d5b1b2a9}\label{header_8h_a9b2127865c77fac199416ec8d5b1b2a9} 
+\index{header.h@{header.h}!NB\_PLANTS\_MAX@{NB\_PLANTS\_MAX}}
+\index{NB\_PLANTS\_MAX@{NB\_PLANTS\_MAX}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{NB\_PLANTS\_MAX}{NB\_PLANTS\_MAX}}
+{\footnotesize\ttfamily \#define NB\+\_\+\+PLANTS\+\_\+\+MAX~\mbox{\hyperlink{header_8h_a313a0ece5f285dd0573af2d020315eb0}{NB\+\_\+\+FARMLAND}}}
+
+nombre de plantation maximale \Hypertarget{header_8h_a7263e63d367da9dc3311af7f575cb767}\label{header_8h_a7263e63d367da9dc3311af7f575cb767} 
+\index{header.h@{header.h}!NB\_STEM\_PLANT@{NB\_STEM\_PLANT}}
+\index{NB\_STEM\_PLANT@{NB\_STEM\_PLANT}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{NB\_STEM\_PLANT}{NB\_STEM\_PLANT}}
+{\footnotesize\ttfamily \#define NB\+\_\+\+STEM\+\_\+\+PLANT~4}
+
+nombre d\textquotesingle{}étape de croissance max d\textquotesingle{}une plante ~\newline
+ \Hypertarget{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b}\label{header_8h_a7bb22c2af1a1b054c96cc32e896d0a6b} 
+\index{header.h@{header.h}!SIZE\_MAP\_X@{SIZE\_MAP\_X}}
+\index{SIZE\_MAP\_X@{SIZE\_MAP\_X}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_MAP\_X}{SIZE\_MAP\_X}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+MAP\+\_\+X~3}
+
+Nombre de partie de la map en X \Hypertarget{header_8h_a24f7370b723f7094c645ae488cf6bdb4}\label{header_8h_a24f7370b723f7094c645ae488cf6bdb4} 
+\index{header.h@{header.h}!SIZE\_MAP\_Y@{SIZE\_MAP\_Y}}
+\index{SIZE\_MAP\_Y@{SIZE\_MAP\_Y}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_MAP\_Y}{SIZE\_MAP\_Y}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+MAP\+\_\+Y~4}
+
+Nombre de partie de la map en Y \Hypertarget{header_8h_a004a0bd4d35be528654076c4dcdd52d8}\label{header_8h_a004a0bd4d35be528654076c4dcdd52d8} 
+\index{header.h@{header.h}!SIZE\_TILE@{SIZE\_TILE}}
+\index{SIZE\_TILE@{SIZE\_TILE}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{SIZE\_TILE}{SIZE\_TILE}}
+{\footnotesize\ttfamily \#define SIZE\+\_\+\+TILE~60}
+
+Taille en pixel d\textquotesingle{}un tuile \Hypertarget{header_8h_aa90cac659d18e8ef6294c7ae337f6b58}\label{header_8h_aa90cac659d18e8ef6294c7ae337f6b58} 
+\index{header.h@{header.h}!SUCCESS@{SUCCESS}}
+\index{SUCCESS@{SUCCESS}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{SUCCESS}{SUCCESS}}
+{\footnotesize\ttfamily \#define SUCCESS~1}
+
+Valeur d\textquotesingle{}un test vrai \Hypertarget{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3}\label{header_8h_ae1172ce9e6d87d89b0d879854bda7ef3} 
+\index{header.h@{header.h}!VERS\_GAME@{VERS\_GAME}}
+\index{VERS\_GAME@{VERS\_GAME}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{VERS\_GAME}{VERS\_GAME}}
+{\footnotesize\ttfamily \#define VERS\+\_\+\+GAME~\"{}vers. 1.\+0\"{}}
+
+Version du jeu \Hypertarget{header_8h_a2d6acae8f9b752a5d85795baf1005907}\label{header_8h_a2d6acae8f9b752a5d85795baf1005907} 
+\index{header.h@{header.h}!WINDOW\_NAME@{WINDOW\_NAME}}
+\index{WINDOW\_NAME@{WINDOW\_NAME}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{WINDOW\_NAME}{WINDOW\_NAME}}
+{\footnotesize\ttfamily \#define WINDOW\+\_\+\+NAME~\"{}Tomogashi Island\"{}}
+
+Nom de la fenêtre 
+
 \doxysubsection{Documentation du type de l\textquotesingle{}énumération}
 \Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0} 
 \index{header.h@{header.h}!dir\_t@{dir\_t}}
@@ -226,19 +491,19 @@ enum des directions possibles
 
 \begin{DoxyEnumFields}{Valeurs énumérées}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{nord@{nord}!header.h@{header.h}}\index{header.h@{header.h}!nord@{nord}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0aa7d434167708d0dfa76b5d8fd2ab7b4b} 
-nord&Direction nord. \\
+nord&Direction nord \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{est@{est}!header.h@{header.h}}\index{header.h@{header.h}!est@{est}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0ad0b49d79209a3ca574f13585138e5253} 
-est&Direction est. \\
+est&Direction est \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{sud@{sud}!header.h@{header.h}}\index{header.h@{header.h}!sud@{sud}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0af43d8d56cb253b260ccd2a5e98e205a8} 
-sud&Direction sud. \\
+sud&Direction sud \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{ouest@{ouest}!header.h@{header.h}}\index{header.h@{header.h}!ouest@{ouest}}}\Hypertarget{header_8h_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed}\label{header_8h_a32db8bfae4e3fc9908e95d227f464ad0a5d3e324d53c84c30ff123124ec8c30ed} 
-ouest&Direction ouest. \\
+ouest&Direction ouest \\
 \hline
 
 \end{DoxyEnumFields}
@@ -300,6 +565,41 @@ Permet de savoir si le joueur peut aller en avancant dans un direction.
 
 1 -\/-\/\texorpdfstring{$>$}{>} Le joueur peut y aller 
 \end{DoxyReturn}
+\Hypertarget{header_8h_a762bd3c82e9c28a3f14728eb1c793ae2}\label{header_8h_a762bd3c82e9c28a3f14728eb1c793ae2} 
+\index{header.h@{header.h}!chargerTexture@{chargerTexture}}
+\index{chargerTexture@{chargerTexture}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{chargerTexture()}{chargerTexture()}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} charger\+Texture (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{chemin,  }\item[{SDL\+\_\+\+Renderer \texorpdfstring{$\ast$}{*}}]{renderer }\end{DoxyParamCaption})}
+
+
+
+Charge une texture à partir d\textquotesingle{}un chemin d\textquotesingle{}accès. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em chemin} & Chemin d\textquotesingle{}accès à l\textquotesingle{}image \\
+\hline
+{\em renderer} & Renderer SDL pour la texture \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+Pointeur vers la texture chargée, NULL en cas d\textquotesingle{}erreur 
+\end{DoxyReturn}
+\Hypertarget{header_8h_aeb5f5d84c7634fefd0a189ffdc2a01db}\label{header_8h_aeb5f5d84c7634fefd0a189ffdc2a01db} 
+\index{header.h@{header.h}!dialog@{dialog}}
+\index{dialog@{dialog}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{dialog()}{dialog()}}
+{\footnotesize\ttfamily int dialog (\begin{DoxyParamCaption}\item[{char \texorpdfstring{$\ast$}{*}}]{file\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Affichage un dialogua a partir d\textquotesingle{}un fichier. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file\+\_\+name} & chemin du fichier de diagua a afficher \\
+\hline
+\end{DoxyParams}
 \Hypertarget{header_8h_a16780f266f3216ee6e8c3872bb32df41}\label{header_8h_a16780f266f3216ee6e8c3872bb32df41} 
 \index{header.h@{header.h}!displayAction@{displayAction}}
 \index{displayAction@{displayAction}!header.h@{header.h}}
@@ -315,6 +615,34 @@ Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{
 {\em action} & valeur de l\textquotesingle{}action du joueur \\
 \hline
 \end{DoxyParams}
+\Hypertarget{header_8h_a1adab60934d1d9cd845cad9171870637}\label{header_8h_a1adab60934d1d9cd845cad9171870637} 
+\index{header.h@{header.h}!displayFarm@{displayFarm}}
+\index{displayFarm@{displayFarm}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{displayFarm()}{displayFarm()}}
+{\footnotesize\ttfamily void display\+Farm (\begin{DoxyParamCaption}\item[{int}]{i\+\_\+map }\end{DoxyParamCaption})}
+
+
+
+Affiche les plantations sur la carte. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em i\+\_\+map} & Indice de la partie de la carte où afficher les plantations \\
+\hline
+\end{DoxyParams}
+\Hypertarget{header_8h_a0230fbe8a473c60c41455759a9494ea5}\label{header_8h_a0230fbe8a473c60c41455759a9494ea5} 
+\index{header.h@{header.h}!displayPNJ@{displayPNJ}}
+\index{displayPNJ@{displayPNJ}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{displayPNJ()}{displayPNJ()}}
+{\footnotesize\ttfamily int display\+PNJ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Affiche les PNJ sur la carte. 
+
+\begin{DoxyReturn}{Renvoie}
+1 en cas de succès, sinon 0 
+\end{DoxyReturn}
 \Hypertarget{header_8h_a1cbaea046077d435e2c2af95f5f4b3b8}\label{header_8h_a1cbaea046077d435e2c2af95f5f4b3b8} 
 \index{header.h@{header.h}!ErrorLog@{ErrorLog}}
 \index{ErrorLog@{ErrorLog}!header.h@{header.h}}
@@ -323,18 +651,82 @@ Permet d\textquotesingle{}afficher l\textquotesingle{}icon de l\textquotesingle{
 
 
 
-Stop le jeu si il y a une erreur dans le programme. 
+Arret le programme avec un maessage d\textquotesingle{}erreur. 
+
+Stop le jeu si il y a une erreur dans le programme.
 
 
 \begin{DoxyParams}{Paramètres}
+{\em message} & message a afficher\\
+\hline
 {\em message} & est le message d\textquotesingle{}erreur à afficher dans le terminal \\
 \hline
 \end{DoxyParams}
-\Hypertarget{header_8h_a68df481c38303e85cc5d9d6b17e19fa6}\label{header_8h_a68df481c38303e85cc5d9d6b17e19fa6} 
+\Hypertarget{header_8h_a96c7fa9ea8349dad73804b5eafb1298e}\label{header_8h_a96c7fa9ea8349dad73804b5eafb1298e} 
+\index{header.h@{header.h}!farmland\_empty@{farmland\_empty}}
+\index{farmland\_empty@{farmland\_empty}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{farmland\_empty()}{farmland\_empty()}}
+{\footnotesize\ttfamily int farmland\+\_\+empty (\begin{DoxyParamCaption}\item[{int \texorpdfstring{$\ast$}{*}}]{x,  }\item[{int \texorpdfstring{$\ast$}{*}}]{y }\end{DoxyParamCaption})}
+
+
+
+Vérifie si une parcelle de plantation est vide. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Pointeur vers la position X de la parcelle vide (sortie) \\
+\hline
+{\em y} & Pointeur vers la position Y de la parcelle vide (sortie) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si une parcelle vide est trouvée, sinon 0 
+\end{DoxyReturn}
+\Hypertarget{header_8h_acba75cb10788e9c1e4187ebd8ed88843}\label{header_8h_acba75cb10788e9c1e4187ebd8ed88843} 
+\index{header.h@{header.h}!farmland\_finalstage@{farmland\_finalstage}}
+\index{farmland\_finalstage@{farmland\_finalstage}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{farmland\_finalstage()}{farmland\_finalstage()}}
+{\footnotesize\ttfamily int farmland\+\_\+finalstage (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Vérifie si une parcelle de plantation est à son stade final. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Position X de la parcelle \\
+\hline
+{\em y} & Position Y de la parcelle \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 si la parcelle est à son stade final, sinon 0 
+\end{DoxyReturn}
+\Hypertarget{header_8h_afde2f077822aa6c243706063844f82de}\label{header_8h_afde2f077822aa6c243706063844f82de} 
+\index{header.h@{header.h}!farmland\_remove@{farmland\_remove}}
+\index{farmland\_remove@{farmland\_remove}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{farmland\_remove()}{farmland\_remove()}}
+{\footnotesize\ttfamily int farmland\+\_\+remove (\begin{DoxyParamCaption}\item[{int}]{x,  }\item[{int}]{y }\end{DoxyParamCaption})}
+
+
+
+Retire une parcelle de plantation. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em x} & Position X de la parcelle à retirer \\
+\hline
+{\em y} & Position Y de la parcelle à retirer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+1 en cas de succès, sinon 0 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a08e611b15a6d28b0d07e38ff0ff73241}\label{header_8h_a08e611b15a6d28b0d07e38ff0ff73241} 
 \index{header.h@{header.h}!freeMap@{freeMap}}
 \index{freeMap@{freeMap}!header.h@{header.h}}
 \doxysubsubsection{\texorpdfstring{freeMap()}{freeMap()}}
-{\footnotesize\ttfamily void free\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{m }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily free\+Map (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structmap__t}{map\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{m }\end{DoxyParamCaption})}
 
 
 
@@ -358,6 +750,34 @@ Permet de liberer le joueur.
 \begin{DoxyReturn}{Renvoie}
 0 si echec et 1 si succes 
 \end{DoxyReturn}
+\Hypertarget{header_8h_ab8962a76cb989b1d172fdc362148039c}\label{header_8h_ab8962a76cb989b1d172fdc362148039c} 
+\index{header.h@{header.h}!freePNJ@{freePNJ}}
+\index{freePNJ@{freePNJ}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{freePNJ()}{freePNJ()}}
+{\footnotesize\ttfamily int free\+PNJ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Libère les ressources allouées aux PNJ. 
+
+\begin{DoxyReturn}{Renvoie}
+1 en cas de succès, sinon 0 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a56081315e028b1183be67c1093e70f43}\label{header_8h_a56081315e028b1183be67c1093e70f43} 
+\index{header.h@{header.h}!GameExit@{GameExit}}
+\index{GameExit@{GameExit}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{GameExit()}{GameExit()}}
+{\footnotesize\ttfamily void Game\+Exit (\begin{DoxyParamCaption}\item[{int}]{exit\+\_\+value }\end{DoxyParamCaption})}
+
+
+
+Affichage de l\textquotesingle{}argent. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em exit\+\_\+value} & valeur de sortie du jeu \\
+\hline
+\end{DoxyParams}
 \Hypertarget{header_8h_a1b0bdc2c7f72e1a58b6a6ae93a8863c0}\label{header_8h_a1b0bdc2c7f72e1a58b6a6ae93a8863c0} 
 \index{header.h@{header.h}!GUI\_print\_hour@{GUI\_print\_hour}}
 \index{GUI\_print\_hour@{GUI\_print\_hour}!header.h@{header.h}}
@@ -368,7 +788,20 @@ Permet de liberer le joueur.
 
 Permet d\textquotesingle{}afficher l\textquotesingle{}interface de l\textquotesingle{}hour. 
 
-Permet d\textquotesingle{}afficher l\textquotesingle{}interface des dialogues. \Hypertarget{header_8h_a464977f8317c50346420be433fa5320d}\label{header_8h_a464977f8317c50346420be433fa5320d} 
+Permet d\textquotesingle{}afficher l\textquotesingle{}interface des dialogues. \Hypertarget{header_8h_a43dfd85a96f267f1834dfcd4357d14e9}\label{header_8h_a43dfd85a96f267f1834dfcd4357d14e9} 
+\index{header.h@{header.h}!initFarmTexture@{initFarmTexture}}
+\index{initFarmTexture@{initFarmTexture}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{initFarmTexture()}{initFarmTexture()}}
+{\footnotesize\ttfamily int init\+Farm\+Texture (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise les textures des plantations. 
+
+\begin{DoxyReturn}{Renvoie}
+1 en cas de succès, sinon 0 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a464977f8317c50346420be433fa5320d}\label{header_8h_a464977f8317c50346420be433fa5320d} 
 \index{header.h@{header.h}!initMap@{initMap}}
 \index{initMap@{initMap}!header.h@{header.h}}
 \doxysubsubsection{\texorpdfstring{initMap()}{initMap()}}
@@ -395,6 +828,19 @@ Permet d\textquotesingle{}initialiser le joueur.
 
 \begin{DoxyReturn}{Renvoie}
 0 si echec et 1 si succes 
+\end{DoxyReturn}
+\Hypertarget{header_8h_a921083467da01d3e8764ee6e87304de8}\label{header_8h_a921083467da01d3e8764ee6e87304de8} 
+\index{header.h@{header.h}!initPNJ@{initPNJ}}
+\index{initPNJ@{initPNJ}!header.h@{header.h}}
+\doxysubsubsection{\texorpdfstring{initPNJ()}{initPNJ()}}
+{\footnotesize\ttfamily int init\+PNJ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise les personnages non-\/joueurs (PNJ) 
+
+\begin{DoxyReturn}{Renvoie}
+1 en cas de succès, sinon 0 
 \end{DoxyReturn}
 \Hypertarget{header_8h_ac2f8a53b6509da854f35d8cdaa18d3a6}\label{header_8h_ac2f8a53b6509da854f35d8cdaa18d3a6} 
 \index{header.h@{header.h}!limit\_fps@{limit\_fps}}
@@ -510,10 +956,14 @@ la valeur d\textquotesingle{}une tuile de la map à la position donnée
 
 
 
-Envoie un avertissement (warning) 
+Affiche un maessage (warning) 
+
+Envoie un avertissement (warning)
 
 
 \begin{DoxyParams}{Paramètres}
+{\em message} & message a afficher\\
+\hline
 {\em message} & est le message du warning à afficher dans le terminal \\
 \hline
 \end{DoxyParams}

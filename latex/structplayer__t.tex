@@ -12,31 +12,69 @@ structure représentant les informations du joueur
 \doxysubsubsection*{Attributs publics}
 \begin{DoxyCompactItemize}
 \item 
-\Hypertarget{structplayer__t_ad9a9183e105b3ca0e4ba28cb0137dd24}\label{structplayer__t_ad9a9183e105b3ca0e4ba28cb0137dd24} 
-int {\bfseries x}
-\begin{DoxyCompactList}\small\item\em Position sur l\textquotesingle{}axe X du joueur. \end{DoxyCompactList}\item 
-\Hypertarget{structplayer__t_a23e37c6edab398b7d45261b54decfec8}\label{structplayer__t_a23e37c6edab398b7d45261b54decfec8} 
-int {\bfseries y}
-\begin{DoxyCompactList}\small\item\em Position sur l\textquotesingle{}axe Y du joueur. \end{DoxyCompactList}\item 
-\Hypertarget{structplayer__t_a891d4884151019a2190987925120548b}\label{structplayer__t_a891d4884151019a2190987925120548b} 
-\mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}} {\bfseries dir}
-\begin{DoxyCompactList}\small\item\em Direction du joueur. \end{DoxyCompactList}\item 
-\Hypertarget{structplayer__t_a14e5a4b4504a4e3326da6ae2940901c2}\label{structplayer__t_a14e5a4b4504a4e3326da6ae2940901c2} 
-int {\bfseries vit}
-\begin{DoxyCompactList}\small\item\em Vitesse de deplacement du joueur. \end{DoxyCompactList}\item 
-\Hypertarget{structplayer__t_aed4e3b0976e77e56cbcf4316608ab467}\label{structplayer__t_aed4e3b0976e77e56cbcf4316608ab467} 
-SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries sprites} \mbox{[}4\mbox{]}\mbox{[}\mbox{\hyperlink{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef}{NB\+\_\+\+ANIMATION}}\mbox{]}
-\begin{DoxyCompactList}\small\item\em Ensembles des sprites du joueur. \end{DoxyCompactList}\item 
-\Hypertarget{structplayer__t_aac7a833aedf133de443489bb8850b9a3}\label{structplayer__t_aac7a833aedf133de443489bb8850b9a3} 
-int {\bfseries frame}
-\begin{DoxyCompactList}\small\item\em Frame d\textquotesingle{}animation du personnage. \end{DoxyCompactList}\item 
-\Hypertarget{structplayer__t_a5e6b9ecc5c4ab8a9c6fe25764d81d597}\label{structplayer__t_a5e6b9ecc5c4ab8a9c6fe25764d81d597} 
-SDL\+\_\+\+Surface \texorpdfstring{$\ast$}{*} {\bfseries actions} \mbox{[}\mbox{\hyperlink{header_8h_a92b776fb4fb058c7769228eb857d2539}{NB\+\_\+\+ACTIONS}}\mbox{]}
-\begin{DoxyCompactList}\small\item\em Ensemble des surfaces d\textquotesingle{}icons d\textquotesingle{}actions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+int \mbox{\hyperlink{structplayer__t_ad9a9183e105b3ca0e4ba28cb0137dd24}{x}}
+\item 
+int \mbox{\hyperlink{structplayer__t_a23e37c6edab398b7d45261b54decfec8}{y}}
+\item 
+\mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}} \mbox{\hyperlink{structplayer__t_a891d4884151019a2190987925120548b}{dir}}
+\item 
+int \mbox{\hyperlink{structplayer__t_a14e5a4b4504a4e3326da6ae2940901c2}{vit}}
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structplayer__t_a396c10666d9a892d263dbad73647bc04}{sprites}} \mbox{[}4\mbox{]}\mbox{[}\mbox{\hyperlink{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef}{NB\+\_\+\+ANIMATION}}\mbox{]}
+\item 
+int \mbox{\hyperlink{structplayer__t_aac7a833aedf133de443489bb8850b9a3}{frame}}
+\item 
+SDL\+\_\+\+Texture \texorpdfstring{$\ast$}{*} \mbox{\hyperlink{structplayer__t_a9943f2a68ea26c590694fd6fe5898262}{actions}} \mbox{[}\mbox{\hyperlink{header_8h_a92b776fb4fb058c7769228eb857d2539}{NB\+\_\+\+ACTIONS}}\mbox{]}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Description détaillée}
 structure représentant les informations du joueur 
+
+\doxysubsection{Documentation des données membres}
+\Hypertarget{structplayer__t_a9943f2a68ea26c590694fd6fe5898262}\label{structplayer__t_a9943f2a68ea26c590694fd6fe5898262} 
+\index{player\_t@{player\_t}!actions@{actions}}
+\index{actions@{actions}!player\_t@{player\_t}}
+\doxysubsubsection{\texorpdfstring{actions}{actions}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} player\+\_\+t\+::actions\mbox{[}\mbox{\hyperlink{header_8h_a92b776fb4fb058c7769228eb857d2539}{NB\+\_\+\+ACTIONS}}\mbox{]}}
+
+Ensemble des surfaces d\textquotesingle{}icons d\textquotesingle{}actions \Hypertarget{structplayer__t_a891d4884151019a2190987925120548b}\label{structplayer__t_a891d4884151019a2190987925120548b} 
+\index{player\_t@{player\_t}!dir@{dir}}
+\index{dir@{dir}!player\_t@{player\_t}}
+\doxysubsubsection{\texorpdfstring{dir}{dir}}
+{\footnotesize\ttfamily \mbox{\hyperlink{header_8h_a32db8bfae4e3fc9908e95d227f464ad0}{dir\+\_\+t}} player\+\_\+t\+::dir}
+
+Direction du joueur \Hypertarget{structplayer__t_aac7a833aedf133de443489bb8850b9a3}\label{structplayer__t_aac7a833aedf133de443489bb8850b9a3} 
+\index{player\_t@{player\_t}!frame@{frame}}
+\index{frame@{frame}!player\_t@{player\_t}}
+\doxysubsubsection{\texorpdfstring{frame}{frame}}
+{\footnotesize\ttfamily int player\+\_\+t\+::frame}
+
+Frame d\textquotesingle{}animation du personnage \Hypertarget{structplayer__t_a396c10666d9a892d263dbad73647bc04}\label{structplayer__t_a396c10666d9a892d263dbad73647bc04} 
+\index{player\_t@{player\_t}!sprites@{sprites}}
+\index{sprites@{sprites}!player\_t@{player\_t}}
+\doxysubsubsection{\texorpdfstring{sprites}{sprites}}
+{\footnotesize\ttfamily SDL\+\_\+\+Texture\texorpdfstring{$\ast$}{*} player\+\_\+t\+::sprites\mbox{[}4\mbox{]}\mbox{[}\mbox{\hyperlink{header_8h_ac47acfae1eb5beadc44fce0c2ebce5ef}{NB\+\_\+\+ANIMATION}}\mbox{]}}
+
+Ensembles des sprites du joueur \Hypertarget{structplayer__t_a14e5a4b4504a4e3326da6ae2940901c2}\label{structplayer__t_a14e5a4b4504a4e3326da6ae2940901c2} 
+\index{player\_t@{player\_t}!vit@{vit}}
+\index{vit@{vit}!player\_t@{player\_t}}
+\doxysubsubsection{\texorpdfstring{vit}{vit}}
+{\footnotesize\ttfamily int player\+\_\+t\+::vit}
+
+Vitesse de deplacement du joueur \Hypertarget{structplayer__t_ad9a9183e105b3ca0e4ba28cb0137dd24}\label{structplayer__t_ad9a9183e105b3ca0e4ba28cb0137dd24} 
+\index{player\_t@{player\_t}!x@{x}}
+\index{x@{x}!player\_t@{player\_t}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily int player\+\_\+t\+::x}
+
+Position sur l\textquotesingle{}axe X du joueur \Hypertarget{structplayer__t_a23e37c6edab398b7d45261b54decfec8}\label{structplayer__t_a23e37c6edab398b7d45261b54decfec8} 
+\index{player\_t@{player\_t}!y@{y}}
+\index{y@{y}!player\_t@{player\_t}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily int player\+\_\+t\+::y}
+
+Position sur l\textquotesingle{}axe Y du joueur 
 
 La documentation de cette structure a été générée à partir du fichier suivant \+:\begin{DoxyCompactItemize}
 \item 

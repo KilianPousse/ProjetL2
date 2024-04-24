@@ -1,0 +1,29 @@
+\doxysection{menu.\+h}
+\hypertarget{menu_8h_source}{}\label{menu_8h_source}\index{include/menu.h@{include/menu.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00002\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structbouton__s}{bouton\_s}}\{}
+\DoxyCodeLine{00003\ \ \ \ \ \textcolor{keywordtype}{char}\ *\ \mbox{\hyperlink{structbouton__s_afaeb5267a4ae98012b3bb09e3c46877a}{texte}};\ }
+\DoxyCodeLine{00004\ \ \ \ \ SDL\_Rect\ \mbox{\hyperlink{structbouton__s_a808c7d3ae39b6278229ff77aed646195}{rectangle}};\ \ }
+\DoxyCodeLine{00005\ \ \ \ \ SDL\_Texture\ *\ \mbox{\hyperlink{structbouton__s_a8b07d28e2af46359cf7b17cb819d9187}{image}};\ }
+\DoxyCodeLine{00006\ \ \ \ \ SDL\_Texture\ *\ \mbox{\hyperlink{structbouton__s_aaec584c68ee28b550d32b0d1ee9f2966}{clique}};\ }
+\DoxyCodeLine{00007\ \}\mbox{\hyperlink{structbouton__s}{bouton\_t}};}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structnuages__s}{nuages\_s}}\{}
+\DoxyCodeLine{00010\ \ \ \ \ SDL\_Rect\ rectangle;}
+\DoxyCodeLine{00011\ \ \ \ \ SDL\_Texture\ *\ image[2];}
+\DoxyCodeLine{00012\ \}\mbox{\hyperlink{structnuages__s}{nuages\_t}};}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{structlogo__s}{logo\_s}}\{}
+\DoxyCodeLine{00015\ \ \ \ \ SDL\_Rect\ rectangle;}
+\DoxyCodeLine{00016\ \ \ \ \ SDL\_Texture\ *\ image[6];}
+\DoxyCodeLine{00017\ \}\mbox{\hyperlink{structlogo__s}{logo\_t}};}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keywordtype}{void}\ menu\_destruction(\mbox{\hyperlink{structbouton__s}{bouton\_t}}\ *\ bouton,\ SDL\_Texture\ *\ texture,\mbox{\hyperlink{structnuages__s}{nuages\_t}}\ nuage,\ \mbox{\hyperlink{structnuages__s}{nuages\_t}}\ nuagea,\mbox{\hyperlink{structnuages__s}{nuages\_t}}\ nuageb,\mbox{\hyperlink{structnuages__s}{nuages\_t}}\ nuagec,\mbox{\hyperlink{structlogo__s}{logo\_t}}\ logo);}
+\DoxyCodeLine{00020\ \textcolor{keywordtype}{int}\ menu\_main();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keywordtype}{int}\ main\_option();}
+\DoxyCodeLine{00023\ \textcolor{keywordtype}{void}\ option\_destruction(\mbox{\hyperlink{structbouton__s}{bouton\_t}}\ *\ bouton,\ SDL\_Texture\ *\ texture);}
+
+\end{DoxyCode}
