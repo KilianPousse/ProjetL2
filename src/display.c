@@ -198,7 +198,10 @@ void displayAction( int action ){
         case TILE_LIVRE_BEACH:
         case TILE_LIVRE_CAVE:
         case TILE_LIVRE_FARM:
-        case TILE_LIVRE_FISHING:
+        case TILE_LIVRE_FISH:
+        case TILE_OUTSIDE:
+        case TILE_COFFRE:
+        case TILE_FINAL_QUEST:
         case TILE_LIVRE_FOREST:
         case TILE_LIVRE_HOUSE:
         case TILE_LIVRE_JSP:

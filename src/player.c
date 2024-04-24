@@ -182,6 +182,14 @@ int action( int tile ){
             dialog("data/dialog/crabe");
             break;
 
+        case TILE_COFFRE:
+            dialog("data/dialog/coffre");
+            break;
+
+        case TILE_FINAL_QUEST:
+            dialog("data/dialog/finalQuest");
+            break;
+
         case TILE_PY:
             dialog("data/dialog/py");
             break;
@@ -214,13 +222,18 @@ int action( int tile ){
             dialog("data/dialog/forest");
             break;
 
-        case TILE_LIVRE_FISHING:
+        case TILE_LIVRE_FISH:
             dialog("data/dialog/fishing");
             break;
 
-        case TILE_LIVRE_FARM:
+        case TILE_LIVRE_FARM: 
             dialog("data/dialog/farm");
             break;
+
+        case TILE_OUTSIDE:
+            dialog("data/dialog/outside_house"); 
+            break;
+            
 
         case TILE_LIVRE_BEACH:
             dialog("data/dialog/beach");
