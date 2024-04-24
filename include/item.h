@@ -11,12 +11,18 @@
 #define NB_ITEMS 25
 
 
+/**
+ * \struct item_t
+ * \brief Structure representant l'inventaire
+**/
+
 typedef struct {
 
     unsigned char id;
     int nb;
 
 }item_t;
+
 
 int initItem();
 int freeItem();
