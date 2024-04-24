@@ -1,10 +1,11 @@
 /**
- * \file header.h
- * \brief Entete principale du projet
- * \details C'est ici qu'on retrouvera les initialisations des variables globals, struct, enum, fonctions, ...
+ * \file hotbar.h
+ * \brief Variables utilisées dans scripte de la hotbar.c 
+ * \details Création des variables qqui seront utilisée dans la hotbar.c
  * \author Pousse Kilian - Pierre Elona - Vallee Alban 
  * \version alpha 1.2
- * \date 31/01/2024
+ * \date 24/02/2024
+**/2024
 **/
 #include <time.h>
 
